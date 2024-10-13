@@ -11,7 +11,7 @@ Breve descripción del proyecto: ¿Qué hace? ¿Por qué es útil? ¿Cuál es su
 - [Próximas Modificaciones](#próximas-modificaciones)
 - [Autores](#autores)
 
-**Actualizaciones**:
+**Actualizaciones**(Formato de Actualizacion):
    - Mantén un registro detallado de cada nueva **versión** con la fecha correspondiente.
    - Usa íconos para diferenciar el tipo de cambios:
      - ✅ Nuevas funcionalidades.
