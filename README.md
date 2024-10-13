@@ -16,5 +16,6 @@ con una intefaz que sea intuitiva para el usuario
      - ✅ Nuevas funcionalidades.
      - 🛠️ Correcciones de errores.
      - 🧹 Mejoras generales.
+       
 **Próximas Modificaciones**:
    - Enumera las funcionalidades o cambios planeados para futuras versiones, con números de versión tentativos. Esto ofrece una visión clara del progreso del proyecto.
