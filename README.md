@@ -1,8 +1,7 @@
-# Pry-IEFI-V2
+# Gestor de Ventas
 
-# Nombre del Proyecto
-
-Breve descripción del proyecto: ¿Qué hace? ¿Por qué es útil? ¿Cuál es su propósito? 
+El proyecto esta enfocado a tener una gestion negocio(chico) mas eficiente
+con una intefaz que sea intuitiva para el usuario
 
 ## Tabla de Contenidos
 
@@ -17,3 +16,5 @@ Breve descripción del proyecto: ¿Qué hace? ¿Por qué es útil? ¿Cuál es su
      - ✅ Nuevas funcionalidades.
      - 🛠️ Correcciones de errores.
      - 🧹 Mejoras generales.
+**Próximas Modificaciones**:
+   - Enumera las funcionalidades o cambios planeados para futuras versiones, con números de versión tentativos. Esto ofrece una visión clara del progreso del proyecto.
