@@ -128,5 +128,32 @@ namespace Gestion.Clases
             return dt;
         }
 
+
+        //Metode de busqueda por Cod-Barra
+        public void CodBarra(int cod)
+        {
+            conectar = new OleDbConnection(cadena);
+            try
+            {
+                conectar.Open();
+                string consulta = $"SELECT IdProducto,Nombre,Descripcion,Precio FROM Productos where IdProducto = {cod}";
+                comando = new OleDbCommand(consulta, conectar);
+                OleDbDataReader reader = comando.ExecuteReader();
+
+                // Agrega los datos al ComboBox
+                while (reader.Read())
+                {
+                    clsProducto.codigo = reader.GetInt32(0);
+                    clsProducto.nombre = reader.GetString(1);
+                    clsProducto.descripcion = reader.GetString(2);
+                    clsProducto.precio = reader.GetDecimal(3);
+                }
+                reader.Close();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
     }
 }

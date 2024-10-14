@@ -43,20 +43,20 @@
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.panelCarrito = new System.Windows.Forms.Panel();
             this.btnBuscarCod = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBuscarCod = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnPagar = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.dgvCarrito = new System.Windows.Forms.DataGridView();
-            this.btnCancelarOrden = new System.Windows.Forms.Button();
-            this.lblCarrito = new System.Windows.Forms.Label();
-            this.panelContenedor = new System.Windows.Forms.Panel();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnCancelarOrden = new System.Windows.Forms.Button();
+            this.lblCarrito = new System.Windows.Forms.Label();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelBusqueda.SuspendLayout();
             this.panelCarrito.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).BeginInit();
@@ -158,7 +158,7 @@
             // panelCarrito
             // 
             this.panelCarrito.Controls.Add(this.btnBuscarCod);
-            this.panelCarrito.Controls.Add(this.textBox1);
+            this.panelCarrito.Controls.Add(this.txtBuscarCod);
             this.panelCarrito.Controls.Add(this.label3);
             this.panelCarrito.Controls.Add(this.btnPagar);
             this.panelCarrito.Controls.Add(this.lblTotal);
@@ -185,14 +185,15 @@
             this.btnBuscarCod.Text = "Buscar";
             this.btnBuscarCod.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBuscarCod.UseVisualStyleBackColor = false;
+            this.btnBuscarCod.Click += new System.EventHandler(this.btnBuscarCod_Click);
             // 
-            // textBox1
+            // txtBuscarCod
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(664, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 23);
-            this.textBox1.TabIndex = 25;
+            this.txtBuscarCod.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarCod.Location = new System.Drawing.Point(664, 86);
+            this.txtBuscarCod.Name = "txtBuscarCod";
+            this.txtBuscarCod.Size = new System.Drawing.Size(144, 23);
+            this.txtBuscarCod.TabIndex = 25;
             // 
             // label3
             // 
@@ -285,41 +286,6 @@
             this.dgvCarrito.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCarrito_CellContentClick);
             this.dgvCarrito.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvCarrito_CellPainting);
             // 
-            // btnCancelarOrden
-            // 
-            this.btnCancelarOrden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(44)))), ((int)(((byte)(60)))));
-            this.btnCancelarOrden.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarOrden.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarOrden.Location = new System.Drawing.Point(864, 10);
-            this.btnCancelarOrden.Name = "btnCancelarOrden";
-            this.btnCancelarOrden.Size = new System.Drawing.Size(131, 31);
-            this.btnCancelarOrden.TabIndex = 9;
-            this.btnCancelarOrden.Text = "Cancelar Orden";
-            this.btnCancelarOrden.UseVisualStyleBackColor = false;
-            this.btnCancelarOrden.Visible = false;
-            this.btnCancelarOrden.Click += new System.EventHandler(this.btnCancelarOrden_Click);
-            // 
-            // lblCarrito
-            // 
-            this.lblCarrito.AutoSize = true;
-            this.lblCarrito.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarrito.ForeColor = System.Drawing.Color.White;
-            this.lblCarrito.Location = new System.Drawing.Point(12, 10);
-            this.lblCarrito.Name = "lblCarrito";
-            this.lblCarrito.Size = new System.Drawing.Size(118, 30);
-            this.lblCarrito.TabIndex = 12;
-            this.lblCarrito.Text = "CARRITO";
-            this.lblCarrito.Visible = false;
-            // 
-            // panelContenedor
-            // 
-            this.panelContenedor.AutoScroll = true;
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelContenedor.Location = new System.Drawing.Point(0, 70);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1000, 610);
-            this.panelContenedor.TabIndex = 2;
-            // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -372,6 +338,41 @@
             this.Column6.ReadOnly = true;
             this.Column6.Text = "  ";
             // 
+            // btnCancelarOrden
+            // 
+            this.btnCancelarOrden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(44)))), ((int)(((byte)(60)))));
+            this.btnCancelarOrden.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarOrden.ForeColor = System.Drawing.Color.White;
+            this.btnCancelarOrden.Location = new System.Drawing.Point(864, 10);
+            this.btnCancelarOrden.Name = "btnCancelarOrden";
+            this.btnCancelarOrden.Size = new System.Drawing.Size(131, 31);
+            this.btnCancelarOrden.TabIndex = 9;
+            this.btnCancelarOrden.Text = "Cancelar Orden";
+            this.btnCancelarOrden.UseVisualStyleBackColor = false;
+            this.btnCancelarOrden.Visible = false;
+            this.btnCancelarOrden.Click += new System.EventHandler(this.btnCancelarOrden_Click);
+            // 
+            // lblCarrito
+            // 
+            this.lblCarrito.AutoSize = true;
+            this.lblCarrito.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarrito.ForeColor = System.Drawing.Color.White;
+            this.lblCarrito.Location = new System.Drawing.Point(12, 10);
+            this.lblCarrito.Name = "lblCarrito";
+            this.lblCarrito.Size = new System.Drawing.Size(118, 30);
+            this.lblCarrito.TabIndex = 12;
+            this.lblCarrito.Text = "CARRITO";
+            this.lblCarrito.Visible = false;
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.AutoScroll = true;
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelContenedor.Location = new System.Drawing.Point(0, 70);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1000, 610);
+            this.panelContenedor.TabIndex = 2;
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -412,7 +413,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnCancelarOrden;
         private System.Windows.Forms.Button btnBuscarCod;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscarCod;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnPagar;
         private System.Windows.Forms.Label lblTotal;

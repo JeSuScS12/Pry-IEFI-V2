@@ -183,6 +183,8 @@ namespace Gestion.Forms_Modulos
             if(clsProducto.cant > 0)
             {
                 Agregar(clsProducto.nombre, clsProducto.cant,clsProducto.precio);
+                clsProducto.codigo = 0;
+                clsProducto.cant = 0;
             }
         }
 
@@ -233,10 +235,13 @@ namespace Gestion.Forms_Modulos
             // Verifica si la columna del clic es la de botones
             if (dgvCarrito.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-                // Aquí realizas la acción que quieres cuando se hace clic en el botón
-                MessageBox.Show($"Eliminando del Carrito");
-                dgvCarrito.Rows.RemoveAt(e.RowIndex);
-                ActualizarCarrito();
+                DialogResult resultado = MessageBox.Show("¿Quiere eliminar el producto?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    MessageBox.Show($"Eliminando del Carrito");
+                    dgvCarrito.Rows.RemoveAt(e.RowIndex);
+                    ActualizarCarrito();
+                }
             }
         }
 
@@ -247,6 +252,20 @@ namespace Gestion.Forms_Modulos
             frmVentasPagar frm = new frmVentasPagar();
             frm.ShowDialog();
             
+        }
+
+        private void btnBuscarCod_Click(object sender, EventArgs e)
+        {
+            int cod = Convert.ToInt32(txtBuscarCod.Text);
+            conectar.CodBarra(cod);
+
+            if(clsProducto.codigo == 0) MessageBox.Show("No existe el producto con ese codigo", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                frmVentas_Agregar frm = new frmVentas_Agregar();
+                frm.FormClosing += frm_close;
+                frm.ShowDialog();
+            }
         }
     }
 }
