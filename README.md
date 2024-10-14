@@ -1,21 +1,29 @@
-# Gestor de Ventas
+# Gestor de Ventas(Proximamente mas funciones)
 
 El proyecto esta enfocado a tener una gestion negocio(chico) mas eficiente
-con una intefaz que sea intuitiva para el usuario
+con una intefaz que sea intuitiva para el usuario.
 
 ## Tabla de Contenidos
 
-- [Uso](#uso)
 - [Actualizaciones](#actualizaciones)
 - [Próximas Modificaciones](#próximas-modificaciones)
 - [Autores](#autores)
 
-**Actualizaciones**(Formato de Actualizacion):
-   - Mantén un registro detallado de cada nueva **versión** con la fecha correspondiente.
-   - Usa íconos para diferenciar el tipo de cambios:
-     - ✅ Nuevas funcionalidades.
-     - 🛠️ Correcciones de errores.
-     - 🧹 Mejoras generales.
+**Actualizaciones**:
+   Modificaciones 13/10/24
+   - ✅Funcione de Carrito de Compras
+   - ✅Agregados Forms:
+     - Login
+     - Pago
+     - Agregar Cant(antes del carrito)
+   - 🛠️ Correcciones de errores.
+     - Ninguna
+   - 🧹 Mejoras generales.
+     - Ninguna
        
-**Próximas Modificaciones**:
-   - Enumera las funcionalidades o cambios planeados para futuras versiones, con números de versión tentativos. Esto ofrece una visión clara del progreso del proyecto.
+**Próximas Modificaciones 🕛**:
+   - Agregar BD de Usuarios
+   - Pagos si los clientes estan Registrados
+   - Matener el carrito si no se completo la orden
+   - Funcion de facturacion
+   - Funcion de recuperacion de usuario
