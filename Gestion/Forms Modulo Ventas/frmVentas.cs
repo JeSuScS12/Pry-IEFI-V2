@@ -1,4 +1,5 @@
 ﻿using Gestion.Clases;
+using Gestion.Forms_Modulo_Ventas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,6 @@ namespace Gestion.Forms_Modulos
 
         //Instanciar clases
         clsConexionVentas conectar = new clsConexionVentas();
-        clsCarrito carrito = new clsCarrito();
 
         private void frmVentas_Load(object sender, EventArgs e)
         {
@@ -238,6 +238,15 @@ namespace Gestion.Forms_Modulos
                 dgvCarrito.Rows.RemoveAt(e.RowIndex);
                 ActualizarCarrito();
             }
+        }
+
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            clsCarrito.carrito = clsCarrito.CargarDataSet(dgvCarrito);
+
+            frmVentasPagar frm = new frmVentasPagar();
+            frm.ShowDialog();
+            
         }
     }
 }

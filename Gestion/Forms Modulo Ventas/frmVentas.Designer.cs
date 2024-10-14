@@ -48,15 +48,15 @@
             this.btnPagar = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.dgvCarrito = new System.Windows.Forms.DataGridView();
+            this.btnCancelarOrden = new System.Windows.Forms.Button();
+            this.lblCarrito = new System.Windows.Forms.Label();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnCancelarOrden = new System.Windows.Forms.Button();
-            this.lblCarrito = new System.Windows.Forms.Label();
-            this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelBusqueda.SuspendLayout();
             this.panelCarrito.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).BeginInit();
@@ -221,6 +221,7 @@
             this.btnPagar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPagar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnPagar.UseVisualStyleBackColor = false;
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // lblTotal
             // 
@@ -284,6 +285,41 @@
             this.dgvCarrito.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCarrito_CellContentClick);
             this.dgvCarrito.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvCarrito_CellPainting);
             // 
+            // btnCancelarOrden
+            // 
+            this.btnCancelarOrden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(44)))), ((int)(((byte)(60)))));
+            this.btnCancelarOrden.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarOrden.ForeColor = System.Drawing.Color.White;
+            this.btnCancelarOrden.Location = new System.Drawing.Point(864, 10);
+            this.btnCancelarOrden.Name = "btnCancelarOrden";
+            this.btnCancelarOrden.Size = new System.Drawing.Size(131, 31);
+            this.btnCancelarOrden.TabIndex = 9;
+            this.btnCancelarOrden.Text = "Cancelar Orden";
+            this.btnCancelarOrden.UseVisualStyleBackColor = false;
+            this.btnCancelarOrden.Visible = false;
+            this.btnCancelarOrden.Click += new System.EventHandler(this.btnCancelarOrden_Click);
+            // 
+            // lblCarrito
+            // 
+            this.lblCarrito.AutoSize = true;
+            this.lblCarrito.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarrito.ForeColor = System.Drawing.Color.White;
+            this.lblCarrito.Location = new System.Drawing.Point(12, 10);
+            this.lblCarrito.Name = "lblCarrito";
+            this.lblCarrito.Size = new System.Drawing.Size(118, 30);
+            this.lblCarrito.TabIndex = 12;
+            this.lblCarrito.Text = "CARRITO";
+            this.lblCarrito.Visible = false;
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.AutoScroll = true;
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelContenedor.Location = new System.Drawing.Point(0, 70);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1000, 610);
+            this.panelContenedor.TabIndex = 2;
+            // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -334,41 +370,7 @@
             this.Column6.HeaderText = "";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            // 
-            // btnCancelarOrden
-            // 
-            this.btnCancelarOrden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(44)))), ((int)(((byte)(60)))));
-            this.btnCancelarOrden.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarOrden.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarOrden.Location = new System.Drawing.Point(864, 10);
-            this.btnCancelarOrden.Name = "btnCancelarOrden";
-            this.btnCancelarOrden.Size = new System.Drawing.Size(131, 31);
-            this.btnCancelarOrden.TabIndex = 9;
-            this.btnCancelarOrden.Text = "Cancelar Orden";
-            this.btnCancelarOrden.UseVisualStyleBackColor = false;
-            this.btnCancelarOrden.Visible = false;
-            this.btnCancelarOrden.Click += new System.EventHandler(this.btnCancelarOrden_Click);
-            // 
-            // lblCarrito
-            // 
-            this.lblCarrito.AutoSize = true;
-            this.lblCarrito.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarrito.ForeColor = System.Drawing.Color.White;
-            this.lblCarrito.Location = new System.Drawing.Point(12, 10);
-            this.lblCarrito.Name = "lblCarrito";
-            this.lblCarrito.Size = new System.Drawing.Size(118, 30);
-            this.lblCarrito.TabIndex = 12;
-            this.lblCarrito.Text = "CARRITO";
-            this.lblCarrito.Visible = false;
-            // 
-            // panelContenedor
-            // 
-            this.panelContenedor.AutoScroll = true;
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelContenedor.Location = new System.Drawing.Point(0, 70);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1000, 610);
-            this.panelContenedor.TabIndex = 2;
+            this.Column6.Text = "  ";
             // 
             // frmVentas
             // 

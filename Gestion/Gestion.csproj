@@ -50,23 +50,29 @@
     <Compile Include="Clases\clsConexionUsuarios.cs" />
     <Compile Include="Clases\clsConexionVentas.cs" />
     <Compile Include="Clases\clsProducto.cs" />
-    <Compile Include="Forms Modulos\frmConfigNegocio.cs">
+    <Compile Include="frmConfigNegocio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Modulos\frmConfigNegocio.Designer.cs">
+    <Compile Include="frmConfigNegocio.Designer.cs">
       <DependentUpon>frmConfigNegocio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms Modulos\frmVentas-Agregar.cs">
+    <Compile Include="Forms Modulo Ventas\frmVentasAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Modulos\frmVentas-Agregar.Designer.cs">
-      <DependentUpon>frmVentas-Agregar.cs</DependentUpon>
+    <Compile Include="Forms Modulo Ventas\frmVentasAgregar.Designer.cs">
+      <DependentUpon>frmVentasAgregar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms Modulos\frmVentas.cs">
+    <Compile Include="Forms Modulo Ventas\frmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Modulos\frmVentas.Designer.cs">
+    <Compile Include="Forms Modulo Ventas\frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modulo Ventas\frmVentasPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modulo Ventas\frmVentasPagar.Designer.cs">
+      <DependentUpon>frmVentasPagar.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms Otros\frmPrimerRegistro.cs">
       <SubType>Form</SubType>
@@ -100,11 +106,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms Modulos\frmVentas-Agregar.resx">
-      <DependentUpon>frmVentas-Agregar.cs</DependentUpon>
+    <EmbeddedResource Include="Forms Modulo Ventas\frmVentasAgregar.resx">
+      <DependentUpon>frmVentasAgregar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Modulos\frmVentas.resx">
+    <EmbeddedResource Include="Forms Modulo Ventas\frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modulo Ventas\frmVentasPagar.resx">
+      <DependentUpon>frmVentasPagar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Otros\frmPrimerRegistro.resx">
       <DependentUpon>frmPrimerRegistro.cs</DependentUpon>

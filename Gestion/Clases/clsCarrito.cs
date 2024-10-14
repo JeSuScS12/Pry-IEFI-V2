@@ -8,34 +8,33 @@ using System.Windows.Forms;
 
 namespace Gestion.Clases
 {
-    internal  class clsCarrito
+    internal static class clsCarrito
     {
-        public  DataSet carrito { get; set; }
+        public static DataTable carrito { get; set; }
 
 
-        public  void CargarDataSet(DataGridView tabla)
+        public static DataTable CargarDataSet(DataGridView tabla)
         {
             DataTable dataTable = new DataTable();
 
-            foreach (DataGridViewColumn column in tabla.Columns)
+            foreach (DataGridViewColumn columna in tabla.Columns)
             {
-                dataTable.Columns.Add(column.Name, column.ValueType);
+                dataTable.Columns.Add(columna.HeaderText);
             }
 
-            // Agregar las filas del DataGridView al DataTable
-            foreach (DataGridViewRow row in tabla.Rows)
+            foreach (DataGridViewRow fila in tabla.Rows)
             {
-                if (!row.IsNewRow)
+                if (!fila.IsNewRow) // Evitar la fila nueva en blanco
                 {
-                    DataRow dataRow = dataTable.NewRow();
-                    foreach (DataGridViewCell cell in row.Cells)
+                    DataRow row = dataTable.NewRow();
+                    foreach (DataGridViewCell celda in fila.Cells)
                     {
-                        dataRow[cell.ColumnIndex] = cell.Value;
+                        row[celda.ColumnIndex] = celda.Value ?? DBNull.Value; // Manejar celdas nulas
                     }
-                    dataTable.Rows.Add(dataRow);
+                    dataTable.Rows.Add(row);
                 }
             }
-
+            return dataTable;
         }
     }
 }
