@@ -28,7 +28,7 @@ namespace Gestion.Forms_Modulos
 
             //AQUI
 
-
+            //Cambio
 
             //CARGA EL COMBO Y MUESTRA TODOS LOS PRODUCTOS AL CARGAR EL MODULO DE VENTAS
             
