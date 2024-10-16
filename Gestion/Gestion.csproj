@@ -50,6 +50,30 @@
     <Compile Include="Clases\clsConexionUsuarios.cs" />
     <Compile Include="Clases\clsConexionVentas.cs" />
     <Compile Include="Clases\clsProducto.cs" />
+    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmGeneral.Designer.cs">
+      <DependentUpon>frmGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmPanelGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmPanelGeneral.Designer.cs">
+      <DependentUpon>frmPanelGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConfigNegocio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,22 +98,22 @@
     <Compile Include="Forms Modulo Ventas\frmVentasPagar.Designer.cs">
       <DependentUpon>frmVentasPagar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms Otros\frmPrimerRegistro.cs">
+    <Compile Include="Forms InicioSesion\frmPrimerRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Otros\frmPrimerRegistro.Designer.cs">
+    <Compile Include="Forms InicioSesion\frmPrimerRegistro.Designer.cs">
       <DependentUpon>frmPrimerRegistro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms Otros\frmInicioSesion.cs">
+    <Compile Include="Forms InicioSesion\frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Otros\frmInicioSesion.Designer.cs">
+    <Compile Include="Forms InicioSesion\frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms Otros\frmRecuperarUsuario.cs">
+    <Compile Include="Forms InicioSesion\frmRecuperarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Otros\frmRecuperarUsuario.Designer.cs">
+    <Compile Include="Forms InicioSesion\frmRecuperarUsuario.Designer.cs">
       <DependentUpon>frmRecuperarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
@@ -106,6 +130,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms Clientes-Usuarios%28Empleados%29\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Clientes-Usuarios%28Empleados%29\frmPanelGeneral.resx">
+      <DependentUpon>frmPanelGeneral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms Modulo Ventas\frmVentasAgregar.resx">
       <DependentUpon>frmVentasAgregar.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,13 +145,13 @@
     <EmbeddedResource Include="Forms Modulo Ventas\frmVentasPagar.resx">
       <DependentUpon>frmVentasPagar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Otros\frmPrimerRegistro.resx">
+    <EmbeddedResource Include="Forms InicioSesion\frmPrimerRegistro.resx">
       <DependentUpon>frmPrimerRegistro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Otros\frmInicioSesion.resx">
+    <EmbeddedResource Include="Forms InicioSesion\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Otros\frmRecuperarUsuario.resx">
+    <EmbeddedResource Include="Forms InicioSesion\frmRecuperarUsuario.resx">
       <DependentUpon>frmRecuperarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
@@ -158,6 +188,9 @@
     <None Include="Resources\producto.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BD\DB.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="BD\Usuarios.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
