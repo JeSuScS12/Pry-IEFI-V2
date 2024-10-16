@@ -1,4 +1,5 @@
-﻿using Gestion.Forms_Modulos;
+﻿using Gestion.Forms_Clientes_Usuarios_Empleados_;
+using Gestion.Forms_Modulos;
 using Gestion.Forms_Otros;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace Gestion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInicioSesion());
+            Application.Run(new frmPrincipal());
         }
     }
 }
