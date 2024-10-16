@@ -1,6 +1,6 @@
 ﻿namespace Gestion.Forms_Clientes_Usuarios_Empleados_
 {
-    partial class frmPanelGeneral
+    partial class frmRegistros
     {
         /// <summary>
         /// Required designer variable.

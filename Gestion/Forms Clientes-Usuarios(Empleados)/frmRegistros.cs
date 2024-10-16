@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gestion.Forms_Clientes_Usuarios_Empleados_
 {
-    public partial class frmPanelGeneral : Form
+    public partial class frmRegistros : Form
     {
-        public frmPanelGeneral()
+        public frmRegistros()
         {
             InitializeComponent();
         }

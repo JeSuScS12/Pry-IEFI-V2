@@ -30,17 +30,17 @@
         {
             this.panelNav = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnUsersClientes = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelUsuario = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelNav.SuspendLayout();
             this.panelUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,7 +50,7 @@
             // 
             this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(52)))));
             this.panelNav.Controls.Add(this.button5);
-            this.panelNav.Controls.Add(this.button4);
+            this.panelNav.Controls.Add(this.btnUsersClientes);
             this.panelNav.Controls.Add(this.button3);
             this.panelNav.Controls.Add(this.button2);
             this.panelNav.Controls.Add(this.btnVentas);
@@ -60,7 +60,7 @@
             this.panelNav.Location = new System.Drawing.Point(0, 0);
             this.panelNav.Margin = new System.Windows.Forms.Padding(4);
             this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(250, 760);
+            this.panelNav.Size = new System.Drawing.Size(250, 749);
             this.panelNav.TabIndex = 0;
             // 
             // button5
@@ -77,19 +77,20 @@
             this.button5.Text = "Registro";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnUsersClientes
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
-            this.button4.Location = new System.Drawing.Point(0, 469);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(250, 54);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Clientes";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnUsersClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsersClientes.FlatAppearance.BorderSize = 0;
+            this.btnUsersClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsersClientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsersClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
+            this.btnUsersClientes.Location = new System.Drawing.Point(0, 469);
+            this.btnUsersClientes.Name = "btnUsersClientes";
+            this.btnUsersClientes.Size = new System.Drawing.Size(250, 54);
+            this.btnUsersClientes.TabIndex = 5;
+            this.btnUsersClientes.Text = "Clientes / Usuarios";
+            this.btnUsersClientes.UseVisualStyleBackColor = true;
+            this.btnUsersClientes.Click += new System.EventHandler(this.btnUsersClientes_Click);
             // 
             // button3
             // 
@@ -141,7 +142,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
-            this.button1.Location = new System.Drawing.Point(0, 706);
+            this.button1.Location = new System.Drawing.Point(0, 695);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 54);
             this.button1.TabIndex = 1;
@@ -158,6 +159,16 @@
             this.panelUsuario.Name = "panelUsuario";
             this.panelUsuario.Size = new System.Drawing.Size(250, 307);
             this.panelUsuario.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Gestion.Properties.Resources.FondoCircular;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 45);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 162);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -199,27 +210,17 @@
             // panelContenedor
             // 
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelContenedor.Location = new System.Drawing.Point(250, 45);
+            this.panelContenedor.Location = new System.Drawing.Point(250, 34);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1000, 715);
             this.panelContenedor.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Gestion.Properties.Resources.FondoCircular;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 45);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 162);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
-            this.ClientSize = new System.Drawing.Size(1250, 760);
+            this.ClientSize = new System.Drawing.Size(1250, 749);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCerrar);
@@ -248,7 +249,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Button btnVentas;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnUsersClientes;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
