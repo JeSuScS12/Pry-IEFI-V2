@@ -11,6 +11,7 @@ using System.Windows.Forms;
 //Usando esto para redondear bordes del form
 using System.Runtime.InteropServices;
 using Gestion.Forms_Modulos;
+using Gestion.Forms_Clientes_Usuarios_Empleados_;
 
 namespace Gestion
 {
@@ -58,6 +59,11 @@ namespace Gestion
         private void btnVentas_Click(object sender, EventArgs e)
         {
             AbrirFrm(new frmVentas());
+        }
+
+        private void btnRegistros_Click(object sender, EventArgs e)
+        {
+            AbrirFrm(new frmPanelRegistros());
         }
     }
 }

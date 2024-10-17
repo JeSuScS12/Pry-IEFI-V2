@@ -30,17 +30,17 @@
         {
             this.panelNav = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnRegistros = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelUsuario = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelNav.SuspendLayout();
             this.panelUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,7 +50,7 @@
             // 
             this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(52)))));
             this.panelNav.Controls.Add(this.button5);
-            this.panelNav.Controls.Add(this.button4);
+            this.panelNav.Controls.Add(this.btnRegistros);
             this.panelNav.Controls.Add(this.button3);
             this.panelNav.Controls.Add(this.button2);
             this.panelNav.Controls.Add(this.btnVentas);
@@ -77,19 +77,20 @@
             this.button5.Text = "Registro";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnRegistros
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
-            this.button4.Location = new System.Drawing.Point(0, 469);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(250, 54);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Clientes";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnRegistros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegistros.FlatAppearance.BorderSize = 0;
+            this.btnRegistros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
+            this.btnRegistros.Location = new System.Drawing.Point(0, 469);
+            this.btnRegistros.Name = "btnRegistros";
+            this.btnRegistros.Size = new System.Drawing.Size(250, 54);
+            this.btnRegistros.TabIndex = 5;
+            this.btnRegistros.Text = "Clientes / Usuarios";
+            this.btnRegistros.UseVisualStyleBackColor = true;
+            this.btnRegistros.Click += new System.EventHandler(this.btnRegistros_Click);
             // 
             // button3
             // 
@@ -159,6 +160,16 @@
             this.panelUsuario.Size = new System.Drawing.Size(250, 307);
             this.panelUsuario.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Gestion.Properties.Resources.FondoCircular;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 45);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 162);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -204,16 +215,6 @@
             this.panelContenedor.Size = new System.Drawing.Size(1000, 715);
             this.panelContenedor.TabIndex = 3;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Gestion.Properties.Resources.FondoCircular;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 45);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 162);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -248,7 +249,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Button btnVentas;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnRegistros;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;

@@ -58,5 +58,7 @@ namespace Gestion
                 dataGridView1.Rows.RemoveAt(e.RowIndex);
             }
         }
+
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Gestion.Forms_Clientes_Usuarios_Empleados_
 {
-    partial class frmPanelGeneral
+    partial class frmPanelRegistros
     {
         /// <summary>
         /// Required designer variable.
@@ -30,17 +30,17 @@
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnCliente = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCliente = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panelBotones.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelContenedor
             // 
-            this.panelContenedor.Location = new System.Drawing.Point(50, 131);
+            this.panelContenedor.Location = new System.Drawing.Point(50, 112);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(900, 572);
             this.panelContenedor.TabIndex = 0;
@@ -50,31 +50,38 @@
             this.panelBotones.Controls.Add(this.button2);
             this.panelBotones.Controls.Add(this.button1);
             this.panelBotones.Controls.Add(this.btnCliente);
-            this.panelBotones.Location = new System.Drawing.Point(50, 66);
+            this.panelBotones.Location = new System.Drawing.Point(50, 56);
             this.panelBotones.Name = "panelBotones";
             this.panelBotones.Size = new System.Drawing.Size(900, 50);
             this.panelBotones.TabIndex = 1;
             // 
-            // label1
+            // button2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(25, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(318, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Seleccione la accion que quiera realizar";
+            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
+            this.button2.Location = new System.Drawing.Point(300, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(300, 50);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Mostrar Todos";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // button1
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(359, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 55);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "* Solo el Adminstrador y Supervisor pueden registrar Usuarios";
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
+            this.button1.Location = new System.Drawing.Point(600, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(300, 50);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Usuarios";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnCliente
             // 
@@ -91,35 +98,28 @@
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
-            // button1
+            // label1
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
-            this.button1.Location = new System.Drawing.Point(600, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 50);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Usuarios";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(46, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(318, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Seleccione la accion que quiera realizar";
             // 
-            // button2
+            // label2
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
-            this.button2.Location = new System.Drawing.Point(300, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(300, 50);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Mostrar Todos";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(395, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(181, 37);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "* Solo el Adminstrador y Supervisor pueden registrar Usuarios";
             // 
-            // frmPanelGeneral
+            // frmPanelRegistros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -131,8 +131,8 @@
             this.Controls.Add(this.panelContenedor);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "frmPanelGeneral";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "frmPanelRegistros";
             this.Text = "frmPanelGeneral";
             this.Load += new System.EventHandler(this.frmPanelGeneral_Load);
             this.panelBotones.ResumeLayout(false);

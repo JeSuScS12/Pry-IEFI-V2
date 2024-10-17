@@ -50,6 +50,7 @@
     <Compile Include="Clases\clsConexionClientes.cs" />
     <Compile Include="Clases\clsConexionUsuarios.cs" />
     <Compile Include="Clases\clsConexionVentas.cs" />
+    <Compile Include="Clases\clsFirma.cs" />
     <Compile Include="Clases\clsProducto.cs" />
     <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmCliente.cs">
       <SubType>Form</SubType>
@@ -63,11 +64,17 @@
     <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmGeneral.Designer.cs">
       <DependentUpon>frmGeneral.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmPanelGeneral.cs">
+    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmGrabarFirma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmPanelGeneral.Designer.cs">
-      <DependentUpon>frmPanelGeneral.cs</DependentUpon>
+    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmGrabarFirma.Designer.cs">
+      <DependentUpon>frmGrabarFirma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmPanelRegistros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmPanelRegistros.Designer.cs">
+      <DependentUpon>frmPanelRegistros.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmUsuarios.cs">
       <SubType>Form</SubType>
@@ -134,8 +141,11 @@
     <EmbeddedResource Include="Forms Clientes-Usuarios%28Empleados%29\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Clientes-Usuarios%28Empleados%29\frmPanelGeneral.resx">
-      <DependentUpon>frmPanelGeneral.cs</DependentUpon>
+    <EmbeddedResource Include="Forms Clientes-Usuarios%28Empleados%29\frmGrabarFirma.resx">
+      <DependentUpon>frmGrabarFirma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Clientes-Usuarios%28Empleados%29\frmPanelRegistros.resx">
+      <DependentUpon>frmPanelRegistros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modulo Ventas\frmVentasAgregar.resx">
       <DependentUpon>frmVentasAgregar.cs</DependentUpon>

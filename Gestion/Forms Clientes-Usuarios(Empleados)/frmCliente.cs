@@ -21,17 +21,42 @@ namespace Gestion.Forms_Clientes_Usuarios_Empleados_
             picFirma.Image = firmaBitmap;
         }
 
+        //NOSE
         clsConexionClientes ObjClientes = new clsConexionClientes();
         private bool dibujando = false;
         private Point puntoAnterior;
         private Bitmap firmaBitmap;
         private bool firmaDibujada = false;
 
+
         private void frmCliente_Load(object sender, EventArgs e)
         {
-            ObjClientes.CargarNombres(cmbNombres);
+            ObjClientes.CargarEstados(cmbEstado);
+            ObjClientes.CargarClientes(dgvClientes);
+            grbCliente.Enabled = false;
+
+            //Agregado de Eventos OPT
+            optModificar.CheckedChanged += new EventHandler(optSeleccionado);
+            optRegistrar.CheckedChanged += new EventHandler(optSeleccionado);
+
+            //Tamaño de los campos del DGV
+            DiseñoTabla(dgvClientes);
         }
 
+
+        //Dimensiones del DGV Clientes
+        public void DiseñoTabla(DataGridView tabla)
+        {
+            tabla.Columns[0].Width = 40;
+            tabla.Columns[1].Width = 210;
+            tabla.Columns[2].Width = 125;
+            tabla.Columns[3].Width = 180;
+            tabla.Columns[4].Width = 135;
+            tabla.Columns[5].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+        }
+
+
+        //Funcion Capturar Firma ---------------------------------------------------------------------------
         private void picFirma_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -65,65 +90,152 @@ namespace Gestion.Forms_Clientes_Usuarios_Empleados_
         }
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text != "" && firmaDibujada)
+            frmGrabarFirma frm = new frmGrabarFirma();
+            frm.FormClosing += frm_close;
+            frm.ShowDialog();
+        }
+
+
+        private void frm_close(object sender, FormClosingEventArgs e)
+        {
+            CargarPicFirma(picFirma);
+        }
+
+        public void CargarPicFirma(PictureBox firma)
+        {
+            if (clsFirma.img != null)
             {
-                try
-                {
-                    // Guardar la firma en formato PNG o JPG
-                    //string filePath = "firma.png";
-                    //firmaBitmap.Save(filePath, System.Drawing.Imaging.ImageFormat.Png);
-                    //MessageBox.Show("Firma guardad como PNG");
-
-                    string nombre = txtNombre.Text;
-                    // Luego de guardar la imagen, se convierte a byte[] para guardarla en la base de datos
-                    byte[] imageBytes = FirmaVectorByte(firmaBitmap);
-
-                    ObjClientes.GuardarFirma(nombre, imageBytes);
-                    MessageBox.Show("Se ha guardado la firma y el nombre.");
-                    txtNombre.Text = "";
-
-                    firmaBitmap = new Bitmap(picFirma.Width, picFirma.Height);
-                    picFirma.Image = firmaBitmap;
-
-                    firmaDibujada = false;
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show(error.Message);
-                }
+                firma.Image = clsFirma.img;
+                firma.SizeMode = PictureBoxSizeMode.Zoom; // Ajustar la imagen 
             }
             else
             {
-                MessageBox.Show("Debe colocar nombre y dibujar una firma.");
-            }
-        }
-        public byte[] FirmaVectorByte(Image imageIn)
-        {
-            // Esta funcion convierte la imagen en un vector de bytes para poder guardarla en access
-            // Despues para traer esa imagen se lee desde access y se convierte a imagen
-            using (MemoryStream ms = new MemoryStream())
-            {
-                imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                return ms.ToArray();
+                MessageBox.Show("No se guardo una Firma.");
             }
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            // Luego de guardar la firma en la base de datos, se crea un nuevo Bitmap simulando limpiar el picturebox
-            firmaBitmap = new Bitmap(picFirma.Width, picFirma.Height);
-            picFirma.Image = firmaBitmap;
+        //Fin F. Capturar Firma ---------------------------------------------------------------------------
 
-            txtNombre.Text = "";
-            cmbNombres.Text = "";
+
+
+        //Funcio de Btn x OPT selecionado
+        private void optSeleccionado(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+
+            if (rb.Checked)
+            {
+                // Cambia  dependiendo del opt seleccionado
+                if (rb == optModificar)
+                {
+                    txtDNI.Enabled = false;
+                    grbCliente.Enabled = true;
+
+                    EliminarBoton(grbCliente, "btn");
+                    CrearBtnModificar("Modificar");
+                }
+                else if (rb == optRegistrar)
+                {
+                    txtDNI.Enabled = true;
+                    grbCliente.Enabled = true;
+
+                    txtDNI.Text = "";
+                    txtNombre.Text = "";
+                    txtCorreo.Text = "";
+                    txtTelefono.Text = "";
+                    cmbEstado.Text = "";
+
+                    EliminarBoton(grbCliente, "btn");
+                    CrearBtnRegistrar("Registrar");
+                }
+            }
         }
 
-        private void btnMostrar_Click(object sender, EventArgs e)
+        //Extra  Funciones de Botnes Personalizados
+
+        //REgistrar Clientes
+        private void CrearBtnRegistrar(string nombre)
         {
-            if (cmbNombres.Text != "")
+            Button btn = new Button();
+            btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
+            btn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btn.ForeColor = System.Drawing.Color.White;
+            btn.Location = new System.Drawing.Point(125, 186);
+            btn.Size = new System.Drawing.Size(218, 45);
+            btn.Text = nombre;
+            btn.Name = "btn";
+
+            //Crear eventos al btn
+            btn.Click += (s, e) =>
             {
-                string nombre = cmbNombres.Text;
-                ObjClientes.MostrarFirma(nombre, picFirma);
+                int estado = cmbEstado.SelectedIndex + 1;
+                ObjClientes.GuardarDatos(txtNombre.Text, txtDNI.Text, txtDireccion.Text, txtCorreo.Text, txtTelefono.Text, estado, picFirma);
+                ObjClientes.CargarClientes(dgvClientes);
+            };
+            grbCliente.Controls.Add(btn);
+        }
+        //Modificar CLientes
+        private void CrearBtnModificar(string nombre)
+        {
+            Button btn = new Button();
+            btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
+            btn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btn.ForeColor = System.Drawing.Color.White;
+            btn.Location = new System.Drawing.Point(125, 186);
+            btn.Size = new System.Drawing.Size(218, 45);
+            btn.Text = nombre;
+            btn.Name = "btn";
+
+            //Crear eventos al btn
+            btn.Click += (s, e) =>
+            {
+                int estado = cmbEstado.SelectedIndex + 1;
+                ObjClientes.ModificarDatos(txtNombre.Text, txtDNI.Text, txtDireccion.Text, txtCorreo.Text, txtTelefono.Text, estado, picFirma);
+                ObjClientes.CargarClientes(dgvClientes);
+            };
+            grbCliente.Controls.Add(btn);
+        }
+
+
+        //Funcion para borrar el boton creado por los opt
+        private void EliminarBoton(GroupBox caja, string nombre)
+        {
+            // Recorrer los controles del GroupBox
+            foreach (Control control in caja.Controls)
+            {
+                if (control is Button && control.Name == nombre)
+                {
+                    caja.Controls.Remove(control);
+                    break;
+                }
+            }
+        }
+
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            picFirma.Image = null;
+
+            if (dgvClientes.CurrentRow != null) // Verifica si hay una fila seleccionada
+            {
+                // Obtener la fila seleccionada actualmente
+                DataGridViewRow fila = dgvClientes.CurrentRow;
+
+                // Obtener los valores de las celdas de la fila seleccionada
+                int id = Convert.ToInt32(fila.Cells["ID"].Value);
+                string nombre = fila.Cells["Nombre"].Value.ToString();
+                string dni = fila.Cells["DNI"].Value.ToString();
+                string correo = fila.Cells["Correo"].Value.ToString();
+                string telef = fila.Cells["telefono"].Value.ToString();
+                string estado = fila.Cells["Estado"].Value.ToString();
+
+                // Mostrar los valores en cajas de texto
+                txtNombre.Text = nombre;
+                txtDNI.Text = dni;
+                txtCorreo.Text = correo;
+                txtTelefono.Text = telef;
+                cmbEstado.Text = estado;
+
+                ObjClientes.MostrarFirma(id, picFirma);
             }
         }
     }
