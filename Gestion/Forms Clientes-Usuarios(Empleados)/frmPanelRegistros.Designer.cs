@@ -30,11 +30,11 @@
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMostrarTodos = new System.Windows.Forms.Button();
+            this.btnMostrarUsuarios = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSeleccionar = new System.Windows.Forms.Label();
+            this.lblAclaracion = new System.Windows.Forms.Label();
             this.panelBotones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,41 +47,41 @@
             // 
             // panelBotones
             // 
-            this.panelBotones.Controls.Add(this.button2);
-            this.panelBotones.Controls.Add(this.button1);
+            this.panelBotones.Controls.Add(this.btnMostrarTodos);
+            this.panelBotones.Controls.Add(this.btnMostrarUsuarios);
             this.panelBotones.Controls.Add(this.btnCliente);
             this.panelBotones.Location = new System.Drawing.Point(50, 56);
             this.panelBotones.Name = "panelBotones";
             this.panelBotones.Size = new System.Drawing.Size(900, 50);
             this.panelBotones.TabIndex = 1;
             // 
-            // button2
+            // btnMostrarTodos
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
-            this.button2.Location = new System.Drawing.Point(300, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(300, 50);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Mostrar Todos";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMostrarTodos.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMostrarTodos.FlatAppearance.BorderSize = 0;
+            this.btnMostrarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarTodos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarTodos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
+            this.btnMostrarTodos.Location = new System.Drawing.Point(300, 0);
+            this.btnMostrarTodos.Name = "btnMostrarTodos";
+            this.btnMostrarTodos.Size = new System.Drawing.Size(300, 50);
+            this.btnMostrarTodos.TabIndex = 9;
+            this.btnMostrarTodos.Text = "Mostrar Todos";
+            this.btnMostrarTodos.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnMostrarUsuarios
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
-            this.button1.Location = new System.Drawing.Point(600, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 50);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Usuarios";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnMostrarUsuarios.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMostrarUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnMostrarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarUsuarios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
+            this.btnMostrarUsuarios.Location = new System.Drawing.Point(600, 0);
+            this.btnMostrarUsuarios.Name = "btnMostrarUsuarios";
+            this.btnMostrarUsuarios.Size = new System.Drawing.Size(300, 50);
+            this.btnMostrarUsuarios.TabIndex = 8;
+            this.btnMostrarUsuarios.Text = "Usuarios";
+            this.btnMostrarUsuarios.UseVisualStyleBackColor = true;
             // 
             // btnCliente
             // 
@@ -98,26 +98,26 @@
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
-            // label1
+            // lblSeleccionar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(46, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(318, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Seleccione la accion que quiera realizar";
+            this.lblSeleccionar.AutoSize = true;
+            this.lblSeleccionar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeleccionar.ForeColor = System.Drawing.Color.White;
+            this.lblSeleccionar.Location = new System.Drawing.Point(46, 25);
+            this.lblSeleccionar.Name = "lblSeleccionar";
+            this.lblSeleccionar.Size = new System.Drawing.Size(318, 21);
+            this.lblSeleccionar.TabIndex = 2;
+            this.lblSeleccionar.Text = "Seleccione la accion que quiera realizar";
             // 
-            // label2
+            // lblAclaracion
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(395, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 37);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "* Solo el Adminstrador y Supervisor pueden registrar Usuarios";
+            this.lblAclaracion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAclaracion.ForeColor = System.Drawing.Color.Gray;
+            this.lblAclaracion.Location = new System.Drawing.Point(395, 9);
+            this.lblAclaracion.Name = "lblAclaracion";
+            this.lblAclaracion.Size = new System.Drawing.Size(181, 37);
+            this.lblAclaracion.TabIndex = 3;
+            this.lblAclaracion.Text = "* Solo el Adminstrador y Supervisor pueden registrar Usuarios";
             // 
             // frmPanelRegistros
             // 
@@ -125,8 +125,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1000, 715);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAclaracion);
+            this.Controls.Add(this.lblSeleccionar);
             this.Controls.Add(this.panelBotones);
             this.Controls.Add(this.panelContenedor);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,10 +145,10 @@
 
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panelBotones;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblSeleccionar;
+        private System.Windows.Forms.Label lblAclaracion;
+        private System.Windows.Forms.Button btnMostrarTodos;
+        private System.Windows.Forms.Button btnMostrarUsuarios;
         private System.Windows.Forms.Button btnCliente;
     }
 }

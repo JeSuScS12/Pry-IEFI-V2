@@ -34,11 +34,11 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.cant = new System.Windows.Forms.NumericUpDown();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbCant = new System.Windows.Forms.NumericUpDown();
+            this.picImagen = new System.Windows.Forms.PictureBox();
             this.panelUp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cant)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbCant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProducto
@@ -112,33 +112,33 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // cant
+            // cmbCant
             // 
-            this.cant.Location = new System.Drawing.Point(245, 153);
-            this.cant.Minimum = new decimal(new int[] {
+            this.cmbCant.Location = new System.Drawing.Point(245, 153);
+            this.cmbCant.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.cant.Name = "cant";
-            this.cant.Size = new System.Drawing.Size(93, 20);
-            this.cant.TabIndex = 11;
-            this.cant.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cant.Value = new decimal(new int[] {
+            this.cmbCant.Name = "cmbCant";
+            this.cmbCant.Size = new System.Drawing.Size(93, 20);
+            this.cmbCant.TabIndex = 11;
+            this.cmbCant.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cmbCant.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // pictureBox1
+            // picImagen
             // 
-            this.pictureBox1.Image = global::Gestion.Properties.Resources.producto_Color;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 55);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 173);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.picImagen.Image = global::Gestion.Properties.Resources.producto_Color;
+            this.picImagen.Location = new System.Drawing.Point(14, 55);
+            this.picImagen.Name = "picImagen";
+            this.picImagen.Size = new System.Drawing.Size(153, 173);
+            this.picImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picImagen.TabIndex = 12;
+            this.picImagen.TabStop = false;
             // 
             // frmVentas_Agregar
             // 
@@ -148,8 +148,8 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.cant);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.cmbCant);
+            this.Controls.Add(this.picImagen);
             this.Controls.Add(this.panelUp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVentas_Agregar";
@@ -158,8 +158,8 @@
             this.Load += new System.EventHandler(this.frmVentas_Agregar_Load);
             this.panelUp.ResumeLayout(false);
             this.panelUp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cant)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbCant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,7 +172,7 @@
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.NumericUpDown cant;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.NumericUpDown cmbCant;
+        private System.Windows.Forms.PictureBox picImagen;
     }
 }

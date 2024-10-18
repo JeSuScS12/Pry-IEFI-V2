@@ -33,7 +33,7 @@ namespace Gestion.Forms_Modulos
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             
-            int cantidad = Convert.ToInt32(cant.Value);
+            int cantidad = Convert.ToInt32(cmbCant.Value);
             clsProducto.cant = cantidad;
             this.Close();
         }

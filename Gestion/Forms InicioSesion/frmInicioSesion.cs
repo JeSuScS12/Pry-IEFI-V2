@@ -95,5 +95,10 @@ namespace Gestion
             this.Show();
             txtUsuario.Focus();
         }
+
+        private void lblLogo_Click(object sender, EventArgs e)
+        {
+            // Despues de poner un logo, cambiar el nombre a lblNombre(Hacerle recordar a Valentin Fuzzi)
+        }
     }
 }
