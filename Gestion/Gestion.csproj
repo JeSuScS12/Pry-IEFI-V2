@@ -46,12 +46,68 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BDInventarioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDInventarioDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Clases\clsCarrito.cs" />
+    <Compile Include="Clases\clsCategoriasInv.cs" />
     <Compile Include="Clases\clsConexionClientes.cs" />
     <Compile Include="Clases\clsConexionUsuarios.cs" />
     <Compile Include="Clases\clsConexionVentas.cs" />
     <Compile Include="Clases\clsFirma.cs" />
+    <Compile Include="Clases\clsInventario.cs" />
     <Compile Include="Clases\clsProducto.cs" />
+    <Compile Include="Clases\clsProveedoresInv.cs" />
+    <Compile Include="Foms Modulo Inventario\frmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventario.Designer.cs">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventarioAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventarioAgregar.Designer.cs">
+      <DependentUpon>frmInventarioAgregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventarioBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventarioBusqueda.Designer.cs">
+      <DependentUpon>frmInventarioBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventarioEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventarioEliminar.Designer.cs">
+      <DependentUpon>frmInventarioEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventarioInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventarioInicio.Designer.cs">
+      <DependentUpon>frmInventarioInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventarioModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventarioModificar.Designer.cs">
+      <DependentUpon>frmInventarioModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventarioSolicitudStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventarioSolicitudStock.Designer.cs">
+      <DependentUpon>frmInventarioSolicitudStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventraioCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foms Modulo Inventario\frmInventraioCategorias.Designer.cs">
+      <DependentUpon>frmInventraioCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +194,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Foms Modulo Inventario\frmInventario.resx">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Foms Modulo Inventario\frmInventarioAgregar.resx">
+      <DependentUpon>frmInventarioAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Foms Modulo Inventario\frmInventarioBusqueda.resx">
+      <DependentUpon>frmInventarioBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Foms Modulo Inventario\frmInventarioEliminar.resx">
+      <DependentUpon>frmInventarioEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Foms Modulo Inventario\frmInventarioInicio.resx">
+      <DependentUpon>frmInventarioInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Foms Modulo Inventario\frmInventarioModificar.resx">
+      <DependentUpon>frmInventarioModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Foms Modulo Inventario\frmInventarioSolicitudStock.resx">
+      <DependentUpon>frmInventarioSolicitudStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Foms Modulo Inventario\frmInventraioCategorias.resx">
+      <DependentUpon>frmInventraioCategorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms Clientes-Usuarios%28Empleados%29\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +256,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="BDInventarioDataSet.xsc">
+      <DependentUpon>BDInventarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDInventarioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDInventarioDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDInventarioDataSet.xss">
+      <DependentUpon>BDInventarioDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -199,6 +290,9 @@
     <None Include="Resources\producto.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BDInventario.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="BD\DB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

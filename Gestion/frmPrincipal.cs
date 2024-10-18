@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Gestion.Forms_Modulos;
 using Gestion.Forms_Clientes_Usuarios_Empleados_;
+using Gestion.Foms_Modulo_Inventario;
 
 namespace Gestion
 {
@@ -64,6 +65,11 @@ namespace Gestion
         private void btnRegistros_Click(object sender, EventArgs e)
         {
             AbrirFrm(new frmPanelRegistros());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AbrirFrm(new frmInventario());
         }
     }
 }
