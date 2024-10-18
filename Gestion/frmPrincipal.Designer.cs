@@ -32,7 +32,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.btnRegistros = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnInventario = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelUsuario = new System.Windows.Forms.Panel();
@@ -52,7 +52,7 @@
             this.panelNav.Controls.Add(this.button5);
             this.panelNav.Controls.Add(this.btnRegistros);
             this.panelNav.Controls.Add(this.button3);
-            this.panelNav.Controls.Add(this.button2);
+            this.panelNav.Controls.Add(this.btnInventario);
             this.panelNav.Controls.Add(this.btnVentas);
             this.panelNav.Controls.Add(this.button1);
             this.panelNav.Controls.Add(this.panelUsuario);
@@ -106,19 +106,20 @@
             this.button3.Text = "Proveedores";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnInventario
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
-            this.button2.Location = new System.Drawing.Point(0, 361);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 54);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Inventario";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnInventario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInventario.FlatAppearance.BorderSize = 0;
+            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
+            this.btnInventario.Location = new System.Drawing.Point(0, 361);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(250, 54);
+            this.btnInventario.TabIndex = 3;
+            this.btnInventario.Text = "Inventario";
+            this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnVentas
             // 
@@ -251,7 +252,7 @@
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnRegistros;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
