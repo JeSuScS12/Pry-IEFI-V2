@@ -67,7 +67,7 @@
             this.btnEliminarSolicitud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
             this.btnEliminarSolicitud.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarSolicitud.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarSolicitud.Location = new System.Drawing.Point(20, 469);
+            this.btnEliminarSolicitud.Location = new System.Drawing.Point(20, 450);
             this.btnEliminarSolicitud.Name = "btnEliminarSolicitud";
             this.btnEliminarSolicitud.Size = new System.Drawing.Size(173, 69);
             this.btnEliminarSolicitud.TabIndex = 15;
@@ -79,7 +79,7 @@
             this.btnSolicitud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
             this.btnSolicitud.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSolicitud.ForeColor = System.Drawing.Color.White;
-            this.btnSolicitud.Location = new System.Drawing.Point(199, 469);
+            this.btnSolicitud.Location = new System.Drawing.Point(199, 450);
             this.btnSolicitud.Name = "btnSolicitud";
             this.btnSolicitud.Size = new System.Drawing.Size(173, 69);
             this.btnSolicitud.TabIndex = 15;
@@ -91,7 +91,7 @@
             this.lblSolicitud.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSolicitud.ForeColor = System.Drawing.Color.White;
             this.lblSolicitud.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblSolicitud.Location = new System.Drawing.Point(587, 4);
+            this.lblSolicitud.Location = new System.Drawing.Point(528, 4);
             this.lblSolicitud.Name = "lblSolicitud";
             this.lblSolicitud.Size = new System.Drawing.Size(269, 34);
             this.lblSolicitud.TabIndex = 10;
@@ -110,7 +110,7 @@
             this.dgvProductos.Enabled = false;
             this.dgvProductos.Location = new System.Drawing.Point(419, 41);
             this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.Size = new System.Drawing.Size(581, 650);
+            this.dgvProductos.Size = new System.Drawing.Size(569, 638);
             this.dgvProductos.TabIndex = 5;
             // 
             // gpbAgregar
@@ -129,17 +129,18 @@
             this.gpbAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
             this.gpbAgregar.Location = new System.Drawing.Point(21, 41);
             this.gpbAgregar.Name = "gpbAgregar";
-            this.gpbAgregar.Size = new System.Drawing.Size(309, 371);
+            this.gpbAgregar.Size = new System.Drawing.Size(375, 371);
             this.gpbAgregar.TabIndex = 4;
             this.gpbAgregar.TabStop = false;
             this.gpbAgregar.Text = "Carga de Datos";
+            this.gpbAgregar.Enter += new System.EventHandler(this.gpbAgregar_Enter);
             // 
             // cmbProveedores
             // 
             this.cmbProveedores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbProveedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProveedores.FormattingEnabled = true;
-            this.cmbProveedores.Location = new System.Drawing.Point(113, 172);
+            this.cmbProveedores.Location = new System.Drawing.Point(146, 173);
             this.cmbProveedores.Name = "cmbProveedores";
             this.cmbProveedores.Size = new System.Drawing.Size(121, 21);
             this.cmbProveedores.TabIndex = 15;
@@ -149,7 +150,7 @@
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(23, 291);
+            this.btnAgregar.Location = new System.Drawing.Point(84, 291);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(211, 54);
             this.btnAgregar.TabIndex = 14;
@@ -158,55 +159,55 @@
             // 
             // lblCantidad
             // 
-            this.lblCantidad.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblCantidad.ForeColor = System.Drawing.Color.White;
             this.lblCantidad.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblCantidad.Location = new System.Drawing.Point(20, 220);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(83, 34);
+            this.lblCantidad.Size = new System.Drawing.Size(106, 34);
             this.lblCantidad.TabIndex = 10;
             this.lblCantidad.Text = "Cantidad:";
             this.lblCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblProveedores
             // 
-            this.lblProveedores.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedores.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblProveedores.ForeColor = System.Drawing.Color.White;
             this.lblProveedores.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblProveedores.Location = new System.Drawing.Point(20, 163);
             this.lblProveedores.Name = "lblProveedores";
-            this.lblProveedores.Size = new System.Drawing.Size(83, 34);
+            this.lblProveedores.Size = new System.Drawing.Size(106, 34);
             this.lblProveedores.TabIndex = 9;
             this.lblProveedores.Text = "Proveedor:";
             this.lblProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbldescripcion
             // 
-            this.lbldescripcion.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lbldescripcion.ForeColor = System.Drawing.Color.White;
             this.lbldescripcion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbldescripcion.Location = new System.Drawing.Point(20, 97);
             this.lbldescripcion.Name = "lbldescripcion";
-            this.lbldescripcion.Size = new System.Drawing.Size(83, 34);
+            this.lbldescripcion.Size = new System.Drawing.Size(106, 34);
             this.lbldescripcion.TabIndex = 7;
             this.lbldescripcion.Text = "Descripción:";
             this.lbldescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblnombre
             // 
-            this.lblnombre.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombre.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblnombre.ForeColor = System.Drawing.Color.White;
             this.lblnombre.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblnombre.Location = new System.Drawing.Point(20, 44);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(83, 34);
+            this.lblnombre.Size = new System.Drawing.Size(106, 34);
             this.lblnombre.TabIndex = 6;
             this.lblnombre.Text = "Nombre:";
             this.lblnombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(113, 229);
+            this.txtStock.Location = new System.Drawing.Point(146, 230);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(121, 20);
             this.txtStock.TabIndex = 3;
@@ -214,14 +215,14 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(113, 106);
+            this.txtDescripcion.Location = new System.Drawing.Point(146, 107);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(190, 20);
             this.txtDescripcion.TabIndex = 2;
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(113, 53);
+            this.txtnombre.Location = new System.Drawing.Point(146, 54);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(121, 20);
             this.txtnombre.TabIndex = 1;

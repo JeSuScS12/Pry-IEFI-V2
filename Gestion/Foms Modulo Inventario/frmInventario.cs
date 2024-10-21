@@ -31,6 +31,7 @@ namespace Gestion.Foms_Modulo_Inventario
             this.panelInventario.Controls.Add(frm);
             this.panelInventario.Tag = frm;
             frm.Show();
+            mspOpciones.Height = 50;
         }
 
         private void proToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,6 +69,9 @@ namespace Gestion.Foms_Modulo_Inventario
             AbrirFrm(new frmInventarioSolicitudStock());
         }
 
-       
+        private void mspOpciones_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            
+        }
     }
 }

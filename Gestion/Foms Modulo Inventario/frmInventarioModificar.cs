@@ -53,5 +53,10 @@ namespace Gestion.Foms_Modulo_Inventario
             }
         }
         #endregion
+
+        private void gpbModificar_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

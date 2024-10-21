@@ -57,7 +57,7 @@
             this.panelEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEliminar.Location = new System.Drawing.Point(0, 0);
             this.panelEliminar.Name = "panelEliminar";
-            this.panelEliminar.Size = new System.Drawing.Size(1000, 691);
+            this.panelEliminar.Size = new System.Drawing.Size(1000, 668);
             this.panelEliminar.TabIndex = 8;
             // 
             // lblSeleccion
@@ -80,10 +80,10 @@
             this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Cursor = System.Windows.Forms.Cursors.No;
-            this.dgvProductos.Location = new System.Drawing.Point(419, 0);
+            this.dgvProductos.Location = new System.Drawing.Point(419, 9);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(581, 691);
+            this.dgvProductos.Size = new System.Drawing.Size(569, 650);
             this.dgvProductos.TabIndex = 4;
             // 
             // gpbEliminar
@@ -102,9 +102,9 @@
             this.gpbEliminar.Controls.Add(this.txtnombre);
             this.gpbEliminar.Cursor = System.Windows.Forms.Cursors.Default;
             this.gpbEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
-            this.gpbEliminar.Location = new System.Drawing.Point(44, 74);
+            this.gpbEliminar.Location = new System.Drawing.Point(12, 74);
             this.gpbEliminar.Name = "gpbEliminar";
-            this.gpbEliminar.Size = new System.Drawing.Size(325, 418);
+            this.gpbEliminar.Size = new System.Drawing.Size(396, 418);
             this.gpbEliminar.TabIndex = 3;
             this.gpbEliminar.TabStop = false;
             this.gpbEliminar.Text = "Eliminar Datos";
@@ -114,7 +114,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEliminar.Location = new System.Drawing.Point(23, 336);
+            this.btnEliminar.Location = new System.Drawing.Point(81, 336);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(211, 54);
             this.btnEliminar.TabIndex = 14;
@@ -123,60 +123,60 @@
             // 
             // lblstock
             // 
-            this.lblstock.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblstock.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblstock.ForeColor = System.Drawing.Color.White;
             this.lblstock.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblstock.Location = new System.Drawing.Point(20, 258);
             this.lblstock.Name = "lblstock";
-            this.lblstock.Size = new System.Drawing.Size(83, 34);
+            this.lblstock.Size = new System.Drawing.Size(113, 34);
             this.lblstock.TabIndex = 10;
             this.lblstock.Text = "Stock:";
             this.lblstock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblprecio
             // 
-            this.lblprecio.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprecio.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblprecio.ForeColor = System.Drawing.Color.White;
             this.lblprecio.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblprecio.Location = new System.Drawing.Point(20, 201);
             this.lblprecio.Name = "lblprecio";
-            this.lblprecio.Size = new System.Drawing.Size(83, 34);
+            this.lblprecio.Size = new System.Drawing.Size(113, 34);
             this.lblprecio.TabIndex = 9;
             this.lblprecio.Text = "Precio:";
             this.lblprecio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblcategoria
             // 
-            this.lblcategoria.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcategoria.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblcategoria.ForeColor = System.Drawing.Color.White;
             this.lblcategoria.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblcategoria.Location = new System.Drawing.Point(20, 153);
             this.lblcategoria.Name = "lblcategoria";
-            this.lblcategoria.Size = new System.Drawing.Size(83, 34);
+            this.lblcategoria.Size = new System.Drawing.Size(113, 34);
             this.lblcategoria.TabIndex = 8;
             this.lblcategoria.Text = "Categoria:";
             this.lblcategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbldescripcion
             // 
-            this.lbldescripcion.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lbldescripcion.ForeColor = System.Drawing.Color.White;
             this.lbldescripcion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbldescripcion.Location = new System.Drawing.Point(20, 97);
             this.lbldescripcion.Name = "lbldescripcion";
-            this.lbldescripcion.Size = new System.Drawing.Size(83, 34);
+            this.lbldescripcion.Size = new System.Drawing.Size(113, 34);
             this.lbldescripcion.TabIndex = 7;
             this.lbldescripcion.Text = "Descripción:";
             this.lbldescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblnombre
             // 
-            this.lblnombre.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombre.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblnombre.ForeColor = System.Drawing.Color.White;
             this.lblnombre.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblnombre.Location = new System.Drawing.Point(20, 44);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(83, 34);
+            this.lblnombre.Size = new System.Drawing.Size(113, 34);
             this.lblnombre.TabIndex = 6;
             this.lblnombre.Text = "Nombre:";
             this.lblnombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -187,7 +187,7 @@
             this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.Enabled = false;
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(113, 162);
+            this.cmbCategoria.Location = new System.Drawing.Point(139, 162);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
             this.cmbCategoria.TabIndex = 5;
@@ -195,7 +195,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Enabled = false;
-            this.txtPrecio.Location = new System.Drawing.Point(113, 210);
+            this.txtPrecio.Location = new System.Drawing.Point(139, 210);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(121, 20);
             this.txtPrecio.TabIndex = 4;
@@ -205,7 +205,7 @@
             // txtStock
             // 
             this.txtStock.Enabled = false;
-            this.txtStock.Location = new System.Drawing.Point(113, 267);
+            this.txtStock.Location = new System.Drawing.Point(139, 267);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(121, 20);
             this.txtStock.TabIndex = 3;
@@ -214,7 +214,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Enabled = false;
-            this.txtDescripcion.Location = new System.Drawing.Point(113, 106);
+            this.txtDescripcion.Location = new System.Drawing.Point(139, 106);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(190, 20);
             this.txtDescripcion.TabIndex = 2;
@@ -222,7 +222,7 @@
             // txtnombre
             // 
             this.txtnombre.Enabled = false;
-            this.txtnombre.Location = new System.Drawing.Point(113, 53);
+            this.txtnombre.Location = new System.Drawing.Point(139, 53);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(121, 20);
             this.txtnombre.TabIndex = 1;
@@ -231,7 +231,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 691);
+            this.ClientSize = new System.Drawing.Size(1000, 668);
             this.Controls.Add(this.panelEliminar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInventarioEliminar";

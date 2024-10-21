@@ -39,13 +39,16 @@
             this.busquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.solicitudDeStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelInventario = new System.Windows.Forms.Panel();
             this.mspOpciones.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mspOpciones
             // 
             this.mspOpciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(52)))));
+            this.mspOpciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mspOpciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.proToolStripMenuItem,
             this.productosToolStripMenuItem,
@@ -54,15 +57,16 @@
             this.solicitudDeStockToolStripMenuItem});
             this.mspOpciones.Location = new System.Drawing.Point(0, 0);
             this.mspOpciones.Name = "mspOpciones";
-            this.mspOpciones.Size = new System.Drawing.Size(1000, 24);
+            this.mspOpciones.Size = new System.Drawing.Size(1000, 47);
             this.mspOpciones.TabIndex = 0;
             this.mspOpciones.Text = "menuStrip1";
+            this.mspOpciones.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mspOpciones_ItemClicked);
             // 
             // proToolStripMenuItem
             // 
             this.proToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
             this.proToolStripMenuItem.Name = "proToolStripMenuItem";
-            this.proToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.proToolStripMenuItem.Size = new System.Drawing.Size(48, 43);
             this.proToolStripMenuItem.Text = "Inicio";
             this.proToolStripMenuItem.Click += new System.EventHandler(this.proToolStripMenuItem_Click);
             // 
@@ -75,7 +79,7 @@
             this.eliminarToolStripMenuItem});
             this.productosToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(73, 43);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // agregarToolStripMenuItem
@@ -109,7 +113,7 @@
             // 
             this.categoriasToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(75, 43);
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
@@ -117,7 +121,7 @@
             // 
             this.busquedaToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
             this.busquedaToolStripMenuItem.Name = "busquedaToolStripMenuItem";
-            this.busquedaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.busquedaToolStripMenuItem.Size = new System.Drawing.Size(71, 43);
             this.busquedaToolStripMenuItem.Text = "Busqueda";
             this.busquedaToolStripMenuItem.Click += new System.EventHandler(this.busquedaToolStripMenuItem_Click);
             // 
@@ -125,7 +129,7 @@
             // 
             this.solicitudDeStockToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
             this.solicitudDeStockToolStripMenuItem.Name = "solicitudDeStockToolStripMenuItem";
-            this.solicitudDeStockToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+            this.solicitudDeStockToolStripMenuItem.Size = new System.Drawing.Size(113, 43);
             this.solicitudDeStockToolStripMenuItem.Text = "Solicitud de Stock";
             this.solicitudDeStockToolStripMenuItem.Click += new System.EventHandler(this.solicitudDeStockToolStripMenuItem_Click);
             // 
@@ -134,14 +138,24 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
+            this.panel1.Controls.Add(this.mspOpciones);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1000, 47);
+            this.panel1.TabIndex = 3;
+            // 
             // panelInventario
             // 
             this.panelInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
             this.panelInventario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelInventario.Location = new System.Drawing.Point(0, 24);
+            this.panelInventario.Location = new System.Drawing.Point(0, 47);
             this.panelInventario.Name = "panelInventario";
-            this.panelInventario.Size = new System.Drawing.Size(1000, 691);
-            this.panelInventario.TabIndex = 2;
+            this.panelInventario.Size = new System.Drawing.Size(1000, 668);
+            this.panelInventario.TabIndex = 4;
             // 
             // frmInventario
             // 
@@ -149,15 +163,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 715);
             this.Controls.Add(this.panelInventario);
-            this.Controls.Add(this.mspOpciones);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.mspOpciones;
             this.Name = "frmInventario";
             this.Text = "frmInventario";
             this.mspOpciones.ResumeLayout(false);
             this.mspOpciones.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -173,6 +188,7 @@
         private System.Windows.Forms.ToolStripMenuItem busquedaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem solicitudDeStockToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelInventario;
     }
 }

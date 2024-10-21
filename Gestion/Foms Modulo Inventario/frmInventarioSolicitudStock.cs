@@ -46,5 +46,10 @@ namespace Gestion.Foms_Modulo_Inventario
             }
         }
         #endregion
+
+        private void gpbAgregar_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
