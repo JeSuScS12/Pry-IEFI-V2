@@ -16,5 +16,15 @@ namespace Gestion.Foms_Modulo_Inventario
         {
             InitializeComponent();
         }
+
+        private void lblCategoria2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblcategoria_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

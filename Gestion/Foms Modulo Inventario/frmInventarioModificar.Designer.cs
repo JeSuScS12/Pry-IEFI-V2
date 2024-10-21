@@ -80,10 +80,10 @@
             this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Cursor = System.Windows.Forms.Cursors.No;
-            this.dgvProductos.Location = new System.Drawing.Point(419, 0);
+            this.dgvProductos.Location = new System.Drawing.Point(419, 9);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(581, 691);
+            this.dgvProductos.Size = new System.Drawing.Size(569, 670);
             this.dgvProductos.TabIndex = 4;
             // 
             // gpbModificar
@@ -102,19 +102,20 @@
             this.gpbModificar.Controls.Add(this.txtnombre);
             this.gpbModificar.Cursor = System.Windows.Forms.Cursors.Default;
             this.gpbModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
-            this.gpbModificar.Location = new System.Drawing.Point(44, 74);
+            this.gpbModificar.Location = new System.Drawing.Point(12, 74);
             this.gpbModificar.Name = "gpbModificar";
-            this.gpbModificar.Size = new System.Drawing.Size(325, 418);
+            this.gpbModificar.Size = new System.Drawing.Size(401, 443);
             this.gpbModificar.TabIndex = 3;
             this.gpbModificar.TabStop = false;
             this.gpbModificar.Text = "Modificar Datos";
+            this.gpbModificar.Enter += new System.EventHandler(this.gpbModificar_Enter);
             // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
             this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnModificar.Location = new System.Drawing.Point(23, 336);
+            this.btnModificar.Location = new System.Drawing.Point(91, 367);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(211, 54);
             this.btnModificar.TabIndex = 14;
@@ -123,60 +124,60 @@
             // 
             // lblstock
             // 
-            this.lblstock.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblstock.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblstock.ForeColor = System.Drawing.Color.White;
             this.lblstock.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblstock.Location = new System.Drawing.Point(20, 258);
+            this.lblstock.Location = new System.Drawing.Point(20, 305);
             this.lblstock.Name = "lblstock";
-            this.lblstock.Size = new System.Drawing.Size(83, 34);
+            this.lblstock.Size = new System.Drawing.Size(127, 34);
             this.lblstock.TabIndex = 10;
             this.lblstock.Text = "Stock:";
             this.lblstock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblprecio
             // 
-            this.lblprecio.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprecio.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblprecio.ForeColor = System.Drawing.Color.White;
             this.lblprecio.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblprecio.Location = new System.Drawing.Point(20, 201);
+            this.lblprecio.Location = new System.Drawing.Point(20, 236);
             this.lblprecio.Name = "lblprecio";
-            this.lblprecio.Size = new System.Drawing.Size(83, 34);
+            this.lblprecio.Size = new System.Drawing.Size(127, 34);
             this.lblprecio.TabIndex = 9;
             this.lblprecio.Text = "Precio:";
             this.lblprecio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblcategoria
             // 
-            this.lblcategoria.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcategoria.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblcategoria.ForeColor = System.Drawing.Color.White;
             this.lblcategoria.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblcategoria.Location = new System.Drawing.Point(20, 153);
+            this.lblcategoria.Location = new System.Drawing.Point(20, 177);
             this.lblcategoria.Name = "lblcategoria";
-            this.lblcategoria.Size = new System.Drawing.Size(83, 34);
+            this.lblcategoria.Size = new System.Drawing.Size(127, 34);
             this.lblcategoria.TabIndex = 8;
             this.lblcategoria.Text = "Categoria:";
             this.lblcategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbldescripcion
             // 
-            this.lbldescripcion.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lbldescripcion.ForeColor = System.Drawing.Color.White;
             this.lbldescripcion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lbldescripcion.Location = new System.Drawing.Point(20, 97);
+            this.lbldescripcion.Location = new System.Drawing.Point(20, 108);
             this.lbldescripcion.Name = "lbldescripcion";
-            this.lbldescripcion.Size = new System.Drawing.Size(83, 34);
+            this.lbldescripcion.Size = new System.Drawing.Size(127, 34);
             this.lbldescripcion.TabIndex = 7;
             this.lbldescripcion.Text = "Descripción:";
             this.lbldescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblnombre
             // 
-            this.lblnombre.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombre.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblnombre.ForeColor = System.Drawing.Color.White;
             this.lblnombre.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblnombre.Location = new System.Drawing.Point(20, 44);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(83, 34);
+            this.lblnombre.Size = new System.Drawing.Size(127, 34);
             this.lblnombre.TabIndex = 6;
             this.lblnombre.Text = "Nombre:";
             this.lblnombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -186,14 +187,14 @@
             this.cmbCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(113, 162);
+            this.cmbCategoria.Location = new System.Drawing.Point(153, 187);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
             this.cmbCategoria.TabIndex = 5;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(113, 210);
+            this.txtPrecio.Location = new System.Drawing.Point(153, 246);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(121, 20);
             this.txtPrecio.TabIndex = 4;
@@ -202,7 +203,7 @@
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(113, 267);
+            this.txtStock.Location = new System.Drawing.Point(153, 315);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(121, 20);
             this.txtStock.TabIndex = 3;
@@ -210,14 +211,14 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(113, 106);
+            this.txtDescripcion.Location = new System.Drawing.Point(153, 118);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(190, 20);
             this.txtDescripcion.TabIndex = 2;
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(113, 53);
+            this.txtnombre.Location = new System.Drawing.Point(153, 54);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(121, 20);
             this.txtnombre.TabIndex = 1;

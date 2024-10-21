@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelInventario = new System.Windows.Forms.Panel();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.gpbBusqueda = new System.Windows.Forms.GroupBox();
             this.cmbStock = new System.Windows.Forms.ComboBox();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
@@ -40,7 +41,6 @@
             this.lblnombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.btnReporte = new System.Windows.Forms.Button();
             this.panelInventario.SuspendLayout();
             this.gpbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
@@ -55,8 +55,20 @@
             this.panelInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInventario.Location = new System.Drawing.Point(0, 0);
             this.panelInventario.Name = "panelInventario";
-            this.panelInventario.Size = new System.Drawing.Size(1000, 691);
+            this.panelInventario.Size = new System.Drawing.Size(1000, 668);
             this.panelInventario.TabIndex = 3;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
+            this.btnReporte.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnReporte.Location = new System.Drawing.Point(81, 453);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(232, 64);
+            this.btnReporte.TabIndex = 28;
+            this.btnReporte.Text = "Reporte de Stock";
+            this.btnReporte.UseVisualStyleBackColor = false;
             // 
             // gpbBusqueda
             // 
@@ -70,9 +82,9 @@
             this.gpbBusqueda.Controls.Add(this.lblnombre);
             this.gpbBusqueda.Controls.Add(this.label1);
             this.gpbBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
-            this.gpbBusqueda.Location = new System.Drawing.Point(41, 12);
+            this.gpbBusqueda.Location = new System.Drawing.Point(9, 12);
             this.gpbBusqueda.Name = "gpbBusqueda";
-            this.gpbBusqueda.Size = new System.Drawing.Size(325, 320);
+            this.gpbBusqueda.Size = new System.Drawing.Size(378, 435);
             this.gpbBusqueda.TabIndex = 27;
             this.gpbBusqueda.TabStop = false;
             this.gpbBusqueda.Text = "Buscar Productos";
@@ -82,7 +94,7 @@
             this.cmbStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbStock.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStock.FormattingEnabled = true;
-            this.cmbStock.Location = new System.Drawing.Point(187, 266);
+            this.cmbStock.Location = new System.Drawing.Point(219, 381);
             this.cmbStock.Name = "cmbStock";
             this.cmbStock.Size = new System.Drawing.Size(121, 21);
             this.cmbStock.TabIndex = 27;
@@ -92,7 +104,7 @@
             this.cmbCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(187, 157);
+            this.cmbCategoria.Location = new System.Drawing.Point(219, 192);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
             this.cmbCategoria.TabIndex = 26;
@@ -100,22 +112,22 @@
             // 
             // lblcategoria
             // 
-            this.lblcategoria.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcategoria.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblcategoria.ForeColor = System.Drawing.Color.White;
             this.lblcategoria.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblcategoria.Location = new System.Drawing.Point(7, 148);
+            this.lblcategoria.Location = new System.Drawing.Point(7, 183);
             this.lblcategoria.Name = "lblcategoria";
-            this.lblcategoria.Size = new System.Drawing.Size(180, 34);
+            this.lblcategoria.Size = new System.Drawing.Size(218, 34);
             this.lblcategoria.TabIndex = 18;
             this.lblcategoria.Text = "Busqueda por Categoria:";
             this.lblcategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbltitulo
             // 
-            this.lbltitulo.Font = new System.Drawing.Font("Modern No. 20", 11.25F);
+            this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lbltitulo.ForeColor = System.Drawing.Color.White;
             this.lbltitulo.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lbltitulo.Location = new System.Drawing.Point(6, 31);
+            this.lbltitulo.Location = new System.Drawing.Point(7, 29);
             this.lbltitulo.Name = "lbltitulo";
             this.lbltitulo.Size = new System.Drawing.Size(307, 51);
             this.lbltitulo.TabIndex = 15;
@@ -124,19 +136,19 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label2.Location = new System.Drawing.Point(7, 257);
+            this.label2.Location = new System.Drawing.Point(7, 372);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 34);
+            this.label2.Size = new System.Drawing.Size(189, 34);
             this.label2.TabIndex = 24;
             this.label2.Text = "Busqueda por Stock:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(187, 106);
+            this.txtNombre.Location = new System.Drawing.Point(219, 106);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(121, 20);
             this.txtNombre.TabIndex = 17;
@@ -144,7 +156,7 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(187, 208);
+            this.txtCodigo.Location = new System.Drawing.Point(219, 286);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(121, 20);
             this.txtCodigo.TabIndex = 22;
@@ -153,24 +165,24 @@
             // 
             // lblnombre
             // 
-            this.lblnombre.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombre.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblnombre.ForeColor = System.Drawing.Color.White;
             this.lblnombre.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblnombre.Location = new System.Drawing.Point(7, 97);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(158, 34);
+            this.lblnombre.Size = new System.Drawing.Size(189, 34);
             this.lblnombre.TabIndex = 19;
             this.lblnombre.Text = "Busqueda por Nombre:";
             this.lblnombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label1.Location = new System.Drawing.Point(7, 199);
+            this.label1.Location = new System.Drawing.Point(7, 277);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 34);
+            this.label1.Size = new System.Drawing.Size(206, 34);
             this.label1.TabIndex = 21;
             this.label1.Text = "Busqueda por Codigo:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,29 +196,17 @@
             this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Cursor = System.Windows.Forms.Cursors.No;
-            this.dgvProductos.Location = new System.Drawing.Point(419, 3);
+            this.dgvProductos.Location = new System.Drawing.Point(416, 12);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(581, 691);
+            this.dgvProductos.Size = new System.Drawing.Size(569, 644);
             this.dgvProductos.TabIndex = 5;
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
-            this.btnReporte.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporte.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnReporte.Location = new System.Drawing.Point(41, 399);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(232, 64);
-            this.btnReporte.TabIndex = 28;
-            this.btnReporte.Text = "Reporte de Stock";
-            this.btnReporte.UseVisualStyleBackColor = false;
             // 
             // frmInventarioBusqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 691);
+            this.ClientSize = new System.Drawing.Size(1000, 668);
             this.Controls.Add(this.panelInventario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInventarioBusqueda";

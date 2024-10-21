@@ -69,9 +69,9 @@
             this.groupBox2.Controls.Add(this.txtCategoriaModElim);
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
-            this.groupBox2.Location = new System.Drawing.Point(12, 262);
+            this.groupBox2.Location = new System.Drawing.Point(12, 303);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(450, 173);
+            this.groupBox2.Size = new System.Drawing.Size(450, 185);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modificar o Eliminar Categoria";
@@ -113,19 +113,20 @@
             // 
             // lblCategoria2
             // 
-            this.lblCategoria2.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria2.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblCategoria2.ForeColor = System.Drawing.Color.White;
             this.lblCategoria2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblCategoria2.Location = new System.Drawing.Point(95, 57);
+            this.lblCategoria2.Location = new System.Drawing.Point(103, 60);
             this.lblCategoria2.Name = "lblCategoria2";
-            this.lblCategoria2.Size = new System.Drawing.Size(83, 34);
+            this.lblCategoria2.Size = new System.Drawing.Size(102, 34);
             this.lblCategoria2.TabIndex = 8;
             this.lblCategoria2.Text = "Categoria:";
             this.lblCategoria2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCategoria2.Click += new System.EventHandler(this.lblCategoria2_Click);
             // 
             // txtCategoriaModElim
             // 
-            this.txtCategoriaModElim.Location = new System.Drawing.Point(188, 66);
+            this.txtCategoriaModElim.Location = new System.Drawing.Point(211, 70);
             this.txtCategoriaModElim.Name = "txtCategoriaModElim";
             this.txtCategoriaModElim.Size = new System.Drawing.Size(121, 20);
             this.txtCategoriaModElim.TabIndex = 1;
@@ -141,7 +142,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
             this.groupBox1.Location = new System.Drawing.Point(12, 51);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(450, 173);
+            this.groupBox1.Size = new System.Drawing.Size(450, 186);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nueva Categoria";
@@ -151,7 +152,7 @@
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(98, 113);
+            this.btnAgregar.Location = new System.Drawing.Point(121, 113);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(211, 54);
             this.btnAgregar.TabIndex = 15;
@@ -171,19 +172,20 @@
             // 
             // lblcategoria
             // 
-            this.lblcategoria.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcategoria.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblcategoria.ForeColor = System.Drawing.Color.White;
             this.lblcategoria.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblcategoria.Location = new System.Drawing.Point(95, 59);
+            this.lblcategoria.Location = new System.Drawing.Point(103, 57);
             this.lblcategoria.Name = "lblcategoria";
-            this.lblcategoria.Size = new System.Drawing.Size(83, 34);
+            this.lblcategoria.Size = new System.Drawing.Size(102, 34);
             this.lblcategoria.TabIndex = 8;
             this.lblcategoria.Text = "Categoria:";
             this.lblcategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblcategoria.Click += new System.EventHandler(this.lblcategoria_Click);
             // 
             // txtCategoriaAgregar
             // 
-            this.txtCategoriaAgregar.Location = new System.Drawing.Point(188, 68);
+            this.txtCategoriaAgregar.Location = new System.Drawing.Point(211, 67);
             this.txtCategoriaAgregar.Name = "txtCategoriaAgregar";
             this.txtCategoriaAgregar.Size = new System.Drawing.Size(121, 20);
             this.txtCategoriaAgregar.TabIndex = 1;
@@ -197,9 +199,9 @@
             this.dgvCategorias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategorias.Cursor = System.Windows.Forms.Cursors.No;
-            this.dgvCategorias.Location = new System.Drawing.Point(490, 0);
+            this.dgvCategorias.Location = new System.Drawing.Point(490, 12);
             this.dgvCategorias.Name = "dgvCategorias";
-            this.dgvCategorias.Size = new System.Drawing.Size(510, 691);
+            this.dgvCategorias.Size = new System.Drawing.Size(498, 667);
             this.dgvCategorias.TabIndex = 5;
             // 
             // frmInventraioCategorias
