@@ -13,6 +13,7 @@ using System.Runtime.InteropServices;
 using Gestion.Forms_Modulos;
 using Gestion.Forms_Clientes_Usuarios_Empleados_;
 using Gestion.Foms_Modulo_Inventario;
+using Gestion.Clases;
 
 namespace Gestion
 {
@@ -70,6 +71,11 @@ namespace Gestion
         private void button2_Click(object sender, EventArgs e)
         {
             AbrirFrm(new frmInventario());
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            lblUsuario.Text = clsUserGlobal.nombre;
         }
     }
 }

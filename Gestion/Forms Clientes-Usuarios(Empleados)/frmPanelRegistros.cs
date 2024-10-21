@@ -35,12 +35,17 @@ namespace Gestion.Forms_Clientes_Usuarios_Empleados_
 
         private void frmPanelGeneral_Load(object sender, EventArgs e)
         {
-            AbrirFrm(new frmCliente());
+            
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
+            AbrirFrm(new frmCliente());
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AbrirFrm(new frmUsuarios());
         }
     }
 }

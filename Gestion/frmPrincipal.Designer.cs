@@ -37,7 +37,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panelUsuario = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
@@ -153,7 +153,7 @@
             // panelUsuario
             // 
             this.panelUsuario.Controls.Add(this.pictureBox1);
-            this.panelUsuario.Controls.Add(this.label2);
+            this.panelUsuario.Controls.Add(this.lblUsuario);
             this.panelUsuario.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUsuario.Location = new System.Drawing.Point(0, 0);
             this.panelUsuario.Margin = new System.Windows.Forms.Padding(4);
@@ -171,16 +171,15 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lblUsuario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
-            this.label2.Location = new System.Drawing.Point(82, 224);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 24);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Usuario";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
+            this.lblUsuario.Location = new System.Drawing.Point(51, 224);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 24);
+            this.lblUsuario.TabIndex = 4;
             // 
             // btnCerrar
             // 
@@ -232,6 +231,7 @@
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.panelNav.ResumeLayout(false);
             this.panelUsuario.ResumeLayout(false);
             this.panelUsuario.PerformLayout();
@@ -255,7 +255,7 @@
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUsuario;
     }
 }
 

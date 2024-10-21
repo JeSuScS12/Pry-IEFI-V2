@@ -73,6 +73,7 @@ namespace Gestion
 
                     if (nuevo.ValidarUsuario(user, pass))
                     {
+                        nuevo.UserGlobal(user, pass);
                         frmPrincipal frm = new frmPrincipal();
 
                         frm.Show();
@@ -94,6 +95,15 @@ namespace Gestion
             txtContraseña.Text = "";
             this.Show();
             txtUsuario.Focus();
+        }
+
+        private void chkMostrar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkMostrar.Checked)
+            {
+                if (txtContraseña.PasswordChar == '●') txtContraseña.PasswordChar = '\0';
+            }
+            else txtContraseña.PasswordChar = '●';
         }
     }
 }

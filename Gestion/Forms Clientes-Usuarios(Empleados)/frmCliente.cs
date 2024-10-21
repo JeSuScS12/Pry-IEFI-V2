@@ -88,12 +88,6 @@ namespace Gestion.Forms_Clientes_Usuarios_Empleados_
                 dibujando = false;
             }
         }
-        private void btnGrabar_Click(object sender, EventArgs e)
-        {
-            frmGrabarFirma frm = new frmGrabarFirma();
-            frm.FormClosing += frm_close;
-            frm.ShowDialog();
-        }
 
 
         private void frm_close(object sender, FormClosingEventArgs e)
@@ -237,6 +231,15 @@ namespace Gestion.Forms_Clientes_Usuarios_Empleados_
 
                 ObjClientes.MostrarFirma(id, picFirma);
             }
+        }
+
+        //ERROR EN BTN ANTERIOR - REHECHO
+
+        private void btnGrabarFirma_Click(object sender, EventArgs e)
+        {
+            frmGrabarFirma frm = new frmGrabarFirma();
+            frm.FormClosing += frm_close;
+            frm.ShowDialog();
         }
     }
 }

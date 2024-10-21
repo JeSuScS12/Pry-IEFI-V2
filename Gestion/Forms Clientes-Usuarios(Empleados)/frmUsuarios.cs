@@ -16,5 +16,10 @@ namespace Gestion.Forms_Clientes_Usuarios_Empleados_
         {
             InitializeComponent();
         }
+
+        private void frmUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

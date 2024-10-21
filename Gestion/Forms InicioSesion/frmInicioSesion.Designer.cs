@@ -116,6 +116,7 @@
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(110, 324);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '●';
             this.txtContraseña.Size = new System.Drawing.Size(200, 26);
             this.txtContraseña.TabIndex = 8;
             // 
@@ -138,6 +139,7 @@
             this.chkMostrar.TabIndex = 9;
             this.chkMostrar.Text = "Mostrar";
             this.chkMostrar.UseVisualStyleBackColor = true;
+            this.chkMostrar.CheckedChanged += new System.EventHandler(this.chkMostrar_CheckedChanged);
             // 
             // label2
             // 
