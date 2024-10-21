@@ -45,12 +45,12 @@
             this.btnPagar = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.grbClientes = new System.Windows.Forms.GroupBox();
-            this.lblAviso2 = new System.Windows.Forms.Label();
+            this.lblSegundoAviso = new System.Windows.Forms.Label();
             this.grbFactura = new System.Windows.Forms.GroupBox();
             this.optEnviarCorreo = new System.Windows.Forms.RadioButton();
             this.optImprimir = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblAvisoUno = new System.Windows.Forms.Label();
+            this.lblPrimerAviso = new System.Windows.Forms.Label();
             this.lblDir = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblNom = new System.Windows.Forms.Label();
@@ -219,9 +219,9 @@
             // 
             // grbClientes
             // 
-            this.grbClientes.Controls.Add(this.lblAviso2);
+            this.grbClientes.Controls.Add(this.lblSegundoAviso);
             this.grbClientes.Controls.Add(this.grbFactura);
-            this.grbClientes.Controls.Add(this.lblAvisoUno);
+            this.grbClientes.Controls.Add(this.lblPrimerAviso);
             this.grbClientes.Controls.Add(this.lblDir);
             this.grbClientes.Controls.Add(this.textBox3);
             this.grbClientes.Controls.Add(this.lblNom);
@@ -239,16 +239,16 @@
             this.grbClientes.TabStop = false;
             this.grbClientes.Text = "CLIENTES";
             // 
-            // lblAviso2
+            // lblSegundoAviso
             // 
-            this.lblAviso2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAviso2.ForeColor = System.Drawing.Color.Gray;
-            this.lblAviso2.Location = new System.Drawing.Point(251, 170);
-            this.lblAviso2.Name = "lblAviso2";
-            this.lblAviso2.Size = new System.Drawing.Size(172, 45);
-            this.lblAviso2.TabIndex = 39;
-            this.lblAviso2.Text = "* Enviar al correo solo disponible para usuarios\r\n";
-            this.lblAviso2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSegundoAviso.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSegundoAviso.ForeColor = System.Drawing.Color.Gray;
+            this.lblSegundoAviso.Location = new System.Drawing.Point(251, 170);
+            this.lblSegundoAviso.Name = "lblSegundoAviso";
+            this.lblSegundoAviso.Size = new System.Drawing.Size(172, 45);
+            this.lblSegundoAviso.TabIndex = 39;
+            this.lblSegundoAviso.Text = "* Enviar al correo solo disponible para usuarios\r\n";
+            this.lblSegundoAviso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // grbFactura
             // 
@@ -295,16 +295,16 @@
             this.label6.Size = new System.Drawing.Size(0, 17);
             this.label6.TabIndex = 31;
             // 
-            // lblAvisoUno
+            // lblPrimerAviso
             // 
-            this.lblAvisoUno.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvisoUno.ForeColor = System.Drawing.Color.Gray;
-            this.lblAvisoUno.Location = new System.Drawing.Point(226, 19);
-            this.lblAvisoUno.Name = "lblAvisoUno";
-            this.lblAvisoUno.Size = new System.Drawing.Size(138, 53);
-            this.lblAvisoUno.TabIndex = 37;
-            this.lblAvisoUno.Text = "Si tiene usuario los campos se agregaran al colocar el DNI";
-            this.lblAvisoUno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPrimerAviso.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrimerAviso.ForeColor = System.Drawing.Color.Gray;
+            this.lblPrimerAviso.Location = new System.Drawing.Point(226, 19);
+            this.lblPrimerAviso.Name = "lblPrimerAviso";
+            this.lblPrimerAviso.Size = new System.Drawing.Size(138, 53);
+            this.lblPrimerAviso.TabIndex = 37;
+            this.lblPrimerAviso.Text = "Si tiene usuario los campos se agregaran al colocar el DNI";
+            this.lblPrimerAviso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDir
             // 
@@ -452,10 +452,10 @@
         private System.Windows.Forms.Label lblDNI;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.GroupBox grbFactura;
-        private System.Windows.Forms.Label lblAvisoUno;
+        private System.Windows.Forms.Label lblPrimerAviso;
         private System.Windows.Forms.RadioButton optEnviarCorreo;
         private System.Windows.Forms.RadioButton optImprimir;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblAviso2;
+        private System.Windows.Forms.Label lblSegundoAviso;
     }
 }
