@@ -60,6 +60,8 @@
     <Compile Include="Clases\clsInventario.cs" />
     <Compile Include="Clases\clsProducto.cs" />
     <Compile Include="Clases\clsProveedoresInv.cs" />
+    <Compile Include="Clases\clsRecuperarUser.cs" />
+    <Compile Include="Clases\clsUserGlobal.cs" />
     <Compile Include="Foms Modulo Inventario\frmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,12 +115,6 @@
     </Compile>
     <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmGeneral.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmGeneral.Designer.cs">
-      <DependentUpon>frmGeneral.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmGrabarFirma.cs">
       <SubType>Form</SubType>
@@ -226,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Clientes-Usuarios%28Empleados%29\frmPanelRegistros.resx">
       <DependentUpon>frmPanelRegistros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Clientes-Usuarios%28Empleados%29\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modulo Ventas\frmVentasAgregar.resx">
       <DependentUpon>frmVentasAgregar.cs</DependentUpon>

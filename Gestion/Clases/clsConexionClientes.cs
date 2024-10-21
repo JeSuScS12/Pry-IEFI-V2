@@ -99,7 +99,7 @@ namespace Gestion.Clases
             try
             {
                 conectar.Open();
-                string consulta = "select c.IdCliente as ID, c.Nombre, c.DNI, c.Correo, c.Telefono, e.Estado  from Cliente as c inner join Estado as e on c.IdEstado = e.IdEstado;";   
+                string consulta = "select c.IdCliente as ID, c.Nombre as Nombre, c.DNI, c.Correo, c.Telefono, e.Nombre as Estado from Cliente as c inner join Estado as e on c.IdEstado = e.IdEstado;";   
 
                 adaptador = new OleDbDataAdapter(consulta, conectar);
                 DataTable dataTable = new DataTable();
@@ -124,14 +124,14 @@ namespace Gestion.Clases
 
                 comando.Connection = conectar;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = "select Estado FROM Estado";
+                comando.CommandText = "select Nombre FROM Estado";
                 conectar.Open();
 
                 OleDbDataReader reader = comando.ExecuteReader();
                 cmbClientes.Items.Clear();
                 while (reader.Read())
                 {
-                    string cliente = reader["Estado"].ToString();
+                    string cliente = reader["Nombre"].ToString();
                     cmbClientes.Items.Add(cliente);
                 }
 

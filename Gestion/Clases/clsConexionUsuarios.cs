@@ -19,7 +19,7 @@ namespace Gestion.Clases
 
         public clsConexionUsuarios()
         {
-            cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=../../BD/Usuarios.accdb";
+            cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=../../BD/DB.accdb";
         }
 
         //Metodo de Cargar CMB
@@ -91,7 +91,7 @@ namespace Gestion.Clases
         //Validar Usuarios
         public bool ValidarUsuario(string user, string pass)
         {
-            string consulta = $"select count(*) from Cuentas where Usuario = '{user}' and Contraseña = '{pass}'";  //Query de Validacion (Mejorar metodo) 
+            string consulta = $"select count(*) from Usuarios where Usuario = '{user}' and Contraseña = '{pass}'";  //Query de Validacion (Mejorar metodo) 
             conectar = new OleDbConnection(cadena);
             comando = new OleDbCommand(consulta, conectar);
             try
@@ -101,6 +101,7 @@ namespace Gestion.Clases
                 if (count > 0)
                 {
                     SesionActual.Usuario = user;
+                    clsUserGlobal.user = user;
                     return true;
                 }
                 else
@@ -110,10 +111,39 @@ namespace Gestion.Clases
             }
             catch (Exception error)
             {
-                MessageBox.Show("Error" + error);
+                MessageBox.Show(error.Message);
                 return false;
             }
         }
+
+        public void UserGlobal(string user, string password)
+        {
+
+            string consulta = $"SELECT u.IdUsuario, u.[Usuario], u.[Contraseña], u.Nombre, u.DNI, u.Correo, e.Nombre AS Estado, c.Nombre AS Cargo\r\nFROM (Usuarios AS u\r\nINNER JOIN Cargos AS c ON c.IdCargo = u.IdCargo)\r\nINNER JOIN Estado AS e ON e.IdEstado = u.IdEstado\r\nWHERE u.[Usuario] = '{user}' AND u.[Contraseña] = '{password}';";
+            conectar = new OleDbConnection(cadena);
+            comando = new OleDbCommand(consulta, conectar);
+
+            try
+            {
+                conectar.Open();
+                OleDbDataReader lector = comando.ExecuteReader();
+                if (lector.Read())
+                {
+                    clsUserGlobal.id = lector.GetInt32(0);
+                    clsUserGlobal.user = lector.GetString(1);
+                    clsUserGlobal.contraseña = lector.GetString(2);
+                    clsUserGlobal.nombre = lector.GetString(3);
+                    clsUserGlobal.estado = lector.GetString(4);
+                    clsUserGlobal.cargo = lector.GetString(5);
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error" + error);
+            }
+
+        }
+
 
         //Guarda el usuario
         public static class SesionActual

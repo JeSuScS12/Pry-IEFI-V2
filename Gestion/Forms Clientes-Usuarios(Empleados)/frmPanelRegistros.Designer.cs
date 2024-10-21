@@ -30,7 +30,6 @@
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,27 +46,12 @@
             // 
             // panelBotones
             // 
-            this.panelBotones.Controls.Add(this.button2);
             this.panelBotones.Controls.Add(this.button1);
             this.panelBotones.Controls.Add(this.btnCliente);
             this.panelBotones.Location = new System.Drawing.Point(50, 56);
             this.panelBotones.Name = "panelBotones";
             this.panelBotones.Size = new System.Drawing.Size(900, 50);
             this.panelBotones.TabIndex = 1;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
-            this.button2.Location = new System.Drawing.Point(300, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(300, 50);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Mostrar Todos";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -76,12 +60,13 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
-            this.button1.Location = new System.Drawing.Point(600, 0);
+            this.button1.Location = new System.Drawing.Point(450, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 50);
+            this.button1.Size = new System.Drawing.Size(450, 50);
             this.button1.TabIndex = 8;
             this.button1.Text = "Usuarios";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCliente
             // 
@@ -92,7 +77,7 @@
             this.btnCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
             this.btnCliente.Location = new System.Drawing.Point(0, 0);
             this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(300, 50);
+            this.btnCliente.Size = new System.Drawing.Size(450, 50);
             this.btnCliente.TabIndex = 7;
             this.btnCliente.Text = "Clientes";
             this.btnCliente.UseVisualStyleBackColor = true;
@@ -147,7 +132,6 @@
         private System.Windows.Forms.Panel panelBotones;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCliente;
     }
