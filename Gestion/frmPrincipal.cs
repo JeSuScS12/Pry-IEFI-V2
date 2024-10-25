@@ -73,9 +73,13 @@ namespace Gestion
             AbrirFrm(new frmInventario());
         }
 
+        clsUsuarios user = new clsUsuarios();
+
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             lblUsuario.Text = clsUserGlobal.nombre;
+            user.MostrarAvatar(clsUserGlobal.id);
+            Avatar.Image = clsUserGlobal.foto;
         }
     }
 }

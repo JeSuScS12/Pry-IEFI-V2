@@ -19,6 +19,5 @@ namespace Gestion.Clases
         //Buscar como cargar imagen del usuario
         public static Image foto { get; set; }
 
-
     }
 }

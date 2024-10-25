@@ -62,6 +62,7 @@
     <Compile Include="Clases\clsProveedoresInv.cs" />
     <Compile Include="Clases\clsRecuperarUser.cs" />
     <Compile Include="Clases\clsUserGlobal.cs" />
+    <Compile Include="Clases\clsUsuarios.cs" />
     <Compile Include="Foms Modulo Inventario\frmInventario.cs">
       <SubType>Form</SubType>
     </Compile>

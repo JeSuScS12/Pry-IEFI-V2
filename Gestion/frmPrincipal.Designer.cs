@@ -36,14 +36,14 @@
             this.btnVentas = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelUsuario = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Avatar = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelNav.SuspendLayout();
             this.panelUsuario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelNav
@@ -152,7 +152,7 @@
             // 
             // panelUsuario
             // 
-            this.panelUsuario.Controls.Add(this.pictureBox1);
+            this.panelUsuario.Controls.Add(this.Avatar);
             this.panelUsuario.Controls.Add(this.lblUsuario);
             this.panelUsuario.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUsuario.Location = new System.Drawing.Point(0, 0);
@@ -161,15 +161,14 @@
             this.panelUsuario.Size = new System.Drawing.Size(250, 307);
             this.panelUsuario.TabIndex = 0;
             // 
-            // pictureBox1
+            // Avatar
             // 
-            this.pictureBox1.Image = global::Gestion.Properties.Resources.FondoCircular;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 45);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 162);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.Avatar.Location = new System.Drawing.Point(55, 45);
+            this.Avatar.Name = "Avatar";
+            this.Avatar.Size = new System.Drawing.Size(140, 162);
+            this.Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Avatar.TabIndex = 5;
+            this.Avatar.TabStop = false;
             // 
             // lblUsuario
             // 
@@ -235,7 +234,7 @@
             this.panelNav.ResumeLayout(false);
             this.panelUsuario.ResumeLayout(false);
             this.panelUsuario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,7 +253,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Avatar;
         private System.Windows.Forms.Label lblUsuario;
     }
 }
