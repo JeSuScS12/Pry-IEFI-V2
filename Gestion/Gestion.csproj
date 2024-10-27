@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +51,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BDInventarioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BDInventarioDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDInventarioDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Clases\clsCarrito.cs" />
     <Compile Include="Clases\clsCategoriasInv.cs" />
@@ -265,6 +271,17 @@
     </None>
     <None Include="BDInventarioDataSet.xss">
       <DependentUpon>BDInventarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDInventarioDataSet1.xsc">
+      <DependentUpon>BDInventarioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BDInventarioDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDInventarioDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDInventarioDataSet1.xss">
+      <DependentUpon>BDInventarioDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

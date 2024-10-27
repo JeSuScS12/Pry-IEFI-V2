@@ -41,6 +41,14 @@
             this.lblnombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelInventario.SuspendLayout();
             this.gpbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
@@ -49,14 +57,14 @@
             // panelInventario
             // 
             this.panelInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
+            this.panelInventario.Controls.Add(this.dgvProductos);
             this.panelInventario.Controls.Add(this.btnReporte);
             this.panelInventario.Controls.Add(this.gpbBusqueda);
-            this.panelInventario.Controls.Add(this.dgvProductos);
             this.panelInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInventario.Location = new System.Drawing.Point(0, 0);
             this.panelInventario.Name = "panelInventario";
             this.panelInventario.Size = new System.Drawing.Size(1000, 668);
-            this.panelInventario.TabIndex = 3;
+            this.panelInventario.TabIndex = 6;
             // 
             // btnReporte
             // 
@@ -108,7 +116,6 @@
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
             this.cmbCategoria.TabIndex = 26;
-            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
             // 
             // lblcategoria
             // 
@@ -152,7 +159,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(121, 20);
             this.txtNombre.TabIndex = 17;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
@@ -160,8 +166,6 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(121, 20);
             this.txtCodigo.TabIndex = 22;
-            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
-            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // lblnombre
             // 
@@ -195,12 +199,62 @@
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
             this.dgvProductos.Cursor = System.Windows.Forms.Cursors.No;
-            this.dgvProductos.Location = new System.Drawing.Point(416, 12);
+            this.dgvProductos.Location = new System.Drawing.Point(410, 12);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(569, 644);
-            this.dgvProductos.TabIndex = 5;
+            this.dgvProductos.Size = new System.Drawing.Size(569, 650);
+            this.dgvProductos.TabIndex = 29;
+            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "idProducto";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Descripcion";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Precio";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Stock";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Categoria";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Proveedor";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "FechaIngreso";
+            this.Column8.Name = "Column8";
             // 
             // frmInventarioBusqueda
             // 
@@ -211,6 +265,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInventarioBusqueda";
             this.Text = "frmInventarioBusqueda";
+            this.Load += new System.EventHandler(this.frmInventarioBusqueda_Load);
             this.panelInventario.ResumeLayout(false);
             this.gpbBusqueda.ResumeLayout(false);
             this.gpbBusqueda.PerformLayout();
@@ -222,6 +277,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelInventario;
+        private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.GroupBox gpbBusqueda;
         private System.Windows.Forms.ComboBox cmbStock;
         private System.Windows.Forms.ComboBox cmbCategoria;
@@ -233,6 +289,13 @@
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }

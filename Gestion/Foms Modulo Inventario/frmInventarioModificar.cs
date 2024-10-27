@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestion.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,8 +54,72 @@ namespace Gestion.Foms_Modulo_Inventario
             }
         }
         #endregion
-
+        clsInventario clsInventario = new clsInventario();
+        clsCategoriasInv clsCategoriasInv = new clsCategoriasInv();
+        clsProveedoresInv clsProveedoresInv = new clsProveedoresInv();
         private void gpbModificar_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmInventarioModificar_Load(object sender, EventArgs e)
+        {
+            clsInventario.ListarProductos(dgvProductos);
+            clsCategoriasInv.CargaCMB(cmbCategoria);
+            clsProveedoresInv.CargaCMB(cmbProveedor);
+        }
+        private void LimpiarComandos()
+        {
+            txtIdProd.Clear();
+            txtDescripcion.Clear();
+            txtnombre.Clear();
+            txtStock.Clear();
+            txtPrecio.Clear();
+            txtIdProd.Clear();
+            cmbCategoria.SelectedIndex = -1;
+            cmbProveedor.SelectedIndex = -1;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Int32 id = Convert.ToInt32(txtIdProd.Text);
+            string Nombre = txtnombre.Text;
+            string Descrip = txtDescripcion.Text;
+            decimal Precio = Convert.ToDecimal(txtPrecio.Text);
+            Int32 Stock = Convert.ToInt32(txtStock.Text);
+            Int32 Categoria = Convert.ToInt32(cmbCategoria.SelectedValue);
+            Int32 Proveedor = Convert.ToInt32(cmbProveedor.SelectedValue);
+            clsInventario.Nombre = Nombre;
+            clsInventario.Descripcion = Descrip;   
+            clsInventario.Stock = Stock;
+            clsInventario.Precio = Precio;
+            clsInventario.idCategoria = Categoria;
+            clsInventario.idProveedor = Proveedor;
+            clsInventario.idProducto = id;
+            clsInventario.ModificarProducto(id);
+            LimpiarComandos();
+            MessageBox.Show("Producto modificado con éxito");
+        }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Obtén la fila seleccionada
+                DataGridViewRow filaSeleccionada = dgvProductos.Rows[e.RowIndex];
+
+                // Llena los TextBox con los valores de la fila seleccionada
+                txtIdProd.Text = filaSeleccionada.Cells["Column1"].Value.ToString();
+                txtnombre.Text = filaSeleccionada.Cells["Column2"].Value.ToString();
+                txtDescripcion.Text = filaSeleccionada.Cells["Column3"].Value.ToString();
+                txtPrecio.Text = filaSeleccionada.Cells["Column4"].Value.ToString();
+                txtStock.Text = filaSeleccionada.Cells["Column5"].Value.ToString();
+                cmbCategoria.SelectedIndex = cmbCategoria.FindStringExact(filaSeleccionada.Cells["Column6"].Value.ToString());
+                cmbProveedor.SelectedIndex = cmbProveedor.FindStringExact(filaSeleccionada.Cells["Column7"].Value.ToString());
+            }
+        }
+
+        private void lblSeleccion_Click(object sender, EventArgs e)
         {
 
         }

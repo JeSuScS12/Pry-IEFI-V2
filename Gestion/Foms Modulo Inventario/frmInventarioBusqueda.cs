@@ -58,5 +58,15 @@ namespace Gestion.Foms_Modulo_Inventario
                 e.Handled = true;
             }
         }
+
+        private void frmInventarioBusqueda_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

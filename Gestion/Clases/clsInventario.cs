@@ -24,7 +24,7 @@ namespace Gestion.Clases
         string nom;
         Decimal pre;
         Int32 sto;
-        string cate;
+        Int32 cate;
         string des;
         DateTime fec;
         Int32 idP;
@@ -43,7 +43,7 @@ namespace Gestion.Clases
             get { return nom; }
             set { nom = value; }
         }
-        public string Categoria
+        public Int32 idCategoria
         {
             get { return cate; }
             set { cate = value; }
@@ -105,12 +105,12 @@ namespace Gestion.Clases
 
                 Fila["idProducto"] = idProducto;
                 Fila["Nombre"] = Nombre;
-                Fila["Precio"] = Precio;
-                Fila["Stock"] = Stock;
-                Fila["Categoria"] = Categoria;
                 Fila["Descripcion"] = Descripcion;
-                Fila["FechaIngreso"] = FechaIngreso;
+                Fila["Precio"] = Precio;
+                Fila["Stock"] = Stock;  
+                Fila["idCategoria"] = idCategoria;
                 Fila["idProveedor"] = idProveedor;
+                Fila["FechaIngreso"] = FechaIngreso;
 
                 tabla.Rows.Add(Fila);
 
@@ -149,7 +149,7 @@ namespace Gestion.Clases
                             Descripcion = Lector.GetString(2);
                             Precio = Lector.GetDecimal(3);
                             Stock = Lector.GetInt32(4);
-                            Categoria = Lector.GetString(5);
+                            idCategoria = Lector.GetInt32(5);
                             Descripcion = Lector.GetString(6);
                             FechaIngreso = Lector.GetDateTime(7);
                         }
@@ -191,39 +191,47 @@ namespace Gestion.Clases
                 {
                     conexionBD.Open();
 
-                    
+                    // Corrección de la consulta de actualización
                     string MProducto = "UPDATE Productos SET " +
                                        "Nombre = @Nombre, " +
+                                       "Descripcion = @Descripcion, " +
                                        "Precio = @Precio, " +
                                        "Stock = @Stock, " +
-                                       "Categoria = @Categoria, " +
-                                       "Descripcion = @Descripcion " +
-                                       "idProveedor = @idProveedor " +
-                                       "FechaIngreso = @FechaIngreso" +
+                                       "idCategoria = @idCategoria, " +
+                                       "idProveedor = @idProveedor, " +
+                                       "FechaIngreso = @FechaIngreso " + // Eliminada la coma antes del WHERE
                                        "WHERE idProducto = @idProducto";
 
                     using (OleDbCommand comandoBD = new OleDbCommand(MProducto, conexionBD))
                     {
-                      
+                        // Asignación de parámetros para evitar inyección de SQL
                         comandoBD.Parameters.AddWithValue("@Nombre", Nombre);
+                        comandoBD.Parameters.AddWithValue("@Descripcion", Descripcion);
                         comandoBD.Parameters.AddWithValue("@Precio", Precio);
                         comandoBD.Parameters.AddWithValue("@Stock", Stock);
-                        comandoBD.Parameters.AddWithValue("@Categoria", Categoria);
-                        comandoBD.Parameters.AddWithValue("@Descripcion", Descripcion);
+                        comandoBD.Parameters.AddWithValue("@idCategoria", idCategoria);
                         comandoBD.Parameters.AddWithValue("@idProveedor", idProveedor);
                         comandoBD.Parameters.AddWithValue("@FechaIngreso", FechaIngreso);
                         comandoBD.Parameters.AddWithValue("@idProducto", idproducto);
 
-                     
-                        comandoBD.ExecuteNonQuery();
+                        // Ejecuta la actualización
+                        int filasAfectadas = comandoBD.ExecuteNonQuery();
+
+                        // Verifica si se actualizó alguna fila
+                        if (filasAfectadas > 0)
+                        {
+                            MessageBox.Show("Producto actualizado correctamente.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontró el producto para actualizar.");
+                        }
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("el Producto no se pudo Modificar ");
-                //throw;
-
+                MessageBox.Show("Error al actualizar el producto: " + ex.Message);
             }
         }
         public void ListarProductos(DataGridView grilla)
@@ -238,21 +246,20 @@ namespace Gestion.Clases
             OleDbDataReader dr = comandoBD.ExecuteReader();
             grilla.Rows.Clear();
             
-            clsInventario clsProductos = new clsInventario();
-            clsCategoriasInv clsCategorias = new clsCategoriasInv();
-            clsProveedoresInv clsProveedores = new clsProveedoresInv();
             string DetalleCategoria = "";
             string DetalleProveedor = "";
+            clsCategoriasInv clsCategoriasInv = new clsCategoriasInv();
+            clsProveedoresInv clsProveedoresInv = new clsProveedoresInv();
             if (dr.HasRows)
             {
                 while (dr.Read())
                 {
-                    DetalleProveedor = clsProveedores.BuscarParaGrillaa(lectorBD.GetInt32(6));
-                    DetalleCategoria = clsCategorias.BuscarParaGrillaa(lectorBD.GetInt32(5));
-                    grilla.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[7]);
+                    DetalleCategoria = clsCategoriasInv.BuscarParaGrillaa(dr.GetInt32(5));
+                    DetalleProveedor = clsProveedoresInv.BuscarParaGrillaa(dr.GetInt32(6));
+                    grilla.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], DetalleCategoria, DetalleProveedor,  dr[7]);
                 }
             }
-            
+            conexionBD.Close();
         }
         public List<clsInventario> BuscarProductosPorNombre(string nombre)
         {
@@ -280,7 +287,7 @@ namespace Gestion.Clases
                             Descripcion = reader["Descipcion"].ToString(),
                             Precio = Convert.ToDecimal(reader["Precio"]),
                             Stock = Convert.ToInt32(reader["Correo"]),
-                            Categoria = Convert.ToString(reader["Categoria"]),
+                            idCategoria = Convert.ToInt32(reader["Categoria"]),
                             idProveedor = Convert.ToInt32(reader["idProveedor"]),
                             FechaIngreso = Convert.ToDateTime(reader["FechaIngreso"]),
                         };

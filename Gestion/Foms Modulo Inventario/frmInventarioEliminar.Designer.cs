@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             this.panelEliminar = new System.Windows.Forms.Panel();
-            this.lblSeleccion = new System.Windows.Forms.Label();
-            this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.gpbEliminar = new System.Windows.Forms.GroupBox();
+            this.gpbAgregar = new System.Windows.Forms.GroupBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtIdProd = new System.Windows.Forms.TextBox();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.cmbProveedor = new System.Windows.Forms.ComboBox();
+            this.lblProveedor = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblstock = new System.Windows.Forms.Label();
             this.lblprecio = new System.Windows.Forms.Label();
@@ -43,22 +47,240 @@
             this.txtStock = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
+            this.lblSeleccion = new System.Windows.Forms.Label();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelEliminar.SuspendLayout();
+            this.gpbAgregar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
-            this.gpbEliminar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelEliminar
             // 
             this.panelEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
+            this.panelEliminar.Controls.Add(this.gpbAgregar);
             this.panelEliminar.Controls.Add(this.lblSeleccion);
             this.panelEliminar.Controls.Add(this.dgvProductos);
-            this.panelEliminar.Controls.Add(this.gpbEliminar);
             this.panelEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEliminar.Location = new System.Drawing.Point(0, 0);
             this.panelEliminar.Name = "panelEliminar";
             this.panelEliminar.Size = new System.Drawing.Size(1000, 668);
-            this.panelEliminar.TabIndex = 8;
+            this.panelEliminar.TabIndex = 9;
+            // 
+            // gpbAgregar
+            // 
+            this.gpbAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gpbAgregar.Controls.Add(this.lblId);
+            this.gpbAgregar.Controls.Add(this.txtIdProd);
+            this.gpbAgregar.Controls.Add(this.dtpFecha);
+            this.gpbAgregar.Controls.Add(this.lblFecha);
+            this.gpbAgregar.Controls.Add(this.cmbProveedor);
+            this.gpbAgregar.Controls.Add(this.lblProveedor);
+            this.gpbAgregar.Controls.Add(this.btnEliminar);
+            this.gpbAgregar.Controls.Add(this.lblstock);
+            this.gpbAgregar.Controls.Add(this.lblprecio);
+            this.gpbAgregar.Controls.Add(this.lblcategoria);
+            this.gpbAgregar.Controls.Add(this.lbldescripcion);
+            this.gpbAgregar.Controls.Add(this.lblnombre);
+            this.gpbAgregar.Controls.Add(this.cmbCategoria);
+            this.gpbAgregar.Controls.Add(this.txtPrecio);
+            this.gpbAgregar.Controls.Add(this.txtStock);
+            this.gpbAgregar.Controls.Add(this.txtDescripcion);
+            this.gpbAgregar.Controls.Add(this.txtnombre);
+            this.gpbAgregar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.gpbAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
+            this.gpbAgregar.Location = new System.Drawing.Point(12, 82);
+            this.gpbAgregar.Name = "gpbAgregar";
+            this.gpbAgregar.Size = new System.Drawing.Size(402, 485);
+            this.gpbAgregar.TabIndex = 15;
+            this.gpbAgregar.TabStop = false;
+            this.gpbAgregar.Text = "Carga de Datos";
+            // 
+            // lblId
+            // 
+            this.lblId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.ForeColor = System.Drawing.Color.White;
+            this.lblId.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblId.Location = new System.Drawing.Point(20, 19);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(103, 34);
+            this.lblId.TabIndex = 20;
+            this.lblId.Text = "IdProducto";
+            this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtIdProd
+            // 
+            this.txtIdProd.Location = new System.Drawing.Point(180, 29);
+            this.txtIdProd.Name = "txtIdProd";
+            this.txtIdProd.Size = new System.Drawing.Size(121, 20);
+            this.txtIdProd.TabIndex = 19;
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Location = new System.Drawing.Point(180, 359);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtpFecha.TabIndex = 18;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblFecha.ForeColor = System.Drawing.Color.White;
+            this.lblFecha.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblFecha.Location = new System.Drawing.Point(20, 352);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(154, 34);
+            this.lblFecha.TabIndex = 17;
+            this.lblFecha.Text = "Fecha de ingreso:";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbProveedor
+            // 
+            this.cmbProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProveedor.FormattingEnabled = true;
+            this.cmbProveedor.Items.AddRange(new object[] {
+            "Electronica global",
+            "El rey de la carne"});
+            this.cmbProveedor.Location = new System.Drawing.Point(180, 313);
+            this.cmbProveedor.Name = "cmbProveedor";
+            this.cmbProveedor.Size = new System.Drawing.Size(121, 21);
+            this.cmbProveedor.TabIndex = 16;
+            // 
+            // lblProveedor
+            // 
+            this.lblProveedor.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblProveedor.ForeColor = System.Drawing.Color.White;
+            this.lblProveedor.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblProveedor.Location = new System.Drawing.Point(20, 303);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(103, 34);
+            this.lblProveedor.TabIndex = 15;
+            this.lblProveedor.Text = "Proveedor:";
+            this.lblProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(90, 412);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(211, 54);
+            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
+            // 
+            // lblstock
+            // 
+            this.lblstock.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblstock.ForeColor = System.Drawing.Color.White;
+            this.lblstock.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblstock.Location = new System.Drawing.Point(20, 255);
+            this.lblstock.Name = "lblstock";
+            this.lblstock.Size = new System.Drawing.Size(83, 34);
+            this.lblstock.TabIndex = 10;
+            this.lblstock.Text = "Stock:";
+            this.lblstock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblprecio
+            // 
+            this.lblprecio.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblprecio.ForeColor = System.Drawing.Color.White;
+            this.lblprecio.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblprecio.Location = new System.Drawing.Point(20, 202);
+            this.lblprecio.Name = "lblprecio";
+            this.lblprecio.Size = new System.Drawing.Size(83, 34);
+            this.lblprecio.TabIndex = 9;
+            this.lblprecio.Text = "Precio:";
+            this.lblprecio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblcategoria
+            // 
+            this.lblcategoria.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblcategoria.ForeColor = System.Drawing.Color.White;
+            this.lblcategoria.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblcategoria.Location = new System.Drawing.Point(20, 156);
+            this.lblcategoria.Name = "lblcategoria";
+            this.lblcategoria.Size = new System.Drawing.Size(103, 34);
+            this.lblcategoria.TabIndex = 8;
+            this.lblcategoria.Text = "Categoria:";
+            this.lblcategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbldescripcion
+            // 
+            this.lbldescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lbldescripcion.ForeColor = System.Drawing.Color.White;
+            this.lbldescripcion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lbldescripcion.Location = new System.Drawing.Point(20, 108);
+            this.lbldescripcion.Name = "lbldescripcion";
+            this.lbldescripcion.Size = new System.Drawing.Size(129, 34);
+            this.lbldescripcion.TabIndex = 7;
+            this.lbldescripcion.Text = "Descripción:";
+            this.lbldescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblnombre
+            // 
+            this.lblnombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombre.ForeColor = System.Drawing.Color.White;
+            this.lblnombre.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblnombre.Location = new System.Drawing.Point(20, 57);
+            this.lblnombre.Name = "lblnombre";
+            this.lblnombre.Size = new System.Drawing.Size(83, 34);
+            this.lblnombre.TabIndex = 6;
+            this.lblnombre.Text = "Nombre:";
+            this.lblnombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Items.AddRange(new object[] {
+            "Electronica",
+            "Alimentos",
+            "Ropa"});
+            this.cmbCategoria.Location = new System.Drawing.Point(180, 166);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cmbCategoria.TabIndex = 5;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(180, 212);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(121, 20);
+            this.txtPrecio.TabIndex = 4;
+            this.txtPrecio.Text = "\r\n";
+            // 
+            // txtStock
+            // 
+            this.txtStock.Location = new System.Drawing.Point(180, 265);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(121, 20);
+            this.txtStock.TabIndex = 3;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(180, 118);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(190, 20);
+            this.txtDescripcion.TabIndex = 2;
+            // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(180, 67);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(121, 20);
+            this.txtnombre.TabIndex = 1;
             // 
             // lblSeleccion
             // 
@@ -79,153 +301,62 @@
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
             this.dgvProductos.Cursor = System.Windows.Forms.Cursors.No;
             this.dgvProductos.Location = new System.Drawing.Point(419, 9);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.Size = new System.Drawing.Size(569, 650);
             this.dgvProductos.TabIndex = 4;
+            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick_1);
             // 
-            // gpbEliminar
+            // Column1
             // 
-            this.gpbEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gpbEliminar.Controls.Add(this.btnEliminar);
-            this.gpbEliminar.Controls.Add(this.lblstock);
-            this.gpbEliminar.Controls.Add(this.lblprecio);
-            this.gpbEliminar.Controls.Add(this.lblcategoria);
-            this.gpbEliminar.Controls.Add(this.lbldescripcion);
-            this.gpbEliminar.Controls.Add(this.lblnombre);
-            this.gpbEliminar.Controls.Add(this.cmbCategoria);
-            this.gpbEliminar.Controls.Add(this.txtPrecio);
-            this.gpbEliminar.Controls.Add(this.txtStock);
-            this.gpbEliminar.Controls.Add(this.txtDescripcion);
-            this.gpbEliminar.Controls.Add(this.txtnombre);
-            this.gpbEliminar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gpbEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
-            this.gpbEliminar.Location = new System.Drawing.Point(12, 74);
-            this.gpbEliminar.Name = "gpbEliminar";
-            this.gpbEliminar.Size = new System.Drawing.Size(396, 418);
-            this.gpbEliminar.TabIndex = 3;
-            this.gpbEliminar.TabStop = false;
-            this.gpbEliminar.Text = "Eliminar Datos";
+            this.Column1.HeaderText = "idProducto";
+            this.Column1.Name = "Column1";
             // 
-            // btnEliminar
+            // Column2
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEliminar.Location = new System.Drawing.Point(81, 336);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(211, 54);
-            this.btnEliminar.TabIndex = 14;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
             // 
-            // lblstock
+            // Column3
             // 
-            this.lblstock.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lblstock.ForeColor = System.Drawing.Color.White;
-            this.lblstock.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblstock.Location = new System.Drawing.Point(20, 258);
-            this.lblstock.Name = "lblstock";
-            this.lblstock.Size = new System.Drawing.Size(113, 34);
-            this.lblstock.TabIndex = 10;
-            this.lblstock.Text = "Stock:";
-            this.lblstock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Column3.HeaderText = "Descripcion";
+            this.Column3.Name = "Column3";
             // 
-            // lblprecio
+            // Column4
             // 
-            this.lblprecio.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lblprecio.ForeColor = System.Drawing.Color.White;
-            this.lblprecio.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblprecio.Location = new System.Drawing.Point(20, 201);
-            this.lblprecio.Name = "lblprecio";
-            this.lblprecio.Size = new System.Drawing.Size(113, 34);
-            this.lblprecio.TabIndex = 9;
-            this.lblprecio.Text = "Precio:";
-            this.lblprecio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Column4.HeaderText = "Precio";
+            this.Column4.Name = "Column4";
             // 
-            // lblcategoria
+            // Column5
             // 
-            this.lblcategoria.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lblcategoria.ForeColor = System.Drawing.Color.White;
-            this.lblcategoria.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblcategoria.Location = new System.Drawing.Point(20, 153);
-            this.lblcategoria.Name = "lblcategoria";
-            this.lblcategoria.Size = new System.Drawing.Size(113, 34);
-            this.lblcategoria.TabIndex = 8;
-            this.lblcategoria.Text = "Categoria:";
-            this.lblcategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Column5.HeaderText = "Stock";
+            this.Column5.Name = "Column5";
             // 
-            // lbldescripcion
+            // Column6
             // 
-            this.lbldescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lbldescripcion.ForeColor = System.Drawing.Color.White;
-            this.lbldescripcion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lbldescripcion.Location = new System.Drawing.Point(20, 97);
-            this.lbldescripcion.Name = "lbldescripcion";
-            this.lbldescripcion.Size = new System.Drawing.Size(113, 34);
-            this.lbldescripcion.TabIndex = 7;
-            this.lbldescripcion.Text = "Descripción:";
-            this.lbldescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Column6.HeaderText = "Categoria";
+            this.Column6.Name = "Column6";
             // 
-            // lblnombre
+            // Column7
             // 
-            this.lblnombre.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lblnombre.ForeColor = System.Drawing.Color.White;
-            this.lblnombre.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblnombre.Location = new System.Drawing.Point(20, 44);
-            this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(113, 34);
-            this.lblnombre.TabIndex = 6;
-            this.lblnombre.Text = "Nombre:";
-            this.lblnombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Column7.HeaderText = "Proveedor";
+            this.Column7.Name = "Column7";
             // 
-            // cmbCategoria
+            // Column8
             // 
-            this.cmbCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCategoria.Enabled = false;
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(139, 162);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cmbCategoria.TabIndex = 5;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Enabled = false;
-            this.txtPrecio.Location = new System.Drawing.Point(139, 210);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(121, 20);
-            this.txtPrecio.TabIndex = 4;
-            this.txtPrecio.Text = "\r\n";
-            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
-            // 
-            // txtStock
-            // 
-            this.txtStock.Enabled = false;
-            this.txtStock.Location = new System.Drawing.Point(139, 267);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(121, 20);
-            this.txtStock.TabIndex = 3;
-            this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStock_KeyPress);
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Enabled = false;
-            this.txtDescripcion.Location = new System.Drawing.Point(139, 106);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(190, 20);
-            this.txtDescripcion.TabIndex = 2;
-            // 
-            // txtnombre
-            // 
-            this.txtnombre.Enabled = false;
-            this.txtnombre.Location = new System.Drawing.Point(139, 53);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(121, 20);
-            this.txtnombre.TabIndex = 1;
+            this.Column8.HeaderText = "FechaIngreso";
+            this.Column8.Name = "Column8";
             // 
             // frmInventarioEliminar
             // 
@@ -236,11 +367,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInventarioEliminar";
             this.Text = "frmInventarioEliminar";
+            this.Load += new System.EventHandler(this.frmInventarioEliminar_Load_1);
             this.panelEliminar.ResumeLayout(false);
             this.panelEliminar.PerformLayout();
+            this.gpbAgregar.ResumeLayout(false);
+            this.gpbAgregar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
-            this.gpbEliminar.ResumeLayout(false);
-            this.gpbEliminar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -248,8 +380,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panelEliminar;
-        private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.GroupBox gpbEliminar;
+        private System.Windows.Forms.GroupBox gpbAgregar;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.TextBox txtIdProd;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.ComboBox cmbProveedor;
+        private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblstock;
         private System.Windows.Forms.Label lblprecio;
@@ -262,5 +399,14 @@
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label lblSeleccion;
+        private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }

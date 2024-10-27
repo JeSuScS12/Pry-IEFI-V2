@@ -17,7 +17,7 @@ namespace Gestion.Clases
         OleDbDataAdapter adaptadorBD = new OleDbDataAdapter();
         //DataSet objDS;
 
-        string cadenaDeConexion = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Gestion\\BD\\BDInventario.accdb";
+        string cadenaDeConexion = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\BD\\BDInventario.accdb";
 
         public string EstadoDeConexion = "";
         private string Tabla = "Categorias";
@@ -108,7 +108,7 @@ namespace Gestion.Clases
             }
 
         }
-        public void AgregarCat() 
+        public void ListarTablaCategorias(DataGridView dgv) 
         {
             try
             {
@@ -117,29 +117,73 @@ namespace Gestion.Clases
                 comandoBD.Connection = conexionBD;
                 comandoBD.CommandType = CommandType.TableDirect;
                 comandoBD.CommandText = Tabla;
+                OleDbDataReader dr = comandoBD.ExecuteReader();
+                dgv.Rows.Clear();
+                if (dr.HasRows)
+                {
+                    while (dr.Read()) 
+                    {
+                        dgv.Rows.Add(dr.GetInt32(0), dr.GetString(1),dr.GetString(2)) ;
+                    }
+                }
+            }
+            catch (Exception Mensaje)
+            {
+                MessageBox.Show(Mensaje.Message);
+                //throw;
+            }
+        }
+        public void AgregarCat(string nombreCategoria)
+        {
+            try
+            {
+                using (OleDbConnection conexionBD = new OleDbConnection(cadenaDeConexion))
+                {
+                    conexionBD.Open();
+                    using (OleDbCommand comandoBD = new OleDbCommand())
+                    {
+                        comandoBD.Connection = conexionBD;
+                        comandoBD.CommandType = CommandType.Text;
+                        comandoBD.CommandText = "INSERT INTO Categorias (Categoria) VALUES (@Categoria)";
+                        comandoBD.Parameters.AddWithValue("@Categoria", nombreCategoria);
 
+                        int filasAfectadas = comandoBD.ExecuteNonQuery();
+                        if (filasAfectadas > 0)
+                        {
+                            MessageBox.Show("Categoría agregada con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo agregar la categoría", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo registrar la categoría: " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void CargaCMB(ComboBox combo) 
+        {
+            try
+            {
+                conexionBD.ConnectionString = cadenaDeConexion;
+                conexionBD.Open();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = CommandType.TableDirect;
+                comandoBD.CommandText = Tabla;
                 adaptadorBD = new OleDbDataAdapter(comandoBD);
                 DataSet DS = new DataSet();
-                //LLENA EL DATA SET CON LOS DATOS DE LA TABLA
                 adaptadorBD.Fill(DS, Tabla);
-                //RECIBE LOS DATOS
-                DataTable tabla = DS.Tables[Tabla];
-                DataRow Fila = tabla.NewRow();
-
-               
-                Fila["Categoria"] = Categoria;
-                Fila["Descripcion"] = Descripcion;
-               
-
-                tabla.Rows.Add(Fila);
-
-                OleDbCommandBuilder HacerCompatiblesLosCambios = new OleDbCommandBuilder(adaptadorBD);
-                adaptadorBD.Update(DS, Tabla);
+                combo.DataSource = DS.Tables[Tabla];
+                combo.DisplayMember = "Categoria";
+                combo.ValueMember = "idCategoria";
                 conexionBD.Close();
             }
-            catch (Exception)
+            catch (Exception Mensaje)
             {
-                MessageBox.Show("No se pudo registrar cliente", "ERROR ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Mensaje.Message);
             }
         }
     }

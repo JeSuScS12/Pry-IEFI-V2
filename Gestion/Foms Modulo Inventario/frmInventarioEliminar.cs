@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestion.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,5 +54,72 @@ namespace Gestion.Foms_Modulo_Inventario
             }
         }
         #endregion
+        clsInventario clsInventario = new clsInventario();
+        clsCategoriasInv clsCategoriasInv = new clsCategoriasInv();
+        clsProveedoresInv clsProveedoresInv = new clsProveedoresInv();
+        private void frmInventarioEliminar_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+        private void LimpiarComandos()
+        {
+            txtIdProd.Clear();
+            txtDescripcion.Clear();
+            txtnombre.Clear();
+            txtStock.Clear();
+            txtPrecio.Clear();
+            txtIdProd.Clear();
+            cmbCategoria.SelectedIndex = -1;
+            cmbProveedor.SelectedIndex = -1;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelEliminar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmInventarioEliminar_Load_1(object sender, EventArgs e)
+        {
+            clsInventario.ListarProductos(dgvProductos);
+            clsCategoriasInv.CargaCMB(cmbCategoria);
+            clsProveedoresInv.CargaCMB(cmbProveedor);
+            clsInventario.ListarProductos(dgvProductos);
+        }
+
+        private void dgvProductos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Obtén la fila seleccionada
+                DataGridViewRow filaSeleccionada = dgvProductos.Rows[e.RowIndex];
+
+                // Llena los TextBox con los valores de la fila seleccionada
+                txtIdProd.Text = filaSeleccionada.Cells["Column1"].Value.ToString();
+                txtnombre.Text = filaSeleccionada.Cells["Column2"].Value.ToString();
+                txtDescripcion.Text = filaSeleccionada.Cells["Column3"].Value.ToString();
+                txtPrecio.Text = filaSeleccionada.Cells["Column4"].Value.ToString();
+                txtStock.Text = filaSeleccionada.Cells["Column5"].Value.ToString();
+                cmbCategoria.SelectedIndex = cmbCategoria.FindStringExact(filaSeleccionada.Cells["Column6"].Value.ToString());
+                cmbProveedor.SelectedIndex = cmbProveedor.FindStringExact(filaSeleccionada.Cells["Column7"].Value.ToString());
+            }
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            Int32 cod = Convert.ToInt32(txtIdProd.Text);
+            clsInventario.EliminarProducto(cod);
+            LimpiarComandos();
+            clsInventario.ListarProductos(dgvProductos);
+        }
     }
 }
