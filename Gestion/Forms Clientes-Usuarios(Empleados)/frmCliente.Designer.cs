@@ -28,80 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.lblLista = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grbAccion = new System.Windows.Forms.GroupBox();
             this.optRegistrar = new System.Windows.Forms.RadioButton();
             this.optModificar = new System.Windows.Forms.RadioButton();
             this.grbCliente = new System.Windows.Forms.GroupBox();
             this.btnGrabarFirma = new System.Windows.Forms.Button();
             this.picFirma = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblFirma = new System.Windows.Forms.Label();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.lblTel = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblDir = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNom = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDNI = new System.Windows.Forms.Label();
             this.txtDNI = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.grbAccion.SuspendLayout();
             this.grbCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFirma)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblLista
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lista de Clientes";
+            this.lblLista.AutoSize = true;
+            this.lblLista.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLista.Location = new System.Drawing.Point(47, 9);
+            this.lblLista.Name = "lblLista";
+            this.lblLista.Size = new System.Drawing.Size(99, 16);
+            this.lblLista.TabIndex = 0;
+            this.lblLista.Text = "Lista de Clientes";
             // 
             // dgvClientes
             // 
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClientes.Location = new System.Drawing.Point(50, 28);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClientes.RowHeadersVisible = false;
             this.dgvClientes.RowHeadersWidth = 55;
             this.dgvClientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -110,16 +110,16 @@
             this.dgvClientes.TabIndex = 23;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
-            // groupBox1
+            // grbAccion
             // 
-            this.groupBox1.Controls.Add(this.optRegistrar);
-            this.groupBox1.Controls.Add(this.optModificar);
-            this.groupBox1.Location = new System.Drawing.Point(50, 242);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(275, 57);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "¿Que accion quiere Realizar?";
+            this.grbAccion.Controls.Add(this.optRegistrar);
+            this.grbAccion.Controls.Add(this.optModificar);
+            this.grbAccion.Location = new System.Drawing.Point(50, 242);
+            this.grbAccion.Name = "grbAccion";
+            this.grbAccion.Size = new System.Drawing.Size(275, 57);
+            this.grbAccion.TabIndex = 24;
+            this.grbAccion.TabStop = false;
+            this.grbAccion.Text = "¿Que accion quiere Realizar?";
             // 
             // optRegistrar
             // 
@@ -149,18 +149,18 @@
             // 
             this.grbCliente.Controls.Add(this.btnGrabarFirma);
             this.grbCliente.Controls.Add(this.picFirma);
-            this.grbCliente.Controls.Add(this.label9);
+            this.grbCliente.Controls.Add(this.lblFirma);
             this.grbCliente.Controls.Add(this.cmbEstado);
-            this.grbCliente.Controls.Add(this.label6);
-            this.grbCliente.Controls.Add(this.label7);
+            this.grbCliente.Controls.Add(this.lblEstado);
+            this.grbCliente.Controls.Add(this.lblTel);
             this.grbCliente.Controls.Add(this.txtTelefono);
-            this.grbCliente.Controls.Add(this.label8);
+            this.grbCliente.Controls.Add(this.lblCorreo);
             this.grbCliente.Controls.Add(this.txtCorreo);
-            this.grbCliente.Controls.Add(this.label4);
+            this.grbCliente.Controls.Add(this.lblDir);
             this.grbCliente.Controls.Add(this.txtDireccion);
-            this.grbCliente.Controls.Add(this.label3);
+            this.grbCliente.Controls.Add(this.lblNom);
             this.grbCliente.Controls.Add(this.txtNombre);
-            this.grbCliente.Controls.Add(this.label2);
+            this.grbCliente.Controls.Add(this.lblDNI);
             this.grbCliente.Controls.Add(this.txtDNI);
             this.grbCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbCliente.Location = new System.Drawing.Point(50, 311);
@@ -190,15 +190,15 @@
             this.picFirma.TabIndex = 59;
             this.picFirma.TabStop = false;
             // 
-            // label9
+            // lblFirma
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(632, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 21);
-            this.label9.TabIndex = 58;
-            this.label9.Text = "Firma";
+            this.lblFirma.AutoSize = true;
+            this.lblFirma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirma.Location = new System.Drawing.Point(632, 18);
+            this.lblFirma.Name = "lblFirma";
+            this.lblFirma.Size = new System.Drawing.Size(52, 21);
+            this.lblFirma.TabIndex = 58;
+            this.lblFirma.Text = "Firma";
             // 
             // cmbEstado
             // 
@@ -208,25 +208,25 @@
             this.cmbEstado.Size = new System.Drawing.Size(200, 25);
             this.cmbEstado.TabIndex = 51;
             // 
-            // label6
+            // lblEstado
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(257, 121);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 17);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "Estado";
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(257, 121);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(52, 17);
+            this.lblEstado.TabIndex = 48;
+            this.lblEstado.Text = "Estado";
             // 
-            // label7
+            // lblTel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(257, 79);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 17);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "Telefono";
+            this.lblTel.AutoSize = true;
+            this.lblTel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTel.Location = new System.Drawing.Point(257, 79);
+            this.lblTel.Name = "lblTel";
+            this.lblTel.Size = new System.Drawing.Size(62, 17);
+            this.lblTel.TabIndex = 46;
+            this.lblTel.Text = "Telefono";
             // 
             // txtTelefono
             // 
@@ -236,15 +236,15 @@
             this.txtTelefono.TabIndex = 45;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
-            // label8
+            // lblCorreo
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(257, 33);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 17);
-            this.label8.TabIndex = 44;
-            this.label8.Text = "Correo";
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.Location = new System.Drawing.Point(257, 33);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(53, 17);
+            this.lblCorreo.TabIndex = 44;
+            this.lblCorreo.Text = "Correo";
             // 
             // txtCorreo
             // 
@@ -254,15 +254,15 @@
             this.txtCorreo.TabIndex = 43;
             this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
-            // label4
+            // lblDir
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 17);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "Direccion";
+            this.lblDir.AutoSize = true;
+            this.lblDir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDir.Location = new System.Drawing.Point(29, 121);
+            this.lblDir.Name = "lblDir";
+            this.lblDir.Size = new System.Drawing.Size(69, 17);
+            this.lblDir.TabIndex = 42;
+            this.lblDir.Text = "Direccion";
             // 
             // txtDireccion
             // 
@@ -272,15 +272,15 @@
             this.txtDireccion.TabIndex = 41;
             this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
             // 
-            // label3
+            // lblNom
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Nombre";
+            this.lblNom.AutoSize = true;
+            this.lblNom.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNom.Location = new System.Drawing.Point(29, 79);
+            this.lblNom.Name = "lblNom";
+            this.lblNom.Size = new System.Drawing.Size(61, 17);
+            this.lblNom.TabIndex = 40;
+            this.lblNom.Text = "Nombre";
             // 
             // txtNombre
             // 
@@ -290,15 +290,15 @@
             this.txtNombre.TabIndex = 39;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
-            // label2
+            // lblDNI
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 17);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "DNI";
+            this.lblDNI.AutoSize = true;
+            this.lblDNI.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDNI.Location = new System.Drawing.Point(29, 33);
+            this.lblDNI.Name = "lblDNI";
+            this.lblDNI.Size = new System.Drawing.Size(31, 17);
+            this.lblDNI.TabIndex = 38;
+            this.lblDNI.Text = "DNI";
             // 
             // txtDNI
             // 
@@ -308,27 +308,27 @@
             this.txtDNI.TabIndex = 37;
             this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
-            // label5
+            // lblInfo
             // 
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(344, 246);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 53);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "Seleccione una opcion \r\nPara modificar seleccione de la tabla";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblInfo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.Gray;
+            this.lblInfo.Location = new System.Drawing.Point(344, 246);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(176, 53);
+            this.lblInfo.TabIndex = 38;
+            this.lblInfo.Text = "Seleccione una opcion \r\nPara modificar seleccione de la tabla";
+            this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 572);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.grbCliente);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grbAccion);
             this.Controls.Add(this.dgvClientes);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLista);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -336,8 +336,8 @@
             this.Text = "frmCliente";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grbAccion.ResumeLayout(false);
+            this.grbAccion.PerformLayout();
             this.grbCliente.ResumeLayout(false);
             this.grbCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFirma)).EndInit();
@@ -348,27 +348,27 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLista;
         private System.Windows.Forms.DataGridView dgvClientes;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grbAccion;
         private System.Windows.Forms.RadioButton optRegistrar;
         private System.Windows.Forms.RadioButton optModificar;
         private System.Windows.Forms.GroupBox grbCliente;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.ComboBox cmbEstado;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Label lblTel;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDir;
         private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDNI;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Button btnGrabarFirma;
         private System.Windows.Forms.PictureBox picFirma;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblFirma;
     }
 }
