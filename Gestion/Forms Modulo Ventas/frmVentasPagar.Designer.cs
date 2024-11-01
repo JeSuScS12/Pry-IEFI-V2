@@ -44,27 +44,27 @@
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnPagar = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.grbClientes = new System.Windows.Forms.GroupBox();
+            this.lblAviso = new System.Windows.Forms.Label();
+            this.grbFactura = new System.Windows.Forms.GroupBox();
+            this.optEnviar = new System.Windows.Forms.RadioButton();
+            this.optImprimir = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.lblDir = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNom = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDNI = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.optNo = new System.Windows.Forms.RadioButton();
             this.optSi = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblClientes = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.panelUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grbClientes.SuspendLayout();
+            this.grbFactura.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelUp
@@ -218,74 +218,74 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "Billetes.png");
             // 
-            // groupBox1
+            // grbClientes
             // 
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.optNo);
-            this.groupBox1.Controls.Add(this.optSi);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(28, 264);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(443, 222);
-            this.groupBox1.TabIndex = 25;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "CLIENTES";
+            this.grbClientes.Controls.Add(this.lblAviso);
+            this.grbClientes.Controls.Add(this.grbFactura);
+            this.grbClientes.Controls.Add(this.lblInfo);
+            this.grbClientes.Controls.Add(this.lblDir);
+            this.grbClientes.Controls.Add(this.textBox3);
+            this.grbClientes.Controls.Add(this.lblNom);
+            this.grbClientes.Controls.Add(this.textBox2);
+            this.grbClientes.Controls.Add(this.lblDNI);
+            this.grbClientes.Controls.Add(this.textBox1);
+            this.grbClientes.Controls.Add(this.optNo);
+            this.grbClientes.Controls.Add(this.optSi);
+            this.grbClientes.Controls.Add(this.lblClientes);
+            this.grbClientes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbClientes.Location = new System.Drawing.Point(28, 264);
+            this.grbClientes.Name = "grbClientes";
+            this.grbClientes.Size = new System.Drawing.Size(443, 222);
+            this.grbClientes.TabIndex = 25;
+            this.grbClientes.TabStop = false;
+            this.grbClientes.Text = "CLIENTES";
             // 
-            // label7
+            // lblAviso
             // 
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(251, 170);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(172, 45);
-            this.label7.TabIndex = 39;
-            this.label7.Text = "* Enviar al correo solo disponible para usuarios\r\n";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAviso.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAviso.ForeColor = System.Drawing.Color.Gray;
+            this.lblAviso.Location = new System.Drawing.Point(251, 170);
+            this.lblAviso.Name = "lblAviso";
+            this.lblAviso.Size = new System.Drawing.Size(172, 45);
+            this.lblAviso.TabIndex = 39;
+            this.lblAviso.Text = "* Enviar al correo solo disponible para usuarios\r\n";
+            this.lblAviso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox2
+            // grbFactura
             // 
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(254, 81);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(169, 85);
-            this.groupBox2.TabIndex = 38;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Factura";
+            this.grbFactura.Controls.Add(this.optEnviar);
+            this.grbFactura.Controls.Add(this.optImprimir);
+            this.grbFactura.Controls.Add(this.label6);
+            this.grbFactura.Location = new System.Drawing.Point(254, 81);
+            this.grbFactura.Name = "grbFactura";
+            this.grbFactura.Size = new System.Drawing.Size(169, 85);
+            this.grbFactura.TabIndex = 38;
+            this.grbFactura.TabStop = false;
+            this.grbFactura.Text = "Factura";
             // 
-            // radioButton1
+            // optEnviar
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(19, 53);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(127, 21);
-            this.radioButton1.TabIndex = 33;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Enviar al correo";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.optEnviar.AutoSize = true;
+            this.optEnviar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optEnviar.Location = new System.Drawing.Point(19, 53);
+            this.optEnviar.Name = "optEnviar";
+            this.optEnviar.Size = new System.Drawing.Size(127, 21);
+            this.optEnviar.TabIndex = 33;
+            this.optEnviar.TabStop = true;
+            this.optEnviar.Text = "Enviar al correo";
+            this.optEnviar.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // optImprimir
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(19, 26);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(78, 21);
-            this.radioButton2.TabIndex = 32;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Imprimir";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.optImprimir.AutoSize = true;
+            this.optImprimir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optImprimir.Location = new System.Drawing.Point(19, 26);
+            this.optImprimir.Name = "optImprimir";
+            this.optImprimir.Size = new System.Drawing.Size(78, 21);
+            this.optImprimir.TabIndex = 32;
+            this.optImprimir.TabStop = true;
+            this.optImprimir.Text = "Imprimir";
+            this.optImprimir.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -296,26 +296,26 @@
             this.label6.Size = new System.Drawing.Size(0, 17);
             this.label6.TabIndex = 31;
             // 
-            // label5
+            // lblInfo
             // 
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(226, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 53);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Si tiene usuario los campos se agregaran al colocar el DNI";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblInfo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.Gray;
+            this.lblInfo.Location = new System.Drawing.Point(226, 19);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(138, 53);
+            this.lblInfo.TabIndex = 37;
+            this.lblInfo.Text = "Si tiene usuario los campos se agregaran al colocar el DNI";
+            this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lblDir
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 160);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 17);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Direccion";
+            this.lblDir.AutoSize = true;
+            this.lblDir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDir.Location = new System.Drawing.Point(25, 160);
+            this.lblDir.Name = "lblDir";
+            this.lblDir.Size = new System.Drawing.Size(69, 17);
+            this.lblDir.TabIndex = 36;
+            this.lblDir.Text = "Direccion";
             // 
             // textBox3
             // 
@@ -324,15 +324,15 @@
             this.textBox3.Size = new System.Drawing.Size(200, 23);
             this.textBox3.TabIndex = 35;
             // 
-            // label3
+            // lblNom
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Nombre";
+            this.lblNom.AutoSize = true;
+            this.lblNom.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNom.Location = new System.Drawing.Point(25, 118);
+            this.lblNom.Name = "lblNom";
+            this.lblNom.Size = new System.Drawing.Size(61, 17);
+            this.lblNom.TabIndex = 34;
+            this.lblNom.Text = "Nombre";
             // 
             // textBox2
             // 
@@ -341,15 +341,15 @@
             this.textBox2.Size = new System.Drawing.Size(200, 23);
             this.textBox2.TabIndex = 33;
             // 
-            // label2
+            // lblDNI
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 17);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "DNI";
+            this.lblDNI.AutoSize = true;
+            this.lblDNI.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDNI.Location = new System.Drawing.Point(25, 76);
+            this.lblDNI.Name = "lblDNI";
+            this.lblDNI.Size = new System.Drawing.Size(31, 17);
+            this.lblDNI.TabIndex = 32;
+            this.lblDNI.Text = "DNI";
             // 
             // textBox1
             // 
@@ -382,15 +382,15 @@
             this.optSi.Text = "SI";
             this.optSi.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblClientes
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 17);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "¿Tiene USUARIO el cliente?";
+            this.lblClientes.AutoSize = true;
+            this.lblClientes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientes.Location = new System.Drawing.Point(19, 21);
+            this.lblClientes.Name = "lblClientes";
+            this.lblClientes.Size = new System.Drawing.Size(175, 17);
+            this.lblClientes.TabIndex = 28;
+            this.lblClientes.Text = "¿Tiene USUARIO el cliente?";
             // 
             // lblTotal
             // 
@@ -409,7 +409,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 498);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grbClientes);
             this.Controls.Add(this.btnPagar);
             this.Controls.Add(this.dgvCarrito);
             this.Controls.Add(this.panelUp);
@@ -420,10 +420,10 @@
             this.Load += new System.EventHandler(this.frmVentasPagar_Load);
             this.panelUp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grbClientes.ResumeLayout(false);
+            this.grbClientes.PerformLayout();
+            this.grbFactura.ResumeLayout(false);
+            this.grbFactura.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -441,22 +441,22 @@
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.Button btnPagar;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grbClientes;
         private System.Windows.Forms.RadioButton optNo;
         private System.Windows.Forms.RadioButton optSi;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblClientes;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDir;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDNI;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.GroupBox grbFactura;
+        private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.RadioButton optEnviar;
+        private System.Windows.Forms.RadioButton optImprimir;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblAviso;
     }
 }
