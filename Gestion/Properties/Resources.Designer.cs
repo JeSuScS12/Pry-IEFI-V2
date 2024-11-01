@@ -71,6 +71,33 @@ namespace Gestion.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;es&quot;&gt;
+        ///&lt;head&gt;
+        ///    &lt;meta charset=&quot;UTF-8&quot;&gt;
+        ///    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        ///    &lt;title&gt;Factura Moderna&lt;/title&gt;
+        ///    &lt;style&gt;
+        ///        body {
+        ///            font-family: &apos;Arial&apos;, sans-serif;
+        ///            margin: 0;
+        ///            padding: 0;
+        ///            background-color: #f5f6fa;
+        ///        }
+        ///
+        ///        .invoice-container {
+        ///            max-width: 900px;
+        ///            margin: 50px auto;
+        ///            background-color: #fff;
+        ///            padding:  [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string factura {
+            get {
+                return ResourceManager.GetString("factura", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap FondoCircular {

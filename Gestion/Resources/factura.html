@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ticket de Compra</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .ticket-contenedor {
+            background-color: #fff;
+            width: 500px;
+            padding: 20px;
+            border: 1px dashed #ccc;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .datos-empresa p {
+            margin: 5px 0;
+        }
+
+        h2 {
+            margin: 12px 0;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .ticket-info p {
+            margin: 5px 0;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .ticket-tabla {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+            .ticket-tabla th, .ticket-tabla td {
+                font-size: 14px;
+                padding: 8px 0;
+            }
+
+            .ticket-tabla th {
+                border-bottom: 1px dashed #ccc;
+                text-align: left;
+            }
+            /**/
+            .ticket-tabla td {
+                text-align: left;
+            }
+
+            .ticket-tabla tr:last-child td {
+                border-top: 1px dashed #ccc;
+                font-weight: bold;
+            }
+
+        .footer {
+            font-size: 12px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+            .footer p {
+                margin: 5px 0;
+            }
+
+        .barcode {
+            margin-top: 15px;
+        }
+
+            .barcode img {
+                width: 100%;
+            }
+    </style>
+</head>
+<body>
+    <div class="ticket-contenedor">
+        <!-- Nombre de la tienda o empresa -->
+        <div class="datos-empresa">
+            <h2>Bandeja TEC</h2>
+            <p>CUIL: 12345</p>
+            <p>Direcci�n: Rondeau 165</p>
+            <p>Tel: 555-555-555</p>
+        </div>
+
+        <!-- Informaci�n de la compra -->
+        <div class="ticket-info">
+            <p>Fecha: @FECHA</p>
+            <p>Cajero: 1</p>
+            <p>Ticket #: 12345</p>
+        </div>
+
+        <!-- Productos y precios -->
+        <table class="ticket-tabla">
+            <thead>
+                <tr>
+                    <th style="width: 10%;">Cod</th>
+                    <th style="width: 40%;">Producto</th>
+                    <th style="width: 15%;">Cant</th>
+                    <th style="width: 15%;">P Uni</th>
+                    <th style="width: 20%;">Importe</th>
+                </tr>
+            </thead>
+            <tbody>
+                @FILAS
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td align="left">Total</td>
+                    <td>@TOTAL</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Mensaje de pie de p�gina -->
+        <div class="footer">
+            <p>Gracias por su compra.</p>
+            <p>Vis�tenos en www.bandejatec.com</p>
+        </div>
+
+        <!-- C�digo de barras -->
+        <div class="barcode">
+            <p>||| || | || || ||| ||| || || ||</p>
+        </div>
+    </div>
+
+</body>
+</html>
