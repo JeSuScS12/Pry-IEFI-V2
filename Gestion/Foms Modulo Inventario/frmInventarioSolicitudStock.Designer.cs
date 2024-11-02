@@ -28,75 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelInventario = new System.Windows.Forms.Panel();
-            this.btnEliminarSolicitud = new System.Windows.Forms.Button();
-            this.btnSolicitud = new System.Windows.Forms.Button();
-            this.lblSolicitud = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.gpbAgregar = new System.Windows.Forms.GroupBox();
-            this.cmbProveedores = new System.Windows.Forms.ComboBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.lblCantidad = new System.Windows.Forms.Label();
-            this.lblProveedores = new System.Windows.Forms.Label();
-            this.lbldescripcion = new System.Windows.Forms.Label();
-            this.lblnombre = new System.Windows.Forms.Label();
-            this.txtStock = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblProductos = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lblGrafico = new System.Windows.Forms.Label();
+            this.btnSolicitud = new System.Windows.Forms.Button();
             this.panelInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
-            this.gpbAgregar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelInventario
             // 
             this.panelInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
-            this.panelInventario.Controls.Add(this.btnEliminarSolicitud);
-            this.panelInventario.Controls.Add(this.btnSolicitud);
-            this.panelInventario.Controls.Add(this.lblSolicitud);
             this.panelInventario.Controls.Add(this.dgvProductos);
-            this.panelInventario.Controls.Add(this.gpbAgregar);
+            this.panelInventario.Controls.Add(this.lblProductos);
+            this.panelInventario.Controls.Add(this.chart1);
+            this.panelInventario.Controls.Add(this.lblGrafico);
+            this.panelInventario.Controls.Add(this.btnSolicitud);
             this.panelInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInventario.Location = new System.Drawing.Point(0, 0);
             this.panelInventario.Name = "panelInventario";
             this.panelInventario.Size = new System.Drawing.Size(1000, 691);
-            this.panelInventario.TabIndex = 3;
-            // 
-            // btnEliminarSolicitud
-            // 
-            this.btnEliminarSolicitud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
-            this.btnEliminarSolicitud.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarSolicitud.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarSolicitud.Location = new System.Drawing.Point(20, 450);
-            this.btnEliminarSolicitud.Name = "btnEliminarSolicitud";
-            this.btnEliminarSolicitud.Size = new System.Drawing.Size(173, 69);
-            this.btnEliminarSolicitud.TabIndex = 15;
-            this.btnEliminarSolicitud.Text = "Eliminar Solicitud";
-            this.btnEliminarSolicitud.UseVisualStyleBackColor = false;
-            // 
-            // btnSolicitud
-            // 
-            this.btnSolicitud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
-            this.btnSolicitud.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSolicitud.ForeColor = System.Drawing.Color.White;
-            this.btnSolicitud.Location = new System.Drawing.Point(199, 450);
-            this.btnSolicitud.Name = "btnSolicitud";
-            this.btnSolicitud.Size = new System.Drawing.Size(173, 69);
-            this.btnSolicitud.TabIndex = 15;
-            this.btnSolicitud.Text = "Realizar Solicitud";
-            this.btnSolicitud.UseVisualStyleBackColor = false;
-            // 
-            // lblSolicitud
-            // 
-            this.lblSolicitud.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSolicitud.ForeColor = System.Drawing.Color.White;
-            this.lblSolicitud.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblSolicitud.Location = new System.Drawing.Point(528, 4);
-            this.lblSolicitud.Name = "lblSolicitud";
-            this.lblSolicitud.Size = new System.Drawing.Size(269, 34);
-            this.lblSolicitud.TabIndex = 10;
-            this.lblSolicitud.Text = "Lista de productos Solicitados";
-            this.lblSolicitud.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panelInventario.TabIndex = 4;
+            this.panelInventario.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInventario_Paint);
             // 
             // dgvProductos
             // 
@@ -104,128 +71,127 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
             this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
             this.dgvProductos.Cursor = System.Windows.Forms.Cursors.No;
-            this.dgvProductos.Enabled = false;
-            this.dgvProductos.Location = new System.Drawing.Point(419, 41);
+            this.dgvProductos.Location = new System.Drawing.Point(393, 82);
             this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.Size = new System.Drawing.Size(569, 638);
-            this.dgvProductos.TabIndex = 5;
+            this.dgvProductos.ReadOnly = true;
+            this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProductos.Size = new System.Drawing.Size(595, 597);
+            this.dgvProductos.TabIndex = 38;
             // 
-            // gpbAgregar
+            // Column1
             // 
-            this.gpbAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gpbAgregar.Controls.Add(this.cmbProveedores);
-            this.gpbAgregar.Controls.Add(this.btnAgregar);
-            this.gpbAgregar.Controls.Add(this.lblCantidad);
-            this.gpbAgregar.Controls.Add(this.lblProveedores);
-            this.gpbAgregar.Controls.Add(this.lbldescripcion);
-            this.gpbAgregar.Controls.Add(this.lblnombre);
-            this.gpbAgregar.Controls.Add(this.txtStock);
-            this.gpbAgregar.Controls.Add(this.txtDescripcion);
-            this.gpbAgregar.Controls.Add(this.txtnombre);
-            this.gpbAgregar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gpbAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
-            this.gpbAgregar.Location = new System.Drawing.Point(21, 41);
-            this.gpbAgregar.Name = "gpbAgregar";
-            this.gpbAgregar.Size = new System.Drawing.Size(375, 371);
-            this.gpbAgregar.TabIndex = 4;
-            this.gpbAgregar.TabStop = false;
-            this.gpbAgregar.Text = "Carga de Datos";
-            this.gpbAgregar.Enter += new System.EventHandler(this.gpbAgregar_Enter);
+            this.Column1.HeaderText = "idProducto";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // cmbProveedores
+            // Column2
             // 
-            this.cmbProveedores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbProveedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbProveedores.FormattingEnabled = true;
-            this.cmbProveedores.Location = new System.Drawing.Point(146, 173);
-            this.cmbProveedores.Name = "cmbProveedores";
-            this.cmbProveedores.Size = new System.Drawing.Size(121, 21);
-            this.cmbProveedores.TabIndex = 15;
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
-            // btnAgregar
+            // Column3
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
-            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(84, 291);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(211, 54);
-            this.btnAgregar.TabIndex = 14;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.Column3.HeaderText = "Descripción";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
-            // lblCantidad
+            // Column4
             // 
-            this.lblCantidad.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lblCantidad.ForeColor = System.Drawing.Color.White;
-            this.lblCantidad.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblCantidad.Location = new System.Drawing.Point(20, 220);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(106, 34);
-            this.lblCantidad.TabIndex = 10;
-            this.lblCantidad.Text = "Cantidad:";
-            this.lblCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Column4.HeaderText = "Precio";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
-            // lblProveedores
+            // Column5
             // 
-            this.lblProveedores.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lblProveedores.ForeColor = System.Drawing.Color.White;
-            this.lblProveedores.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblProveedores.Location = new System.Drawing.Point(20, 163);
-            this.lblProveedores.Name = "lblProveedores";
-            this.lblProveedores.Size = new System.Drawing.Size(106, 34);
-            this.lblProveedores.TabIndex = 9;
-            this.lblProveedores.Text = "Proveedor:";
-            this.lblProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Column5.HeaderText = "Stock";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
-            // lbldescripcion
+            // Column6
             // 
-            this.lbldescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lbldescripcion.ForeColor = System.Drawing.Color.White;
-            this.lbldescripcion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lbldescripcion.Location = new System.Drawing.Point(20, 97);
-            this.lbldescripcion.Name = "lbldescripcion";
-            this.lbldescripcion.Size = new System.Drawing.Size(106, 34);
-            this.lbldescripcion.TabIndex = 7;
-            this.lbldescripcion.Text = "Descripción:";
-            this.lbldescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Column6.HeaderText = "Categoria";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
-            // lblnombre
+            // Column7
             // 
-            this.lblnombre.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lblnombre.ForeColor = System.Drawing.Color.White;
-            this.lblnombre.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblnombre.Location = new System.Drawing.Point(20, 44);
-            this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(106, 34);
-            this.lblnombre.TabIndex = 6;
-            this.lblnombre.Text = "Nombre:";
-            this.lblnombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Column7.HeaderText = "Proveedor";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
-            // txtStock
+            // Column8
             // 
-            this.txtStock.Location = new System.Drawing.Point(146, 230);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(121, 20);
-            this.txtStock.TabIndex = 3;
-            this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStock_KeyPress);
+            this.Column8.HeaderText = "Fecha Ingreso";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
-            // txtDescripcion
+            // lblProductos
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(146, 107);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(190, 20);
-            this.txtDescripcion.TabIndex = 2;
+            this.lblProductos.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblProductos.ForeColor = System.Drawing.Color.White;
+            this.lblProductos.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblProductos.Location = new System.Drawing.Point(576, 45);
+            this.lblProductos.Name = "lblProductos";
+            this.lblProductos.Size = new System.Drawing.Size(223, 34);
+            this.lblProductos.TabIndex = 30;
+            this.lblProductos.Text = "Listado de productos:";
+            this.lblProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtnombre
+            // chart1
             // 
-            this.txtnombre.Location = new System.Drawing.Point(146, 54);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(121, 20);
-            this.txtnombre.TabIndex = 1;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(12, 82);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(375, 376);
+            this.chart1.TabIndex = 29;
+            this.chart1.Text = "chart1";
+            this.chart1.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault;
+            // 
+            // lblGrafico
+            // 
+            this.lblGrafico.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblGrafico.ForeColor = System.Drawing.Color.White;
+            this.lblGrafico.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblGrafico.Location = new System.Drawing.Point(14, 47);
+            this.lblGrafico.Name = "lblGrafico";
+            this.lblGrafico.Size = new System.Drawing.Size(223, 34);
+            this.lblGrafico.TabIndex = 25;
+            this.lblGrafico.Text = "Gráfico de Stock disponible";
+            this.lblGrafico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnSolicitud
+            // 
+            this.btnSolicitud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
+            this.btnSolicitud.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSolicitud.ForeColor = System.Drawing.Color.White;
+            this.btnSolicitud.Location = new System.Drawing.Point(12, 473);
+            this.btnSolicitud.Name = "btnSolicitud";
+            this.btnSolicitud.Size = new System.Drawing.Size(139, 45);
+            this.btnSolicitud.TabIndex = 22;
+            this.btnSolicitud.Text = "Exportar";
+            this.btnSolicitud.UseVisualStyleBackColor = false;
+            this.btnSolicitud.Click += new System.EventHandler(this.btnSolicitud_Click);
             // 
             // frmInventarioSolicitudStock
             // 
@@ -236,10 +202,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInventarioSolicitudStock";
             this.Text = "frmInventarioSolicitudStock";
+            this.Load += new System.EventHandler(this.frmInventarioSolicitudStock_Load);
             this.panelInventario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
-            this.gpbAgregar.ResumeLayout(false);
-            this.gpbAgregar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,19 +213,18 @@
         #endregion
 
         private System.Windows.Forms.Panel panelInventario;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.GroupBox gpbAgregar;
-        private System.Windows.Forms.Label lblCantidad;
-        private System.Windows.Forms.Label lblProveedores;
-        private System.Windows.Forms.Label lbldescripcion;
-        private System.Windows.Forms.Label lblnombre;
-        private System.Windows.Forms.TextBox txtStock;
-        private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Label lblGrafico;
+        private System.Windows.Forms.Label lblProductos;
         private System.Windows.Forms.Button btnSolicitud;
-        private System.Windows.Forms.Label lblSolicitud;
         private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.Button btnEliminarSolicitud;
-        private System.Windows.Forms.ComboBox cmbProveedores;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }

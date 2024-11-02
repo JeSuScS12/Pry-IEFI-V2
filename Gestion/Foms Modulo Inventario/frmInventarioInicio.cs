@@ -14,6 +14,7 @@ namespace Gestion.Foms_Modulo_Inventario
 {
     public partial class frmInventarioInicio : Form
     {
+        
         public frmInventarioInicio()
         {
             InitializeComponent();
@@ -32,14 +33,15 @@ namespace Gestion.Foms_Modulo_Inventario
                 int stock = item.Value;
 
                 int pointIndex = series.Points.AddXY(item.Key, stock);
-                if (stock < 3)
+                if (stock < 3  )
                 {
 
                     // Cambiar el color de la barra a rojo
                     series.Points[pointIndex].Color = Color.Red;
-
+                    
                     // Mostrar un mensaje de alerta
                     MessageBox.Show($"Alerta: El producto {item.Key} tiene un stock bajo ({stock} unidades). Considera reponerlo.", "Alerta de Reposición", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    
                 }
             }
             chart1.Series.Add(series);
@@ -54,6 +56,16 @@ namespace Gestion.Foms_Modulo_Inventario
             stripLine.BorderWidth = 2;
             stripLine.BorderDashStyle = ChartDashStyle.Dash;
             chart1.ChartAreas[0].AxisY.StripLines.Add(stripLine);
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

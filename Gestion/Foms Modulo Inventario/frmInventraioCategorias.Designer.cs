@@ -30,12 +30,18 @@
         {
             this.panelGeneral = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.labelidcategoria = new System.Windows.Forms.Label();
+            this.txtModificarDescripcion = new System.Windows.Forms.TextBox();
+            this.lblDescripcionModificar = new System.Windows.Forms.Label();
+            this.lblCategoriaModificar = new System.Windows.Forms.Label();
+            this.txtModificar = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblCategoria2 = new System.Windows.Forms.Label();
-            this.txtCategoriaModElim = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblcategoria = new System.Windows.Forms.Label();
@@ -44,8 +50,6 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.panelGeneral.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -63,30 +67,94 @@
             this.panelGeneral.Name = "panelGeneral";
             this.panelGeneral.Size = new System.Drawing.Size(1000, 691);
             this.panelGeneral.TabIndex = 7;
+            this.panelGeneral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGeneral_Paint);
             // 
             // groupBox2
             // 
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox2.Controls.Add(this.txtID);
+            this.groupBox2.Controls.Add(this.labelidcategoria);
+            this.groupBox2.Controls.Add(this.txtModificarDescripcion);
+            this.groupBox2.Controls.Add(this.lblDescripcionModificar);
+            this.groupBox2.Controls.Add(this.lblCategoriaModificar);
+            this.groupBox2.Controls.Add(this.txtModificar);
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.btnModificar);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.lblCategoria2);
-            this.groupBox2.Controls.Add(this.txtCategoriaModElim);
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
-            this.groupBox2.Location = new System.Drawing.Point(12, 303);
+            this.groupBox2.Location = new System.Drawing.Point(12, 287);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(450, 185);
+            this.groupBox2.Size = new System.Drawing.Size(450, 240);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modificar o Eliminar Categoria";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(258, 64);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(121, 20);
+            this.txtID.TabIndex = 23;
+            // 
+            // labelidcategoria
+            // 
+            this.labelidcategoria.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.labelidcategoria.ForeColor = System.Drawing.Color.White;
+            this.labelidcategoria.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelidcategoria.Location = new System.Drawing.Point(6, 54);
+            this.labelidcategoria.Name = "labelidcategoria";
+            this.labelidcategoria.Size = new System.Drawing.Size(102, 34);
+            this.labelidcategoria.TabIndex = 22;
+            this.labelidcategoria.Text = "Categoria:";
+            this.labelidcategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtModificarDescripcion
+            // 
+            this.txtModificarDescripcion.Location = new System.Drawing.Point(258, 136);
+            this.txtModificarDescripcion.Name = "txtModificarDescripcion";
+            this.txtModificarDescripcion.Size = new System.Drawing.Size(121, 20);
+            this.txtModificarDescripcion.TabIndex = 21;
+            // 
+            // lblDescripcionModificar
+            // 
+            this.lblDescripcionModificar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblDescripcionModificar.ForeColor = System.Drawing.Color.White;
+            this.lblDescripcionModificar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblDescripcionModificar.Location = new System.Drawing.Point(6, 122);
+            this.lblDescripcionModificar.Name = "lblDescripcionModificar";
+            this.lblDescripcionModificar.Size = new System.Drawing.Size(102, 34);
+            this.lblDescripcionModificar.TabIndex = 20;
+            this.lblDescripcionModificar.Text = "Descripción";
+            this.lblDescripcionModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblCategoriaModificar
+            // 
+            this.lblCategoriaModificar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblCategoriaModificar.ForeColor = System.Drawing.Color.White;
+            this.lblCategoriaModificar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblCategoriaModificar.Location = new System.Drawing.Point(6, 88);
+            this.lblCategoriaModificar.Name = "lblCategoriaModificar";
+            this.lblCategoriaModificar.Size = new System.Drawing.Size(102, 34);
+            this.lblCategoriaModificar.TabIndex = 19;
+            this.lblCategoriaModificar.Text = "Categoria:";
+            this.lblCategoriaModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtModificar
+            // 
+            this.txtModificar.Location = new System.Drawing.Point(258, 98);
+            this.txtModificar.Name = "txtModificar";
+            this.txtModificar.Size = new System.Drawing.Size(121, 20);
+            this.txtModificar.TabIndex = 18;
+            this.txtModificar.TextChanged += new System.EventHandler(this.txtModificar_TextChanged);
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(235, 113);
+            this.btnEliminar.Location = new System.Drawing.Point(233, 161);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(211, 54);
             this.btnEliminar.TabIndex = 16;
@@ -99,7 +167,7 @@
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
             this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(4, 113);
+            this.btnModificar.Location = new System.Drawing.Point(6, 161);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(211, 54);
             this.btnModificar.TabIndex = 15;
@@ -117,25 +185,6 @@
             this.label2.Size = new System.Drawing.Size(405, 24);
             this.label2.TabIndex = 9;
             this.label2.Text = "Seleccionar una Categoria en la Tabla";
-            // 
-            // lblCategoria2
-            // 
-            this.lblCategoria2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lblCategoria2.ForeColor = System.Drawing.Color.White;
-            this.lblCategoria2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblCategoria2.Location = new System.Drawing.Point(103, 60);
-            this.lblCategoria2.Name = "lblCategoria2";
-            this.lblCategoria2.Size = new System.Drawing.Size(102, 34);
-            this.lblCategoria2.TabIndex = 8;
-            this.lblCategoria2.Text = "Categoria:";
-            this.lblCategoria2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtCategoriaModElim
-            // 
-            this.txtCategoriaModElim.Location = new System.Drawing.Point(211, 70);
-            this.txtCategoriaModElim.Name = "txtCategoriaModElim";
-            this.txtCategoriaModElim.Size = new System.Drawing.Size(121, 20);
-            this.txtCategoriaModElim.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -155,12 +204,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nueva Categoria";
             // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(267, 141);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(121, 20);
+            this.txtDescripcion.TabIndex = 17;
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblDescripcion.ForeColor = System.Drawing.Color.White;
+            this.lblDescripcion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblDescripcion.Location = new System.Drawing.Point(15, 127);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(102, 34);
+            this.lblDescripcion.TabIndex = 16;
+            this.lblDescripcion.Text = "Descripción";
+            this.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(8, 170);
+            this.btnAgregar.Location = new System.Drawing.Point(99, 170);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(211, 54);
             this.btnAgregar.TabIndex = 15;
@@ -184,7 +252,7 @@
             this.lblcategoria.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblcategoria.ForeColor = System.Drawing.Color.White;
             this.lblcategoria.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblcategoria.Location = new System.Drawing.Point(15, 71);
+            this.lblcategoria.Location = new System.Drawing.Point(15, 67);
             this.lblcategoria.Name = "lblcategoria";
             this.lblcategoria.Size = new System.Drawing.Size(102, 34);
             this.lblcategoria.TabIndex = 8;
@@ -204,15 +272,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCategorias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
             this.dgvCategorias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvCategorias.Cursor = System.Windows.Forms.Cursors.No;
+            this.dgvCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvCategorias.Location = new System.Drawing.Point(490, 12);
             this.dgvCategorias.Name = "dgvCategorias";
+            this.dgvCategorias.ReadOnly = true;
+            this.dgvCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCategorias.Size = new System.Drawing.Size(498, 667);
             this.dgvCategorias.TabIndex = 5;
             this.dgvCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellContentClick);
@@ -221,35 +292,19 @@
             // 
             this.Column1.HeaderText = "idCategoria";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Categoria";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Descripcion";
             this.Column3.Name = "Column3";
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lblDescripcion.ForeColor = System.Drawing.Color.White;
-            this.lblDescripcion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblDescripcion.Location = new System.Drawing.Point(15, 127);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(102, 34);
-            this.lblDescripcion.TabIndex = 16;
-            this.lblDescripcion.Text = "Descripción";
-            this.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(267, 141);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(121, 20);
-            this.txtDescripcion.TabIndex = 17;
+            this.Column3.ReadOnly = true;
             // 
             // frmInventraioCategorias
             // 
@@ -278,8 +333,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblCategoria2;
-        private System.Windows.Forms.TextBox txtCategoriaModElim;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label1;
@@ -291,5 +344,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.TextBox txtModificarDescripcion;
+        private System.Windows.Forms.Label lblDescripcionModificar;
+        private System.Windows.Forms.Label lblCategoriaModificar;
+        private System.Windows.Forms.TextBox txtModificar;
+        private System.Windows.Forms.Label labelidcategoria;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

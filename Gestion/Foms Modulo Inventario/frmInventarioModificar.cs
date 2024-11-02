@@ -16,9 +16,10 @@ namespace Gestion.Foms_Modulo_Inventario
         public frmInventarioModificar()
         {
             InitializeComponent();
+            Movimientodgv();
             btnModificar.Enabled = false;
-
             btnModificar.BackColor = Color.Gray;
+            //Contoles que verifican si las cajas de texto contienen caracteres
             txtnombre.TextChanged += TextBox_TextChanged;
             txtDescripcion.TextChanged += TextBox_TextChanged;
             txtPrecio.TextChanged += TextBox_TextChanged;
@@ -38,21 +39,6 @@ namespace Gestion.Foms_Modulo_Inventario
             EstadoDeTextos();
         }
 
-        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
         #endregion
         clsInventario clsInventario = new clsInventario();
         clsCategoriasInv clsCategoriasInv = new clsCategoriasInv();
@@ -118,10 +104,44 @@ namespace Gestion.Foms_Modulo_Inventario
                 cmbProveedor.SelectedIndex = cmbProveedor.FindStringExact(filaSeleccionada.Cells["Column7"].Value.ToString());
             }
         }
+        //Maneja el tamaño de las columnas y filas. Agrega barras de scroll lateral y vertical para mejorar la vista de los campos de productos
+        private void Movimientodgv()
+        {
+            dgvProductos.ScrollBars = ScrollBars.Both;
+            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            dgvProductos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
 
+            foreach (DataGridViewColumn column in dgvProductos.Columns)
+            {
+                column.Width = 150;
+            }
+            foreach (DataGridViewRow row in dgvProductos.Rows)
+            {
+                row.Height = 30;
+            }
+        }
         private void lblSeleccion_Click(object sender, EventArgs e)
         {
 
+        }
+        
+        //Hace que solo se pueda colocar numeros en ambos textboxs
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
