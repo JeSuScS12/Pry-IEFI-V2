@@ -95,13 +95,14 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvProductos.Cursor = System.Windows.Forms.Cursors.No;
+            this.dgvProductos.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgvProductos.Location = new System.Drawing.Point(440, 12);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.Size = new System.Drawing.Size(548, 631);
             this.dgvProductos.TabIndex = 37;
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             // 
             // Column1
             // 

@@ -22,7 +22,7 @@ namespace Gestion.Clases
         string cadenaDeConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=../../BD/BDInventario.accdb";
         public string EstadoDeConexion = "";
         private string Tabla = "Productos";
-        private string Tabla2 = "Productos2";
+       
         Int32 id;
         string nom;
         Decimal pre;
@@ -31,7 +31,7 @@ namespace Gestion.Clases
         string des;
         DateTime fec;
         Int32 idP;
-       
+        
         public Int32 idProducto
         {
             get { return id; }
@@ -72,6 +72,7 @@ namespace Gestion.Clases
             get { return idP; }
             set { idP = value; }
         }
+        
 
         public void ConectarBD() //esto es para verificar que la base este conectada, no se ve en ningun form, prodriamos sacarlo si se quisiese
         {
@@ -97,14 +98,14 @@ namespace Gestion.Clases
                 conexionBD.Open();
                 comandoBD.Connection = conexionBD;
                 comandoBD.CommandType = CommandType.TableDirect;
-                comandoBD.CommandText = Tabla2;
+                comandoBD.CommandText = Tabla;
 
                 adaptadorBD = new OleDbDataAdapter(comandoBD);
                 DataSet DS = new DataSet();
                 //LLENA EL DATA SET CON LOS DATOS DE LA TABLA
-                adaptadorBD.Fill(DS, Tabla2);
+                adaptadorBD.Fill(DS, Tabla);
                 //RECIBE LOS DATOS
-                DataTable tabla = DS.Tables[Tabla2];
+                DataTable tabla = DS.Tables[Tabla];
                 DataRow Fila = tabla.NewRow();
 
                 
@@ -119,7 +120,7 @@ namespace Gestion.Clases
                 tabla.Rows.Add(Fila);
 
                 OleDbCommandBuilder HacerCompatiblesLosCambios = new OleDbCommandBuilder(adaptadorBD);
-                adaptadorBD.Update(DS, Tabla2);
+                adaptadorBD.Update(DS, Tabla);
                 conexionBD.Close();
             }
             catch (Exception)

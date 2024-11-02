@@ -11,6 +11,7 @@ namespace Gestion.Clases
 {
     internal class clsCategoriasInv
     {
+        
         OleDbConnection conexionBD = new OleDbConnection();
         OleDbCommand comandoBD = new OleDbCommand();
         //OleDbDataReader lectorBD;
@@ -24,6 +25,7 @@ namespace Gestion.Clases
         Int32 id_c;
         string cate;
         string descrip;
+        Int32 estado;
         public Int32 idCategoria
         {
             get { return id_c; }
@@ -38,6 +40,11 @@ namespace Gestion.Clases
         {
             get { return descrip; }
             set { descrip = value; }
+        }
+        public Int32 Estado
+        {
+            get { return estado; }
+            set { estado = value; }
         }
         public string BuscarParaGrillaa(Int32 Id) //busca cuando necesitamos listar todos los productos y pone la categoria en vez de los idCategoria
         {
@@ -112,28 +119,43 @@ namespace Gestion.Clases
         {
             try
             {
+                // Configurar la conexión y el comando SQL
                 conexionBD.ConnectionString = cadenaDeConexion;
                 conexionBD.Open();
                 comandoBD.Connection = conexionBD;
-                comandoBD.CommandType = CommandType.TableDirect;
-                comandoBD.CommandText = Tabla;
+                comandoBD.CommandType = CommandType.Text;
+
+                // Asegúrate de que los nombres de columna sean los mismos que en la base de datos
+                comandoBD.CommandText = @"
+                SELECT Categorias.idCategoria, Categorias.Categoria, Categorias.Descripcion, Estado.Estado 
+                FROM Categorias 
+                INNER JOIN Estado ON Categorias.Id_Estado = Estado.Id_Estado";
+
                 OleDbDataReader dr = comandoBD.ExecuteReader();
                 dgv.Rows.Clear();
+
                 if (dr.HasRows)
                 {
-                    while (dr.Read()) 
+                    while (dr.Read())
                     {
-                        dgv.Rows.Add(dr.GetInt32(0), dr.GetString(1),dr.GetString(2)) ;
+                        // Asegúrate de que los índices coincidan con el orden de las columnas
+                        dgv.Rows.Add(dr.GetInt32(0), dr.GetString(1), dr.GetString(2), dr.GetString(3));
                     }
                 }
             }
-            catch (Exception Mensaje)
+            catch (Exception ex)
             {
-                MessageBox.Show(Mensaje.Message);
-                //throw;
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (conexionBD.State == ConnectionState.Open)
+                {
+                    conexionBD.Close();
+                }
             }
         }
-        public void AgregarCat(string nombreCategoria, string descripcion, DataGridView grilla) //agrega categoria con descripción
+        public void AgregarCat(string nombreCategoria, string descripcion,Int32 estado, DataGridView grilla) //agrega categoria con descripción
         {
             try
             {
@@ -152,16 +174,20 @@ namespace Gestion.Clases
                     {
                         comandoBD.Connection = conexionBD;
                         comandoBD.CommandType = CommandType.Text;
-                        comandoBD.CommandText = "INSERT INTO Categorias (Categoria, Descripcion) VALUES (@Categoria, @Descripcion)";
-                        comandoBD.Parameters.AddWithValue("@Categoria", nombreCategoria);
-                        comandoBD.Parameters.AddWithValue("@Descripcion", descripcion); // Agregar la descripción
+                        comandoBD.CommandText = "INSERT INTO Categorias (Categoria, Descripcion, Id_Estado) VALUES (@Categoria, @Descripcion, @Id_Estado)";
+
+                        // Especifica el tipo de dato de cada parámetro
+                        comandoBD.Parameters.Add("@Categoria", OleDbType.VarChar).Value = nombreCategoria;
+                        comandoBD.Parameters.Add("@Descripcion", OleDbType.VarChar).Value = descripcion;
+                        comandoBD.Parameters.Add("@Id_Estado", OleDbType.Integer).Value = estado;
 
                         int filasAfectadas = comandoBD.ExecuteNonQuery();
                         if (filasAfectadas > 0)
                         {
                             MessageBox.Show("Categoría agregada con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clsCategoriasInv clsCategoriasInv = new clsCategoriasInv();
-                            clsCategoriasInv.ListarTablaCategorias(grilla);
+
+                            // Actualizar la grilla después de la modificación
+                            ListarTablaCategorias(grilla);
                         }
                         else
                         {
@@ -176,7 +202,7 @@ namespace Gestion.Clases
                 MessageBox.Show("No se pudo registrar la categoría: " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void ModificarCategoria(int idCategoria, string nuevoNombreCategoria, string nuevaDescripcion, DataGridView grilla)
+        public void ModificarCategoria(int idCategoria, string nuevoNombreCategoria, string nuevaDescripcion, Int32 nuevoEstado, DataGridView grilla)
         {
             try
             {
@@ -196,19 +222,18 @@ namespace Gestion.Clases
                     {
                         comandoBD.Connection = conexionBD;
                         comandoBD.CommandType = CommandType.Text;
-                        comandoBD.CommandText = "UPDATE Categorias SET Categoria = @NuevoNombre, Descripcion = @NuevaDescripcion WHERE idCategoria = @idCategoria";
+                        comandoBD.CommandText = "UPDATE Categorias SET Categoria = @NuevoNombre, Descripcion = @NuevaDescripcion, Id_Estado = @NuevoEstado WHERE idCategoria = @idCategoria";
 
                         // Asignar parámetros de la consulta
                         comandoBD.Parameters.AddWithValue("@NuevoNombre", nuevoNombreCategoria);
                         comandoBD.Parameters.AddWithValue("@NuevaDescripcion", nuevaDescripcion);
+                        comandoBD.Parameters.AddWithValue("@NuevoEstado", nuevoEstado);
                         comandoBD.Parameters.AddWithValue("@idCategoria", idCategoria);
 
                         int filasAfectadas = comandoBD.ExecuteNonQuery();
                         if (filasAfectadas > 0)
                         {
                             MessageBox.Show("Categoría modificada con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            // Actualizar la grilla después de la modificación
                             clsCategoriasInv clsCategoriasInv = new clsCategoriasInv();
                             clsCategoriasInv.ListarTablaCategorias(grilla);
                         }
@@ -217,14 +242,13 @@ namespace Gestion.Clases
                             MessageBox.Show("No se pudo modificar la categoría", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
-
-                    conexionBD.Close();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al modificar la categoría: " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            conexionBD.Close();
         }
         public bool ExisteCategoriaPorId(int idCategoria)
         {
@@ -244,26 +268,37 @@ namespace Gestion.Clases
             return existe;
         }
 
-        public void CargaCMB(ComboBox combo) //carga los datos en el combobox categoria con las categorias correspondientes de la base de datos
+        public void CargaCMB(ComboBox combo) // carga los datos en el ComboBox solo con las categorías donde Id_Estado = 1
         {
             try
             {
                 conexionBD.ConnectionString = cadenaDeConexion;
                 conexionBD.Open();
                 comandoBD.Connection = conexionBD;
-                comandoBD.CommandType = CommandType.TableDirect;
-                comandoBD.CommandText = Tabla;
+                comandoBD.CommandType = CommandType.Text;
+
+                // Ajustar la consulta SQL para que filtre por Id_Estado = 1
+                comandoBD.CommandText = "SELECT idCategoria, Categoria FROM Categorias WHERE Id_Estado = 1";
+
                 adaptadorBD = new OleDbDataAdapter(comandoBD);
                 DataSet DS = new DataSet();
-                adaptadorBD.Fill(DS, Tabla);
-                combo.DataSource = DS.Tables[Tabla];
+                adaptadorBD.Fill(DS, "Categorias");
+
+                // Asignar los datos al ComboBox
+                combo.DataSource = DS.Tables["Categorias"];
                 combo.DisplayMember = "Categoria";
                 combo.ValueMember = "idCategoria";
-                conexionBD.Close();
             }
-            catch (Exception Mensaje)
+            catch (Exception ex)
             {
-                MessageBox.Show(Mensaje.Message);
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (conexionBD.State == ConnectionState.Open)
+                {
+                    conexionBD.Close();
+                }
             }
         }
         public void CargaCMBID(ComboBox combo) //carga los datos en el combobox categoria con las categorias correspondientes de la base de datos
@@ -312,7 +347,7 @@ namespace Gestion.Clases
             }
             return existe;
         }
-        public void EliminarCategoria(int idCategoria, DataGridView grilla)
+        /*public void EliminarCategoria(int idCategoria, DataGridView grilla)
         {
             try
             {
@@ -345,7 +380,7 @@ namespace Gestion.Clases
             {
                 MessageBox.Show("Error al intentar eliminar la categoría: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        }*/
 
     }
 }

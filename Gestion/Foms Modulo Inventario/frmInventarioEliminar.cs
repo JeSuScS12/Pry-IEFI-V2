@@ -168,5 +168,14 @@ namespace Gestion.Foms_Modulo_Inventario
                 e.Handled = true;
             }
         }
+
+        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvProductos.Columns["Column3"].Index)
+            {
+                // Ajusta automáticamente el ancho de la columna de Descripción
+                dgvProductos.AutoResizeColumn(e.ColumnIndex, DataGridViewAutoSizeColumnMode.DisplayedCells);
+            }
+        }
     }
 }

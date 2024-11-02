@@ -16,7 +16,7 @@ namespace Gestion.Foms_Modulo_Inventario
         public frmInventarioBusqueda()
         {
             InitializeComponent();
-            
+            Movimientodgv();
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -239,6 +239,29 @@ namespace Gestion.Foms_Modulo_Inventario
                 MessageBox.Show("Por favor, selecciona una categoría.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-       
+
+        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvProductos.Columns["Column3"].Index)
+            {
+                // Ajusta automáticamente el ancho de la columna de Descripción
+                dgvProductos.AutoResizeColumn(e.ColumnIndex, DataGridViewAutoSizeColumnMode.DisplayedCells);
+            }
+        }
+        private void Movimientodgv()
+        {
+            dgvProductos.ScrollBars = ScrollBars.Both;
+            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            dgvProductos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+
+            foreach (DataGridViewColumn column in dgvProductos.Columns)
+            {
+                column.Width = 150;
+            }
+            foreach (DataGridViewRow row in dgvProductos.Rows)
+            {
+                row.Height = 30;
+            }
+        }
     }
 }
