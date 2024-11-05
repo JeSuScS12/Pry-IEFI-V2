@@ -1,4 +1,5 @@
-﻿using Gestion.Forms_Clientes_Usuarios_Empleados_;
+﻿using Gestion.Foms_Modulo_Inventario;
+using Gestion.Forms_Clientes_Usuarios_Empleados_;
 using Gestion.Forms_Modulos;
 using Gestion.Forms_Otros;
 using System;
@@ -21,7 +22,7 @@ namespace Gestion
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmPrincipal());
-            Application.Run(new frmVentas());
+            Application.Run(new frmInventario());
         }
     }
 }

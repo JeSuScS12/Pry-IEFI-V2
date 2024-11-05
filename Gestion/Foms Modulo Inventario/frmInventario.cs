@@ -73,5 +73,10 @@ namespace Gestion.Foms_Modulo_Inventario
         {
             
         }
+
+        private void agregarProductosExistentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFrm(new frmInventarioAgregarExcelAccess());
+        }
     }
 }

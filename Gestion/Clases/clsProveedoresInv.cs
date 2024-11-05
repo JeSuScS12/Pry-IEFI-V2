@@ -18,10 +18,10 @@ namespace Gestion.Clases
         OleDbDataReader lectorBD;
         OleDbDataAdapter adaptadorBD = new OleDbDataAdapter();
 
-        string cadenaDeConexion = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\BDInventario.accdb";
+        string cadenaDeConexion = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\BD\\BDInventario.accdb";
 
         public string EstadoDeConexion = "";
-        private string Tabla = "Productos";
+        private string Tabla = "Proveedores";
         Int32 id_p;
         string prove;
         string tel;
@@ -69,7 +69,7 @@ namespace Gestion.Clases
                     {
                         if (Lector.GetInt32(0) == Id)
                         {
-                            varProveedor = Lector.GetString(6);
+                            varProveedor = Lector.GetString(1);
                         }
                     }
                 }
@@ -82,6 +82,27 @@ namespace Gestion.Clases
                 throw;
             }
         }
-
+        public void CargaCMB(ComboBox combo)
+        {
+            try
+            {
+                conexionBD.ConnectionString = cadenaDeConexion;
+                conexionBD.Open();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = CommandType.TableDirect;
+                comandoBD.CommandText = Tabla;
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+                DataSet DS = new DataSet();
+                adaptadorBD.Fill(DS, Tabla);
+                combo.DataSource = DS.Tables[Tabla];
+                combo.DisplayMember = "Proveedor";
+                combo.ValueMember = "idProveedor";
+                conexionBD.Close();
+            }
+            catch (Exception Mensaje)
+            {
+                MessageBox.Show(Mensaje.Message);
+            }
+        }
     }
 }
