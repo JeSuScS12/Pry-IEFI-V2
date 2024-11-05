@@ -41,6 +41,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelInventario = new System.Windows.Forms.Panel();
+            this.agregarProductosExistentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mspOpciones.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +55,8 @@
             this.productosToolStripMenuItem,
             this.categoriasToolStripMenuItem,
             this.busquedaToolStripMenuItem,
-            this.solicitudDeStockToolStripMenuItem});
+            this.solicitudDeStockToolStripMenuItem,
+            this.agregarProductosExistentesToolStripMenuItem});
             this.mspOpciones.Location = new System.Drawing.Point(0, 0);
             this.mspOpciones.Name = "mspOpciones";
             this.mspOpciones.Size = new System.Drawing.Size(1000, 47);
@@ -156,6 +158,14 @@
             this.panelInventario.Size = new System.Drawing.Size(1000, 668);
             this.panelInventario.TabIndex = 4;
             // 
+            // agregarProductosExistentesToolStripMenuItem
+            // 
+            this.agregarProductosExistentesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(253)))));
+            this.agregarProductosExistentesToolStripMenuItem.Name = "agregarProductosExistentesToolStripMenuItem";
+            this.agregarProductosExistentesToolStripMenuItem.Size = new System.Drawing.Size(173, 43);
+            this.agregarProductosExistentesToolStripMenuItem.Text = "Agregar Productos Existentes";
+            this.agregarProductosExistentesToolStripMenuItem.Click += new System.EventHandler(this.agregarProductosExistentesToolStripMenuItem_Click);
+            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,5 +199,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelInventario;
+        private System.Windows.Forms.ToolStripMenuItem agregarProductosExistentesToolStripMenuItem;
     }
 }
