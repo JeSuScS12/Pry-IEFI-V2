@@ -151,7 +151,6 @@
             // panelInventario
             // 
             this.panelInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
-            this.panelInventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInventario.Location = new System.Drawing.Point(0, 47);
             this.panelInventario.Name = "panelInventario";
             this.panelInventario.Size = new System.Drawing.Size(1000, 668);

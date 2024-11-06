@@ -26,5 +26,10 @@ namespace Gestion.Foms_Modulo_Inventario
         {
 
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

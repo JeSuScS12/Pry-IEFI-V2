@@ -54,6 +54,7 @@
     <Compile Include="Clases\clsCarrito.cs" />
     <Compile Include="Clases\clsCategoriasInv.cs" />
     <Compile Include="Clases\clsConexionClientes.cs" />
+    <Compile Include="Clases\clsConexionProveedores.cs" />
     <Compile Include="Clases\clsConexionUsuarios.cs" />
     <Compile Include="Clases\clsConexionVentas.cs" />
     <Compile Include="Clases\clsFirma.cs" />
@@ -134,6 +135,30 @@
     </Compile>
     <Compile Include="Forms Clientes-Usuarios%28Empleados%29\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modulo Proveedores\frmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modulo Proveedores\frmProveedores.Designer.cs">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modulo Proveedores\frmProveedoresAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modulo Proveedores\frmProveedoresAgregar.Designer.cs">
+      <DependentUpon>frmProveedoresAgregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modulo Proveedores\frmProveedoresInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modulo Proveedores\frmProveedoresInicio.Designer.cs">
+      <DependentUpon>frmProveedoresInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modulo Proveedores\frmProveedoresModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modulo Proveedores\frmProveedoresModificar.Designer.cs">
+      <DependentUpon>frmProveedoresModificar.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConfigNegocio.cs">
       <SubType>Form</SubType>
@@ -227,6 +252,18 @@
     <EmbeddedResource Include="Forms Clientes-Usuarios%28Empleados%29\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modulo Proveedores\frmProveedores.resx">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modulo Proveedores\frmProveedoresAgregar.resx">
+      <DependentUpon>frmProveedoresAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modulo Proveedores\frmProveedoresInicio.resx">
+      <DependentUpon>frmProveedoresInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modulo Proveedores\frmProveedoresModificar.resx">
+      <DependentUpon>frmProveedoresModificar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms Modulo Ventas\frmVentasAgregar.resx">
       <DependentUpon>frmVentasAgregar.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,6 +339,10 @@
     <Content Include="BD\Ventas.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\proveedor2.png" />
+    <None Include="Resources\proveedor.png" />
+    <None Include="Resources\prov1.png" />
+    <None Include="Resources\prov.png" />
     <None Include="Resources\Delete2.png" />
     <None Include="Resources\producto-Color.png" />
     <None Include="Resources\FondoCircular.png" />

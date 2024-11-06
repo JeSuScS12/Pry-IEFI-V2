@@ -33,14 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panelBusqueda = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnNuevaCompra = new System.Windows.Forms.Button();
             this.imagesKey = new System.Windows.Forms.ImageList(this.components);
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.panelCarrito = new System.Windows.Forms.Panel();
             this.btnBuscarCod = new System.Windows.Forms.Button();
             this.txtBuscarCod = new System.Windows.Forms.TextBox();
@@ -57,64 +50,17 @@
             this.btnCancelarOrden = new System.Windows.Forms.Button();
             this.lblCarrito = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.panelBusqueda.SuspendLayout();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnNuevaCompra = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelBusqueda = new System.Windows.Forms.Panel();
             this.panelCarrito.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).BeginInit();
+            this.panelBusqueda.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelBusqueda
-            // 
-            this.panelBusqueda.Controls.Add(this.label2);
-            this.panelBusqueda.Controls.Add(this.label1);
-            this.panelBusqueda.Controls.Add(this.btnNuevaCompra);
-            this.panelBusqueda.Controls.Add(this.btnBuscar);
-            this.panelBusqueda.Controls.Add(this.txtBuscar);
-            this.panelBusqueda.Controls.Add(this.cmbCategoria);
-            this.panelBusqueda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBusqueda.Location = new System.Drawing.Point(0, 0);
-            this.panelBusqueda.Name = "panelBusqueda";
-            this.panelBusqueda.Size = new System.Drawing.Size(1000, 70);
-            this.panelBusqueda.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(445, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 17);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Busqueda por categoria:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(22, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 17);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Busqueda por nombre:";
-            // 
-            // btnNuevaCompra
-            // 
-            this.btnNuevaCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
-            this.btnNuevaCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevaCompra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevaCompra.ForeColor = System.Drawing.Color.White;
-            this.btnNuevaCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaCompra.ImageKey = "icons8-más-50.png";
-            this.btnNuevaCompra.ImageList = this.imagesKey;
-            this.btnNuevaCompra.Location = new System.Drawing.Point(748, 8);
-            this.btnNuevaCompra.Name = "btnNuevaCompra";
-            this.btnNuevaCompra.Size = new System.Drawing.Size(169, 53);
-            this.btnNuevaCompra.TabIndex = 9;
-            this.btnNuevaCompra.Text = "Nueva  Orden";
-            this.btnNuevaCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevaCompra.UseVisualStyleBackColor = false;
-            this.btnNuevaCompra.Click += new System.EventHandler(this.btnNuevaCompra_Click);
             // 
             // imagesKey
             // 
@@ -122,38 +68,6 @@
             this.imagesKey.TransparentColor = System.Drawing.Color.Transparent;
             this.imagesKey.Images.SetKeyName(0, "icons8-más-50.png");
             this.imagesKey.Images.SetKeyName(1, "Billetes.png");
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(44)))), ((int)(((byte)(60)))));
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(280, 26);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(124, 38);
-            this.btnBuscar.TabIndex = 8;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(22, 34);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(242, 23);
-            this.txtBuscar.TabIndex = 7;
-            // 
-            // cmbCategoria
-            // 
-            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(448, 34);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(199, 25);
-            this.cmbCategoria.TabIndex = 6;
-            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
             // 
             // panelCarrito
             // 
@@ -367,11 +281,96 @@
             // panelContenedor
             // 
             this.panelContenedor.AutoScroll = true;
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelContenedor.Location = new System.Drawing.Point(0, 70);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1000, 610);
             this.panelContenedor.TabIndex = 2;
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(448, 34);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(199, 25);
+            this.cmbCategoria.TabIndex = 6;
+            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(22, 34);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(242, 23);
+            this.txtBuscar.TabIndex = 7;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(44)))), ((int)(((byte)(60)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(280, 26);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(124, 38);
+            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnNuevaCompra
+            // 
+            this.btnNuevaCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(117)))), ((int)(((byte)(255)))));
+            this.btnNuevaCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaCompra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaCompra.ForeColor = System.Drawing.Color.White;
+            this.btnNuevaCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaCompra.ImageKey = "icons8-más-50.png";
+            this.btnNuevaCompra.ImageList = this.imagesKey;
+            this.btnNuevaCompra.Location = new System.Drawing.Point(748, 8);
+            this.btnNuevaCompra.Name = "btnNuevaCompra";
+            this.btnNuevaCompra.Size = new System.Drawing.Size(169, 53);
+            this.btnNuevaCompra.TabIndex = 9;
+            this.btnNuevaCompra.Text = "Nueva  Orden";
+            this.btnNuevaCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevaCompra.UseVisualStyleBackColor = false;
+            this.btnNuevaCompra.Click += new System.EventHandler(this.btnNuevaCompra_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(22, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 17);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Busqueda por nombre:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(445, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(169, 17);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Busqueda por categoria:";
+            // 
+            // panelBusqueda
+            // 
+            this.panelBusqueda.Controls.Add(this.label2);
+            this.panelBusqueda.Controls.Add(this.label1);
+            this.panelBusqueda.Controls.Add(this.btnNuevaCompra);
+            this.panelBusqueda.Controls.Add(this.btnBuscar);
+            this.panelBusqueda.Controls.Add(this.txtBuscar);
+            this.panelBusqueda.Controls.Add(this.cmbCategoria);
+            this.panelBusqueda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBusqueda.Location = new System.Drawing.Point(0, 0);
+            this.panelBusqueda.Name = "panelBusqueda";
+            this.panelBusqueda.Size = new System.Drawing.Size(1000, 70);
+            this.panelBusqueda.TabIndex = 0;
             // 
             // frmVentas
             // 
@@ -389,28 +388,20 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVentas";
             this.Load += new System.EventHandler(this.frmVentas_Load);
-            this.panelBusqueda.ResumeLayout(false);
-            this.panelBusqueda.PerformLayout();
             this.panelCarrito.ResumeLayout(false);
             this.panelCarrito.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).EndInit();
+            this.panelBusqueda.ResumeLayout(false);
+            this.panelBusqueda.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelBusqueda;
         private System.Windows.Forms.Panel panelCarrito;
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.ComboBox cmbCategoria;
-        private System.Windows.Forms.Button btnNuevaCompra;
         private System.Windows.Forms.ImageList imagesKey;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCarrito;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnCancelarOrden;
         private System.Windows.Forms.Button btnBuscarCod;
         private System.Windows.Forms.TextBox txtBuscarCod;
@@ -424,5 +415,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnNuevaCompra;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelBusqueda;
     }
 }
