@@ -14,6 +14,7 @@ using Gestion.Forms_Modulos;
 using Gestion.Forms_Clientes_Usuarios_Empleados_;
 using Gestion.Foms_Modulo_Inventario;
 using Gestion.Clases;
+using Gestion.Forms_Modulo_Proveedores;
 
 namespace Gestion
 {
@@ -80,6 +81,11 @@ namespace Gestion
             lblUsuario.Text = clsUserGlobal.nombre;
             user.MostrarAvatar(clsUserGlobal.id);
             Avatar.Image = clsUserGlobal.foto;
+        }
+
+        private void btnProveedor_Click(object sender, EventArgs e)
+        {
+            AbrirFrm(new frmProveedores());
         }
     }
 }

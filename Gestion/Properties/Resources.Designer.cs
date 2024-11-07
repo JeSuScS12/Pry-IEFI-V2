@@ -72,24 +72,24 @@ namespace Gestion.Properties {
         
         /// <summary>
         ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
-        ///&lt;html lang=&quot;es&quot;&gt;
+        ///&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
         ///&lt;head&gt;
-        ///    &lt;meta charset=&quot;UTF-8&quot;&gt;
-        ///    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-        ///    &lt;title&gt;Factura Moderna&lt;/title&gt;
+        ///    &lt;title&gt;Ticket de Compra&lt;/title&gt;
         ///    &lt;style&gt;
         ///        body {
-        ///            font-family: &apos;Arial&apos;, sans-serif;
+        ///            font-family: &apos;Courier New&apos;, Courier, monospace;
+        ///            background-color: #f4f4f4;
         ///            margin: 0;
         ///            padding: 0;
-        ///            background-color: #f5f6fa;
+        ///            display: flex;
+        ///            justify-content: center;
+        ///            align-items: center;
+        ///            height: 100vh;
         ///        }
         ///
-        ///        .invoice-container {
-        ///            max-width: 900px;
-        ///            margin: 50px auto;
+        ///        .ticket-contenedor {
         ///            background-color: #fff;
-        ///            padding:  [resto de la cadena truncado]&quot;;.
+        ///            width: [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string factura {
             get {
@@ -143,6 +143,16 @@ namespace Gestion.Properties {
         internal static System.Drawing.Bitmap producto_Color {
             get {
                 object obj = ResourceManager.GetObject("producto-Color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap proveedor2 {
+            get {
+                object obj = ResourceManager.GetObject("proveedor2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
