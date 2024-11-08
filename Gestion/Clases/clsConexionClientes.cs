@@ -224,5 +224,31 @@ namespace Gestion.Clases
             }
 
         }
+
+        public void DNI(string dni)
+        {
+            string consulta = $"select Nombre, DNI,Telefono, Direccion from Cliente where DNI = '{dni}'";
+            conectar = new OleDbConnection(cadena);
+            comando = new OleDbCommand(consulta, conectar);
+            try
+            {
+                conectar.Open();
+                OleDbDataReader lector = comando.ExecuteReader();
+                if (lector.Read())
+                {
+                    cslClienteCompra.DNI = lector.GetString(1);
+                    cslClienteCompra.Cliente = lector.GetString(0);
+                    cslClienteCompra.Direccion = lector.GetString(3);
+                    cslClienteCompra.Telefono = lector.GetString(2);
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+
+
+
     }
 }

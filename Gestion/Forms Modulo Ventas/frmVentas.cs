@@ -43,7 +43,7 @@ namespace Gestion.Forms_Modulos
             panelCarrito.Size = new Size(1000, 240);
             lblCarrito.Visible = true;
             btnCancelarOrden.Visible = true;
-
+            btnDesplegar.Visible = true;
             btnNuevaCompra.Enabled = false;
             
         }
@@ -58,6 +58,7 @@ namespace Gestion.Forms_Modulos
                 panelCarrito.Size = new Size(1000, 50);
                 lblCarrito.Visible = false;
                 btnCancelarOrden.Visible = false;
+                btnDesplegar.Visible = false;
                 btnNuevaCompra.Enabled = true;
 
                 dgvCarrito.Rows.Clear();
@@ -148,11 +149,16 @@ namespace Gestion.Forms_Modulos
                     }
                     else
                     {
-                        DialogResult resultado = MessageBox.Show("¿Quiere abrir Nueva Orden?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (resultado == DialogResult.Yes)
-                        {
-                            btnNuevaCompra_Click(this, EventArgs.Empty);
-                        }
+                        btnNuevaCompra_Click(this, EventArgs.Empty);
+
+                        clsProducto.codigo = Convert.ToInt32(codigo);
+                        clsProducto.nombre = producto;
+                        clsProducto.descripcion = descripcion;
+                        clsProducto.precio = Convert.ToDecimal(precio);
+
+                        frmVentas_Agregar frm = new frmVentas_Agregar();
+                        frm.FormClosing += frm_close;
+                        frm.ShowDialog();
                     }
                 };
 
@@ -265,6 +271,29 @@ namespace Gestion.Forms_Modulos
                 frmVentas_Agregar frm = new frmVentas_Agregar();
                 frm.FormClosing += frm_close;
                 frm.ShowDialog();
+            }
+        }
+
+        //Funcion para cambiar los tamaños de carrito y imagen del btn  --- Arreglar
+        private void btnDesplegar_Click(object sender, EventArgs e)
+        {
+            int imgindex = 2;
+
+            if (panelCarrito.Height == 240)
+            {
+                panelCarrito.Height = 50;
+                panelContenedor.Height = 610;
+
+                imgindex = (imgindex == 2) ? 3 : 2;
+                btnDesplegar.ImageIndex = imgindex;
+            }
+            else if(panelCarrito.Height == 50)
+            {
+                panelCarrito.Height = 240;
+                panelContenedor.Height = 400;
+
+                imgindex = (imgindex == 2) ? 3 : 2;
+                btnDesplegar.ImageIndex = imgindex;
             }
         }
     }

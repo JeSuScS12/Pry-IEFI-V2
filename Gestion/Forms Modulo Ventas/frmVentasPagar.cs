@@ -26,7 +26,7 @@ namespace Gestion.Forms_Modulo_Ventas
         }
 
         //Instanciar clases
-        
+        clsConexionClientes  nuevo = new clsConexionClientes();
         
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -36,6 +36,10 @@ namespace Gestion.Forms_Modulo_Ventas
 
         private void frmVentasPagar_Load(object sender, EventArgs e)
         {
+            optSi.CheckedChanged += new EventHandler(optSeleccionado);
+            optNo.CheckedChanged += new EventHandler(optSeleccionado);
+
+
             //Dando formato a las columnas
             dgvCarrito.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCarrito.Columns[0].Width = 59;
@@ -120,7 +124,56 @@ namespace Gestion.Forms_Modulo_Ventas
             }
         }
 
+        //Funcion OPT Seleccionado 
+        private void optSeleccionado(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
 
+            if (rb.Checked)
+            {
+                // Cambia  dependiendo del opt seleccionado
+                if (rb == optSi)
+                {
+                    txtDNI.Text = "";
+                    txtDNI.Enabled = true;
 
+                    txtNombre.Enabled = false;
+                    txtDireccion.Enabled = false;
+                }
+                else if (rb == optNo)
+                {
+                    txtDNI.Enabled= true;
+                    txtDNI.Text = "";
+                    txtNombre.Enabled= true;
+                    txtNombre.Text = "";
+                    txtDireccion.Enabled= true;
+                    txtDireccion.Text = "";
+                }
+            }
+        }
+
+        private void txtDNI_TextChanged(object sender, EventArgs e)
+        {
+            if (optSi.Checked && txtDNI.TextLength == 8)
+            {
+                nuevo.DNI(txtDNI.Text.Trim());
+                if (cslClienteCompra.DNI.Any())
+                {
+                    txtNombre.Text = cslClienteCompra.Cliente;
+                    txtDireccion.Text = cslClienteCompra.Direccion;
+                }
+                else MessageBox.Show("DNI no registrado", "Notificacion");
+            }
+            
+        }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Cancelar el evento si no es un número
+                e.Handled = true;
+            }
+        }
     }
 }
